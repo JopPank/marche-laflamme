@@ -168,42 +168,10 @@ a {
   text-decoration: none;
 }
 
-.brand__seal {
-  display: flex;
-  width: 72px;
-  height: 58px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  border: 2px solid var(--gold);
-  border-radius: 50%;
-  background: var(--red);
-  box-shadow: inset 0 0 0 2px var(--red), inset 0 0 0 3px #f7e7b0;
-  color: var(--white);
-  line-height: 1;
-  transform: rotate(-5deg);
-}
-
-.brand__small {
-  font-size: 8px;
-  font-weight: 700;
-  letter-spacing: .12em;
-}
-
-.brand__name {
-  font-family: var(--serif);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: -.04em;
-}
-
-.brand__produce {
-  position: absolute;
-  right: 8px;
-  bottom: 1px;
-  color: var(--gold);
-  font-size: 13px;
+.brand__logo {
+  display: block;
+  width: 158px;
+  height: auto;
 }
 
 .brand__caption {
@@ -298,12 +266,12 @@ a {
 }
 
 .hero {
-  min-height: 610px;
+  min-height: 540px;
   overflow: hidden;
   position: relative;
   display: flex;
   align-items: center;
-  background: #eee5d6;
+  background: #ffda24;
 }
 
 .hero__photo,
@@ -313,13 +281,14 @@ a {
 }
 
 .hero__photo {
-  background-image: url("./assets/storefront.webp");
-  background-position: center 54%;
+  left: 43%;
+  background-image: url("./assets/marche-laflamme-banner.webp");
+  background-position: center;
   background-size: cover;
 }
 
 .hero__wash {
-  background: linear-gradient(90deg, rgba(251, 248, 241, .97) 0%, rgba(251, 248, 241, .91) 34%, rgba(251, 248, 241, .4) 57%, rgba(38, 27, 20, .04) 100%);
+  background: linear-gradient(90deg, #ffda24 0%, #ffda24 40%, rgba(255, 218, 36, .8) 46%, transparent 58%);
 }
 
 .hero__content {
@@ -360,8 +329,8 @@ a {
 }
 
 .hero h1 {
-  max-width: 600px;
-  font-size: clamp(53px, 6.3vw, 82px);
+  max-width: 510px;
+  font-size: clamp(53px, 5.7vw, 72px);
   line-height: 1.04;
 }
 
@@ -423,31 +392,14 @@ a {
   font-size: 27px;
 }
 
-.hero__stamp {
+.hero__logo {
   position: absolute;
   z-index: 1;
   right: max(38px, calc((100vw - 1160px) / 2));
   bottom: 38px;
-  display: grid;
-  width: 123px;
-  height: 123px;
-  align-content: center;
-  justify-items: center;
-  gap: 4px;
-  border: 1px solid rgba(255, 255, 255, .82);
-  border-radius: 50%;
-  background: rgba(184, 29, 36, .93);
-  box-shadow: 0 0 0 5px rgba(184, 29, 36, .5);
-  color: #fff9e9;
-  font-size: 7px;
-  letter-spacing: .11em;
-  text-align: center;
-}
-
-.hero__stamp strong {
-  font-family: var(--serif);
-  font-size: 17px;
-  letter-spacing: -.04em;
+  width: 158px;
+  height: auto;
+  border-radius: 4px;
 }
 
 .section-pad {
@@ -591,41 +543,36 @@ a {
 
 .flyer {
   overflow: hidden;
-  background: var(--red);
-  color: white;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .flyer__inner {
-  min-height: 372px;
+  padding-block: 36px;
   display: grid;
-  grid-template-columns: 1fr 1.5fr .65fr;
+  grid-template-columns: .9fr 1.1fr;
   align-items: center;
-  gap: 60px;
+  gap: 48px;
   position: relative;
 }
 
-.flyer__mark {
-  width: 188px;
-  height: 188px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border: 1px solid rgba(255, 255, 255, .6);
-  border-radius: 50%;
-  box-shadow: 0 0 0 9px rgba(255, 255, 255, .07), 0 0 0 10px rgba(255, 255, 255, .25);
-  color: var(--gold);
-  font-size: 8px;
-  letter-spacing: .17em;
-  transform: rotate(-8deg);
+.flyer__preview {
+  margin: 0;
 }
 
-.flyer__mark strong {
-  color: white;
-  font-family: var(--serif);
-  font-size: 41px;
-  letter-spacing: -.07em;
+.flyer__preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.flyer__preview figcaption {
+  margin-top: 10px;
+  color: #54564e;
+  font-size: 11px;
+  text-align: center;
 }
 
 .eyebrow--light {
@@ -638,49 +585,36 @@ a {
 }
 
 .flyer h2 em {
-  color: var(--gold);
+  color: var(--red);
 }
 
 .flyer__copy > p:not(.eyebrow) {
-  max-width: 350px;
+  max-width: 400px;
   margin: 16px 0 22px;
-  color: rgba(255, 255, 255, .79);
+  color: #54564e;
   font-size: 12px;
   line-height: 1.75;
 }
 
-.flyer__aside {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 14px;
-  color: var(--gold);
+.smart-list-guide {
+  margin-block: 24px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--white);
+  font-size: 12px;
+  line-height: 1.7;
 }
 
-.flyer__sparkle {
-  font-size: 41px;
-}
-
-.flyer__aside-label {
-  color: white;
+.smart-list-guide h3 {
+  margin-top: 0;
   font-family: var(--serif);
-  font-size: 17px;
-  font-style: italic;
-  line-height: 1.4;
+  font-size: 20px;
 }
 
-.flyer__aside-rule {
-  width: 38px;
-  height: 1px;
-  background: var(--gold);
-}
-
-.flyer__aside-small {
-  color: rgba(255, 255, 255, .65);
-  font-size: 8px;
-  letter-spacing: .12em;
-  line-height: 1.8;
-  text-transform: uppercase;
+.smart-list-guide__example {
+  padding-left: 14px;
+  border-left: 3px solid var(--green);
 }
 
 .order {
@@ -778,17 +712,10 @@ a {
   color: #aaa79e;
 }
 
-.order-card__seal {
-  width: 33px;
-  height: 33px;
-  display: grid;
-  place-items: center;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-  color: var(--red);
-  font-family: var(--serif);
-  font-size: 11px;
-  font-weight: 700;
+.order-card__logo {
+  width: 88px;
+  height: auto;
+  flex-shrink: 0;
 }
 
 .order-form {
@@ -1018,18 +945,13 @@ a {
     background-position: 58% center;
   }
 
-  .hero__wash {
-    background: linear-gradient(90deg, rgba(251, 248, 241, .97), rgba(251, 248, 241, .85) 48%, rgba(251, 248, 241, .2));
-  }
-
   .hero__note {
     left: 24px;
   }
 
-  .hero__stamp {
+  .hero__logo {
     right: 32px;
-    width: 104px;
-    height: 104px;
+    width: 130px;
   }
 
   .intro__grid {
@@ -1037,12 +959,8 @@ a {
   }
 
   .flyer__inner {
-    grid-template-columns: .75fr 1.4fr;
+    grid-template-columns: 1fr 1fr;
     gap: 38px;
-  }
-
-  .flyer__aside {
-    display: none;
   }
 
   .order__grid {
@@ -1077,9 +995,8 @@ a {
     min-height: 76px;
   }
 
-  .brand__seal {
-    width: 60px;
-    height: 50px;
+  .brand__logo {
+    width: 116px;
   }
 
   .brand__caption {
@@ -1122,22 +1039,25 @@ a {
 
   .hero {
     min-height: 615px;
-    align-items: flex-start;
+    display: block;
+    min-height: 0;
   }
 
   .hero__photo {
-    inset: auto 0 0;
-    height: 54%;
-    background-position: 55% center;
+    position: relative;
+    inset: auto;
+    height: auto;
+    aspect-ratio: 885 / 565;
+    background-position: center;
   }
 
   .hero__wash {
-    background: linear-gradient(180deg, var(--paper) 0%, rgba(251, 248, 241, .98) 39%, rgba(251, 248, 241, .64) 65%, rgba(251, 248, 241, .04) 100%);
+    display: none;
   }
 
   .hero__content {
-    padding-top: 55px;
-    padding-bottom: 240px;
+    padding-top: 32px;
+    padding-bottom: 36px;
   }
 
   .eyebrow {
@@ -1171,16 +1091,8 @@ a {
     display: none;
   }
 
-  .hero__stamp {
-    right: 25px;
-    bottom: 22px;
-    width: 91px;
-    height: 91px;
-    font-size: 6px;
-  }
-
-  .hero__stamp strong {
-    font-size: 14px;
+  .hero__logo {
+    display: none;
   }
 
   .section-pad {
@@ -1265,24 +1177,9 @@ a {
   .flyer__inner {
     min-height: 0;
     grid-template-columns: 1fr;
-    gap: 0;
-    padding-top: 52px;
-    padding-bottom: 54px;
-  }
-
-  .flyer__mark {
-    width: 82px;
-    height: 82px;
-    position: absolute;
-    top: 40px;
-    right: 8px;
-    gap: 3px;
-    box-shadow: 0 0 0 5px rgba(255, 255, 255, .07), 0 0 0 6px rgba(255, 255, 255, .2);
-    font-size: 5px;
-  }
-
-  .flyer__mark strong {
-    font-size: 21px;
+    gap: 24px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   .flyer h2 {
@@ -1290,8 +1187,8 @@ a {
   }
 
   .flyer__copy > p:not(.eyebrow) {
-    max-width: 260px;
-    font-size: 11px;
+    max-width: none;
+    font-size: 12px;
   }
 
   .flyer .button {

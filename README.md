@@ -22,6 +22,16 @@ Lorsque GitHub valide les DNS et émet le certificat, activez **Enforce HTTPS** 
 
 Les documents Word et captures d’écran de travail sont exclus du dépôt par `.gitignore`.
 
+## Présentation, circulaire et identité visuelle
+
+La section **Circulaire et promotions / Les spéciaux de la semaine** apparaît immédiatement sous la navigation, avant le bandeau du marché, comme point d'entrée prioritaire. La capture Metro fournie sert de référence de hiérarchie seulement; aucune image de produit ou promotion Metro n'est publiée.
+
+Aucune circulaire Laflamme en vigueur n'a été fournie. `assets/circulaire-a-venir.svg` est une illustration explicitement identifiée comme emplacement de démonstration, sans faux prix ni dates de validité. Pour publier une vraie circulaire, ajoutez l'image autorisée dans `assets/`, remplacez la source et les dimensions de l'image de `.flyer__preview` dans `index.html`, puis indiquez dans le texte alternatif et la légende les dates de validité et un moyen d'obtenir les détails accessibles (texte des offres ou téléphone). Gardez l'image entière et lisible; si nécessaire, ajoutez un lien vers sa version haute résolution. Le lien Facebook reste un accès aux publications du marché, pas une promesse de circulaire à jour.
+
+Le logo fourni (`marché laflamme logo.png`) est optimisé en `assets/marche-laflamme-logo.webp` et remplace les anciens emblèmes dessinés dans l'en-tête, le bandeau et la carte du formulaire. Ses proportions sont conservées. La photo du nouveau bandeau provient de la partie droite de `marché laflamme website banner.png`, recadrée en `assets/marche-laflamme-banner.webp` pour éviter de réutiliser les textes et le bouton intégrés à la capture. Le titre est du vrai HTML sur fond jaune; la photo conserve une présentation distincte sur mobile.
+
+La fonction **coller sa liste** est conservée dans « Autres articles » de Tally, avec un guide sur le site (une ligne par article, quantité, format, exemples et regroupement manuel par rayon). Les produits courants restent un raccourci complémentaire. Il n'y a ni classement automatique par rayon ni rapprochement avec un inventaire; la préparation reste à confirmer par le personnel.
+
 ## Démonstration Tally — aucune commande réelle
 
 Le site intègre le [formulaire de démonstration](https://tally.so/r/GexPOO) par une iframe native, avec un lien direct de secours. Les avertissements sur la page et sur le formulaire demandent uniquement des coordonnées fictives. Aucun achat, rappel, paiement ou livraison n'est déclenché.
@@ -93,4 +103,6 @@ Vérifiez le domaine (le nom existant contient bien `marche`, avec un `e`), les 
 - `app.js` — navigation mobile et année du pied de page; aucune collecte de commandes.
 - `fiche-preparation.html`, `fiche-preparation.css`, `fiche-preparation.js` — saisie manuelle et impression d'une fiche de démonstration, sans backend.
 - `tally-picking-slip.formula.txt` — copie de récupération de la formule native de la fiche Google Sheets connectée; aucune réponse client.
-- `assets/storefront.webp` — image de façade optimisée pour le bandeau d’accueil.
+- `assets/marche-laflamme-logo.webp`, `assets/marche-laflamme-banner.webp` — logo fourni et photo recadrée du nouveau bandeau.
+- `assets/circulaire-a-venir.svg` — illustration d'attente, à remplacer par une circulaire autorisée et datée.
+- `assets/storefront.webp` — ancienne image de façade, conservée mais non utilisée sur la page.

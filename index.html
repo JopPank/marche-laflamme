@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="./styles.css?v=20261024-tally">
+    <link rel="stylesheet" href="./styles.css?v=20261024-brand">
     <script src="./app.js?v=20261024-tally" defer></script>
   </head>
   <body>
@@ -35,11 +35,7 @@
     <header class="site-header">
       <div class="container header__inner">
         <a class="brand" href="#accueil" aria-label="Marché Laflamme, accueil">
-          <span class="brand__seal" aria-hidden="true">
-            <span class="brand__small">MARCHÉ</span>
-            <span class="brand__name">LAFLAMME</span>
-            <span class="brand__produce">✳</span>
-          </span>
+          <img class="brand__logo" src="./assets/marche-laflamme-logo.webp" width="316" height="136" alt="Marché Laflamme">
           <span class="brand__caption">Le goût d’ici, depuis 1942</span>
         </a>
 
@@ -54,9 +50,9 @@
         </button>
 
         <nav class="navigation" id="navigation" aria-label="Navigation principale">
+          <a href="#circulaire">Circulaire et promotions</a>
           <a href="#rayons">Nos rayons</a>
           <a href="#histoire">Notre marché</a>
-          <a href="#circulaire">Circulaire</a>
           <a href="#contact">Nous joindre</a>
           <a class="button button--small button--red navigation__cta" href="#commande">
             Essayer la démo
@@ -67,12 +63,32 @@
     </header>
 
     <main id="contenu">
+      <section class="flyer" id="circulaire" aria-labelledby="flyer-title">
+        <div class="container flyer__inner">
+          <div class="flyer__copy">
+            <p class="eyebrow"><span class="eyebrow__line"></span> Circulaire et promotions</p>
+            <h2 id="flyer-title">Les spéciaux<br><em>de la semaine.</em></h2>
+            <p>Votre premier arrêt pour les bonnes trouvailles du marché.
+              La circulaire en image prendra place ici dès qu’elle sera fournie.</p>
+            <a class="button button--red" href="https://www.facebook.com/MarcheLaflamme"
+              target="_blank" rel="noopener noreferrer">
+              Voir les publications du marché <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <figure class="flyer__preview">
+            <img src="./assets/circulaire-a-venir.svg" width="720" height="420"
+              alt="Emplacement de démonstration pour la circulaire à venir. Aucun spécial ni prix n’est publié.">
+            <figcaption>Emplacement réservé — pas une circulaire en vigueur.</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section class="hero" id="accueil" aria-labelledby="hero-title">
         <div class="hero__photo" role="img" aria-label="La façade du Marché Laflamme à Aylmer"></div>
         <div class="hero__wash"></div>
         <div class="container hero__content">
           <p class="eyebrow"><span class="eyebrow__line"></span> Votre marché de quartier</p>
-          <h1 id="hero-title">La fraîcheur<br>à deux pas de <em>chez vous.</em></h1>
+          <h1 id="hero-title">L’authentique<br>marché <em>d’Aylmer.</em></h1>
           <p class="hero__description">
             Les bons produits, les visages familiers et le service qui fait du bien.
             C’est ça, le marché d’Aylmer.
@@ -88,11 +104,7 @@
             <span>Une histoire de famille<br><strong>depuis 1942</strong></span>
           </div>
         </div>
-        <div class="hero__stamp" aria-hidden="true">
-          <span>LE MARCHÉ</span>
-          <strong>D’AYLMER</strong>
-          <span>126, RUE PRINCIPALE</span>
-        </div>
+        <img class="hero__logo" src="./assets/marche-laflamme-logo.webp" width="316" height="136" alt="" aria-hidden="true">
       </section>
 
       <section class="intro section-pad" id="histoire">
@@ -172,35 +184,6 @@
         </div>
       </section>
 
-      <section class="flyer" id="circulaire" aria-labelledby="flyer-title">
-        <div class="container flyer__inner">
-          <div class="flyer__mark" aria-hidden="true">
-            <span>LES BONS</span>
-            <strong>PRIX</strong>
-            <span>SONT ICI</span>
-          </div>
-          <div class="flyer__copy">
-            <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> À surveiller</p>
-            <h2 id="flyer-title">Les spéciaux<br><em>du marché.</em></h2>
-            <p>Suivez notre page Facebook pour découvrir les circulaires et nouveautés du moment.</p>
-            <a
-              class="button button--gold"
-              href="https://www.facebook.com/MarcheLaflamme"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Voir les nouvelles du marché <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-          <div class="flyer__aside" aria-hidden="true">
-            <span class="flyer__sparkle">✳</span>
-            <span class="flyer__aside-label">Des trouvailles<br>à chaque visite</span>
-            <span class="flyer__aside-rule"></span>
-            <span class="flyer__aside-small">À Aylmer<br>depuis 1942</span>
-          </div>
-        </div>
-      </section>
-
       <section class="order section-pad" id="commande" aria-labelledby="order-title">
         <div class="container order__grid">
           <div class="order__intro">
@@ -217,6 +200,17 @@
               <li><span aria-hidden="true">✓</span> Une préférence de jour, sans réserver de créneau</li>
               <li><span aria-hidden="true">✓</span> Une préférence en cas de produit indisponible</li>
             </ul>
+            <div class="smart-list-guide">
+              <h3>Collez votre liste, à votre façon.</h3>
+              <p>Depuis vos notes, copiez votre liste dans « Autres articles ».
+                Un article par ligne, avec la quantité, le format et vos préférences :</p>
+              <p class="smart-list-guide__example">500 g de bœuf haché<br>2 steaks de faux-filet<br>1 beurre salé de 454 g</p>
+              <p>Pour faciliter la préparation, vous pouvez regrouper vos lignes :
+                fruits et légumes, boucherie, produits laitiers, boulangerie, autres.
+                Ne répétez pas les produits déjà choisis dans les quantités rapides.</p>
+              <p><strong>Pas de correspondance automatique avec les stocks :</strong>
+                le personnel doit vérifier les produits et les substitutions.</p>
+            </div>
             <div class="order__callout">
               <span class="order__callout-icon" aria-hidden="true">✳</span>
               <span>Pour une vraie commande, téléphonez au marché :<br><a href="tel:+18196844156">(819) 684-4156</a></span>
@@ -226,7 +220,7 @@
           <div class="order-card">
             <div class="order-card__top">
               <span class="order-card__step">ESSAI DU FORMULAIRE <span>DÉMO</span></span>
-              <span class="order-card__seal" aria-hidden="true">ML</span>
+              <img class="order-card__logo" src="./assets/marche-laflamme-logo.webp" width="316" height="136" alt="" aria-hidden="true">
             </div>
             <p class="demo-notice">
               <strong>Aucune commande n’est transmise au marché.</strong>
