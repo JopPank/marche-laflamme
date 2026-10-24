@@ -1,0 +1,66 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #242424;
+  background: #f8f5ef;
+  line-height: 1.5;
+}
+
+* { box-sizing: border-box; }
+body { max-width: 1000px; margin: auto; padding: 24px; }
+a { color: #971820; }
+h1, h2, h3 { line-height: 1.2; }
+li { margin-bottom: 8px; }
+form, article { background: white; padding: 28px; margin-top: 24px; border: 1px solid #ccc; }
+.fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+label { display: block; font-weight: bold; margin-bottom: 16px; }
+input, select, textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid #767676;
+  border-radius: 4px;
+  background: white;
+  color: inherit;
+  font: inherit;
+}
+textarea { resize: vertical; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+button { background: #b81d24; color: white; border: 1px solid #b81d24; border-radius: 4px; padding: 12px 20px; font: inherit; cursor: pointer; }
+button.secondary { background: white; color: #971820; }
+:focus-visible { outline: 3px solid #176ca4; outline-offset: 3px; }
+.slip-heading { border-bottom: 2px solid; padding-bottom: 12px; }
+.slip-heading strong { font-size: 0.85rem; }
+dl { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 6px 12px; }
+dt { font-weight: bold; }
+dd { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+th, td { border: 1px solid #777; text-align: left; padding: 10px; vertical-align: top; overflow-wrap: anywhere; white-space: pre-wrap; }
+th:first-child { width: 48px; }
+th:last-child { width: 36%; }
+td:first-child { text-align: center; }
+.slip-notes p { min-height: 30px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.slip-notes, .workflow { border-bottom: 1px solid #777; padding-bottom: 12px; }
+.slip-footer { font-size: 0.85rem; }
+
+@media (max-width: 600px) {
+  body { padding: 12px; }
+  form, article { padding: 16px; }
+  .fields { grid-template-columns: 1fr; gap: 0; }
+  dl { grid-template-columns: 1fr; }
+  dd { margin-bottom: 8px; }
+  th, td { padding: 5px; }
+}
+
+@page { size: auto; margin: 15mm; }
+@media print {
+  :root { background: white; color: black; font-size: 10pt; }
+  body { max-width: none; padding: 0; margin: 0; }
+  .screen-only { display: none !important; }
+  article { border: 0; margin: 0; padding: 0; }
+  dl { grid-template-columns: 42mm minmax(0, 1fr); }
+  dd { margin: 0; }
+  th, td { padding: 7px; }
+  thead { display: table-header-group; }
+  tr, .slip-heading, .workflow { break-inside: avoid; }
+  h3 { break-after: avoid; }
+}

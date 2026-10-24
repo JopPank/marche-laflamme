@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Fiche de préparation — Démo Marché Laflamme</title>
+    <link rel="stylesheet" href="./fiche-preparation.css?v=1">
+    <script src="./fiche-preparation.js?v=1" defer></script>
+  </head>
+  <body>
+    <header class="screen-only">
+      <a href="./">Retour au site</a>
+      <h1>Préparer une fiche de cueillette</h1>
+      <p><strong>Démonstration : données fictives uniquement.</strong> Cette page est publique, sans connexion.
+        Les champs restent dans cet onglet : aucun envoi, aucune sauvegarde automatique et aucune connexion à Tally.
+        Une actualisation efface les données.</p>
+      <ol>
+        <li>Ouvrez <a href="https://tally.so/forms/GexPOO/submissions" target="_blank" rel="noopener noreferrer">les réponses Tally</a>
+          dans votre compte autorisé, puis une seule réponse (pas la vue Insights).</li>
+        <li>Recopiez les coordonnées fictives et collez uniquement la liste d'épicerie ci-dessous.
+          Placez un article par ligne, avec sa quantité. Vérifiez les détails avec la réponse originale.</li>
+        <li>Imprimez la fiche. Le personnel coche les articles, note les substitutions et passe les produits à la caisse.</li>
+      </ol>
+    </header>
+
+    <main>
+      <form id="slip-form" class="screen-only">
+        <h2>Détails à vérifier</h2>
+        <div class="fields">
+          <label>Référence de la réponse
+            <input name="reference" maxlength="120" placeholder="Ex. Essai 002">
+          </label>
+          <label>Nom fictif
+            <input name="customer" maxlength="160">
+          </label>
+          <label>Téléphone fictif
+            <input name="phone" type="tel" maxlength="80">
+          </label>
+          <label>Adresse fictive
+            <input name="address" maxlength="300">
+          </label>
+          <label>Jour souhaité (non confirmé)
+            <input name="day" maxlength="120" placeholder="Ex. Mardi, à confirmer">
+          </label>
+          <label>Consigne de remplacement
+            <select name="replacement">
+              <option value="Non précisée — à confirmer avec le client">Non précisée — à confirmer</option>
+              <option>Me téléphoner avant de remplacer</option>
+              <option>Ne pas remplacer</option>
+            </select>
+          </label>
+        </div>
+        <label>Liste d'épicerie fictive — un article par ligne
+          <textarea name="items" rows="8" required maxlength="12000" placeholder="2 L de lait&#10;6 bananes&#10;500 g de bœuf haché"></textarea>
+        </label>
+        <label>Notes de préparation
+          <textarea name="notes" rows="3" maxlength="2000" placeholder="Précisions à confirmer, consignes de livraison fictives…"></textarea>
+        </label>
+        <p>La fiche n'interprète pas les quantités, ne vérifie pas les stocks et ne calcule aucun prix.
+          Les retours à la ligne créent les cases à cocher; les virgules restent dans le même article.</p>
+        <div class="actions">
+          <button type="submit">Imprimer la fiche</button>
+          <button type="reset" class="secondary">Effacer les champs</button>
+        </div>
+        <p>Choisissez votre imprimante ou « Enregistrer au format PDF ». Récupérez la fiche à l'imprimante;
+          les impressions et PDF sont à conserver puis détruire selon les règles du magasin.</p>
+        <h2>Aperçu de la fiche</h2>
+      </form>
+
+      <article id="picking-slip" aria-label="Aperçu de la fiche de préparation">
+        <div class="slip-heading">
+          <h2>Marché Laflamme — Fiche de préparation</h2>
+          <strong>DÉMONSTRATION — AUCUNE COMMANDE RÉELLE</strong>
+        </div>
+        <dl id="slip-details"></dl>
+        <p><strong>Avant la cueillette :</strong> confirmer la demande, les quantités, la livraison et les modalités de paiement.</p>
+        <table>
+          <thead>
+            <tr><th scope="col">Pris</th><th scope="col">Article et quantité demandés</th><th scope="col">Manquant / remplacement / quantité réelle</th></tr>
+          </thead>
+          <tbody id="slip-items"></tbody>
+        </table>
+        <section class="slip-notes">
+          <h3>Notes et suivi des substitutions</h3>
+          <p id="slip-notes"></p>
+          <p>Confirmation client (date / initiales) : __________________________________</p>
+        </section>
+        <section class="workflow">
+          <h3>Suivi manuel</h3>
+          <p>□ Confirmée &nbsp; □ En préparation &nbsp; □ Prête &nbsp; □ Livrée &nbsp; □ Annulée</p>
+          <p>Préparée par : __________________ &nbsp; Date / heure : __________________</p>
+          <p>Passage en caisse : __________________ &nbsp; Total réel : ______________ $</p>
+          <p>Livraison / remise : __________________ &nbsp; Initiales : ________________</p>
+        </section>
+        <p class="slip-footer">Prix et disponibilité non garantis. La caisse détermine le montant final.
+          Aucun paiement ni changement de statut n'est enregistré par cette page.</p>
+      </article>
+    </main>
+  </body>
+</html>
