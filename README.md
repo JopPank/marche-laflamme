@@ -24,7 +24,7 @@ Les documents Word et captures d’écran de travail sont exclus du dépôt par 
 
 ## Connecter les demandes de commande
 
-Le formulaire est prêt à envoyer une requête `POST`, mais il reste désactivé tant que l’URL du webhook n’a pas été configurée. Remplacez `YOUR_GOOGLE_APPS_SCRIPT_URL_HERE` dans `app.js` par l’URL de déploiement de votre Google Apps Script Web App.
+Le formulaire est connecté au déploiement Google Apps Script `MarchéLaflamme2`. Son URL publique `/exec` est configurée dans `WEBHOOK_URL` de `app.js`. Pour changer de déploiement, remplacez cette URL et publiez la modification.
 
 Le code source du backend est dans `apps-script/Code.gs`. Le projet Google est [Laflamme Express](https://script.google.com/home/projects/1GLmSVNH0f7AvaLk9aBTXHnMg2Hnq4198G8NGbA06a4QwKlllq0DtJA3t/edit).
 
@@ -37,7 +37,9 @@ Le backend valide les champs, neutralise les formules Sheets et verrouille les �
 
 La feuille n’est pas publique : seule la soumission de demandes est exposée. L’URL publique n’est pas une clé secrète et ne constitue pas une protection contre le spam; prévoyez une protection anti-abus adaptée avant une exploitation à grande échelle. Aucun paiement ni reçu automatique par courriel n’est effectué.
 
-Avant que le webhook soit connecté, le formulaire affiche un message d’indisponibilité explicite et invite le client à appeler le marché; il ne prétend pas que sa demande a été reçue.
+Le déploiement a été vérifié avec une demande synthétique et une nouvelle tentative utilisant le même identifiant. Une soumission depuis le navigateur a également affiché la confirmation et réinitialisé le formulaire. Les lignes nommées `TEST TECHNIQUE` ne sont pas de vraies commandes.
+
+Si l’URL est remplacée par le marqueur `YOUR_GOOGLE_APPS_SCRIPT_URL_HERE`, le formulaire affiche un message d’indisponibilité explicite et invite le client à appeler le marché; il ne prétend pas que sa demande a été reçue.
 
 ## Fichiers
 

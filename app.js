@@ -1,4 +1,4 @@
-const WEBHOOK_URL = "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
+const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbztS_X2FazAyv4sjBflunIlxouCIMqwM6tFkSJKj_YdPGBz5AAsoLH14CBiuppx9CpV/exec";
 
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#navigation");
