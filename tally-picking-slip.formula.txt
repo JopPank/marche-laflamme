@@ -1,0 +1,51 @@
+=LET(
+  selected,'Préparation'!B3,
+  IF(
+    NOT(IFERROR(AND(ISNUMBER(selected),selected>=2,selected=INT(selected),selected<=ROWS(Sheet1!A:A)),FALSE)),
+    "ERREUR : choisissez un numéro de ligne entier à partir de 2 dans Préparation!B3.",
+    LET(
+      field,LAMBDA(label,INDEX(Sheet1!A:O,selected,MATCH(label,Sheet1!A1:O1,0))),
+      names,VSTACK("Lait 2 % — bouteilles de 2 L","Bananes — unités","Pain de blé entier — pains de 675 g","Œufs — boîtes de 12","Pommes — sacs de 1,36 kg","Bœuf haché — portions de 500 g"),
+      quantities,VSTACK(field("Lait 2 % — bouteilles de 2 L"),field("Bananes — unités"),field("Pain de blé entier — pains de 675 g"),field("Œufs — boîtes de 12"),field("Pommes — sacs de 1,36 kg"),field("Bœuf haché — portions de 500 g")),
+      invalid,SUM(ARRAYFORMULA(IF(quantities="",0,IF(REGEXMATCH(quantities&"","^[0-9]+$"),0,1)))),
+      IF(
+        field("Submission ID")="",
+        "ERREUR : aucune réponse sur cette ligne. Choisissez une ligne remplie dans Sheet1.",
+        IF(
+          invalid>0,
+          "ERREUR : quantité invalide. Vérifiez la réponse originale; les produits courants demandent un nombre entier positif ou zéro. Ne préparez pas cette fiche.",
+          LET(
+            common,ARRAYFORMULA(IF(IF(quantities="",0,VALUE(quantities))>0,quantities&" × "&names,"")),
+            other,field("Autres articles — liste fictive (facultatif)"),
+            lines,VSTACK(common,TRANSPOSE(SPLIT(IF(other=""," ",other),CHAR(10),FALSE,TRUE))),
+            count,SUM(ARRAYFORMULA(N(LEN(TRIM(lines))>0))),
+            VSTACK(
+              "MARCHÉ LAFLAMME — FICHE DE PRÉPARATION",
+              "DÉMONSTRATION — DONNÉES FICTIVES — AUCUNE COMMANDE RÉELLE",
+              "Réponse : "&field("Submission ID")&" | Ligne source : "&selected,
+              "Reçue : "&IF(ISNUMBER(field("Submitted at")),TEXT(field("Submitted at"),"yyyy-mm-dd hh:mm"),field("Submitted at")),
+              "Nom fictif : "&field("Nom fictif"),
+              "Téléphone fictif : "&field("Téléphone fictif"),
+              "Adresse fictive : "&field("Adresse fictive à Aylmer"),
+              "Jour souhaité (non confirmé) : "&IF(ISNUMBER(field("Jour préféré — exemple, sans réservation")),TEXT(field("Jour préféré — exemple, sans réservation"),"yyyy-mm-dd"),field("Jour préféré — exemple, sans réservation")),
+              "Remplacements : "&field("Si un produit est indisponible — exemple"),
+              "Confirmer les quantités, la livraison et le paiement avant préparation.",
+              "ARTICLES ET QUANTITÉS DEMANDÉS",
+              IF(count=0,"ATTENTION : aucun article demandé — contactez le client avant préparation.",ARRAYFORMULA("☐ "&FILTER(lines,LEN(TRIM(lines))>0))),
+              "MANQUANTS / SUBSTITUTIONS : ____________________________________",
+              "______________________________________________________________",
+              "Confirmation client (date / initiales) : __________________________",
+              "☐ Confirmée   ☐ En préparation   ☐ Prête   ☐ Livrée   ☐ Annulée",
+              "Préparée par : __________________   Date / heure : _______________",
+              "Passage en caisse : __________________   Total réel : __________ $",
+              "Livraison / remise : __________________   Initiales : ____________",
+              "La caisse fixe le prix final. Prix et stock non garantis.",
+              "Suivi manuscrit uniquement. Cette fiche change avec Préparation!B3.",
+              "Ne pas modifier ni trier Sheet1 pendant la préparation; vérifier la référence."
+            )
+          )
+        )
+      )
+    )
+  )
+)
