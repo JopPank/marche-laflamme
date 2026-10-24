@@ -22,29 +22,42 @@ Lorsque GitHub valide les DNS et émet le certificat, activez **Enforce HTTPS** 
 
 Les documents Word et captures d’écran de travail sont exclus du dépôt par `.gitignore`.
 
-## Connecter les demandes de commande
+## Démonstration Tally — aucune commande réelle
 
-Le formulaire est connecté au déploiement Google Apps Script `MarchéLaflamme2`. Son URL publique `/exec` est configurée dans `WEBHOOK_URL` de `app.js`. Pour changer de déploiement, remplacez cette URL et publiez la modification.
+Le site intègre le [formulaire de démonstration](https://tally.so/r/GexPOO) par une iframe native, avec un lien direct de secours. Les avertissements sur la page et sur le formulaire demandent uniquement des coordonnées fictives. Aucun achat, rappel, paiement ou livraison n'est déclenché.
 
-Le code source du backend est dans `apps-script/Code.gs`. Le projet Google est [Laflamme Express](https://script.google.com/home/projects/1GLmSVNH0f7AvaLk9aBTXHnMg2Hnq4198G8NGbA06a4QwKlllq0DtJA3t/edit).
+Le formulaire est géré dans le compte Tally personnel de Jonathan :
 
-1. Dans Apps Script, enregistrez le code puis exécutez `setup` et autorisez personnellement l’accès à Google Sheets. Cette fonction crée une feuille privée et conserve son identifiant dans les propriétés du script.
-2. Utilisez **Deploy > New deployment > Web app**, avec exécution en tant que propriétaire et accès **Anyone**, pour permettre les demandes anonymes du site.
-3. Copiez l’URL `/exec` du déploiement dans `WEBHOOK_URL` de `app.js`, puis publiez la modification.
-4. Testez une demande synthétique et vérifiez sa ligne dans la feuille avant d’accepter de vraies commandes.
+- [Modifier le formulaire](https://tally.so/forms/GexPOO/edit).
+- [Consulter les réponses](https://tally.so/forms/GexPOO/submissions).
+- [Réglages et fermeture du formulaire](https://tally.so/forms/GexPOO/settings).
 
-Le backend valide les champs, neutralise les formules Sheets et verrouille les écritures concurrentes. Le timestamp et le statut sont définis côté serveur. Un identifiant de demande empêche les doublons lors d’une nouvelle tentative dans la même session. Le navigateur ne confirme la réception que si le JSON contient `ok: true` et le même identifiant.
+La langue est le français et reCAPTCHA est placé avant l'envoi. Une réponse fictive a été soumise manuellement et vérifiée dans le tableau des réponses. Ne contournez pas le CAPTCHA pour des tests automatisés.
 
-La feuille n’est pas publique : seule la soumission de demandes est exposée. L’URL publique n’est pas une clé secrète et ne constitue pas une protection contre le spam; prévoyez une protection anti-abus adaptée avant une exploitation à grande échelle. Aucun paiement ni reçu automatique par courriel n’est effectué.
+Les données sont enregistrées chez Tally, pas dans Google Sheets ni dans la boîte Hotmail du marché. Aucun connecteur Sheets, courriel au marché, reçu client payant ou abonnement payant n'est configuré. Les réponses restent jusqu'à leur suppression manuelle : supprimez les essais après la présentation et fermez le formulaire lorsque vous ne l'utilisez plus. Le plan gratuit est soumis aux conditions et limites d'utilisation de Tally; le CAPTCHA ne garantit pas l'absence de spam.
 
-Le déploiement a été vérifié avec une demande synthétique et une nouvelle tentative utilisant le même identifiant. Une soumission depuis le navigateur a également affiché la confirmation et réinitialisé le formulaire. Les lignes nommées `TEST TECHNIQUE` ne sont pas de vraies commandes.
+L'iframe charge Tally et son CAPTCHA Google. Les liens de confidentialité sont affichés à proximité. Avant une utilisation réelle, faites approuver les textes, les conditions de livraison, la destination des notifications et le traitement des renseignements personnels, notamment leur stockage en Europe par Tally. La présentation n'est pas une autorisation de prendre des commandes.
 
-Si l’URL est remplacée par le marqueur `YOUR_GOOGLE_APPS_SCRIPT_URL_HERE`, le formulaire affiche un message d’indisponibilité explicite et invite le client à appeler le marché; il ne prétend pas que sa demande a été reçue.
+## Ancien backend Google retiré
+
+Le déploiement Apps Script `MarchéLaflamme2` a été archivé par le propriétaire. Son ancienne URL `/exec` renvoie HTTP 404 lors de la vérification du 24 octobre 2026. Le site ne contient plus de requête vers Apps Script, et le code du backend a été retiré du dépôt courant (il reste dans l'historique Git).
+
+Le projet Google et la feuille privée historique n'ont pas été supprimés. Ne réactivez pas l'ancien déploiement public : il ne possédait pas de protection anti-abus adaptée.
+
+## Courriel professionnel — proposition seulement
+
+Le site affiche l'adresse Hotmail existante fournie dans les documents. Aucune boîte `info@marchelaflamme.com` ou `commande@marchelaflamme.com` n'a été créée.
+
+Pour un futur lancement, le propriétaire de `marchelaflamme.com` peut choisir :
+
+- Une redirection de `info@marchelaflamme.com` vers sa boîte Hotmail existante : réception au même endroit, mais une réponse depuis Hotmail n'utilise pas automatiquement l'adresse professionnelle.
+- Une véritable boîte chez un fournisseur de courriel professionnel : réception et envoi sous l'adresse du domaine, dans Outlook, webmail ou une application mobile. Un abonnement est généralement nécessaire.
+
+Vérifiez le domaine (le nom existant contient bien `marche`, avec un `e`), les accès DNS et les enregistrements de messagerie actuels avant toute modification MX/SPF/DKIM/DMARC. Le sous-domaine de démonstration `marchelaflamme.jopism.com` ne donne aucun contrôle sur le domaine du marché. Aucun paramètre de messagerie n'a été modifié.
 
 ## Fichiers
 
 - `index.html` — contenu et structure de la page.
 - `styles.css` — mise en page responsive et styles de marque.
-- `app.js` — navigation mobile, date minimale et soumission du formulaire.
+- `app.js` — navigation mobile et année du pied de page; aucune collecte de commandes.
 - `assets/storefront.webp` — image de façade optimisée pour le bandeau d’accueil.
-- `apps-script/Code.gs` — validation et enregistrement des demandes dans Google Sheets.

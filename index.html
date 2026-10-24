@@ -20,6 +20,9 @@
   </head>
   <body>
     <a class="skip-link" href="#contenu">Passer au contenu</a>
+    <aside class="demo-banner" aria-label="Avis de démonstration">
+      Démonstration de site — aucune commande réelle. Utilisez uniquement des données fictives.
+    </aside>
 
     <div class="announcement">
       <div class="container announcement__inner">
@@ -56,7 +59,7 @@
           <a href="#circulaire">Circulaire</a>
           <a href="#contact">Nous joindre</a>
           <a class="button button--small button--red navigation__cta" href="#commande">
-            Commander
+            Essayer la démo
             <span aria-hidden="true">↗</span>
           </a>
         </nav>
@@ -165,7 +168,7 @@
               <span class="department-card__arrow" aria-hidden="true">↗</span>
             </a>
           </div>
-          <p class="department-footnote">Un produit en tête? Ajoutez-le simplement à votre liste de commande.</p>
+          <p class="department-footnote">Un produit en tête? Essayez une liste fictive dans notre démonstration.</p>
         </div>
       </section>
 
@@ -204,75 +207,45 @@
             <p class="eyebrow"><span class="eyebrow__line"></span> Laflamme Express</p>
             <h2 id="order-title">Votre liste.<br><em>On s’en occupe.</em></h2>
             <p>
-              Faites-nous parvenir votre liste d’épicerie. Notre équipe vous
-              contactera pour confirmer les détails de votre demande et la livraison.
+              Découvrez une façon simple de transmettre une liste d’épicerie.
+              Sur le futur site, le marché pourrait rappeler pour confirmer les produits,
+              le montant et la livraison. Ici, il s’agit uniquement d’un essai.
             </p>
             <ul class="order__benefits">
               <li><span aria-hidden="true">✓</span> Votre liste, même copiée depuis vos notes</li>
-              <li><span aria-hidden="true">✓</span> Les produits frais préparés avec soin</li>
-              <li><span aria-hidden="true">✓</span> Une confirmation par notre équipe</li>
+              <li><span aria-hidden="true">✓</span> Une préférence de jour, sans réserver de créneau</li>
+              <li><span aria-hidden="true">✓</span> Une préférence en cas de produit indisponible</li>
             </ul>
             <div class="order__callout">
               <span class="order__callout-icon" aria-hidden="true">✳</span>
-              <span>Une question avant de commander?<br><a href="tel:+18196844156">(819) 684-4156</a></span>
+              <span>Pour une vraie commande, téléphonez au marché :<br><a href="tel:+18196844156">(819) 684-4156</a></span>
             </div>
           </div>
 
           <div class="order-card">
             <div class="order-card__top">
-              <span class="order-card__step">VOTRE COMMANDE <span>01 / 01</span></span>
+              <span class="order-card__step">ESSAI DU FORMULAIRE <span>DÉMO</span></span>
               <span class="order-card__seal" aria-hidden="true">ML</span>
             </div>
-            <form class="order-form" id="order-form">
-              <div class="form-row">
-                <div class="field">
-                  <label for="customer-name">Votre nom</label>
-                  <input id="customer-name" name="clientName" autocomplete="name" maxlength="150" placeholder="Ex. Marie Tremblay" required>
-                </div>
-                <div class="field">
-                  <label for="customer-phone">Téléphone</label>
-                  <input id="customer-phone" name="phone" type="tel" autocomplete="tel" maxlength="50" placeholder="(819) 555-0123" required>
-                </div>
-              </div>
-              <div class="field">
-                <label for="delivery-address">Adresse de livraison à Aylmer</label>
-                <input id="delivery-address" name="address" autocomplete="street-address" maxlength="400" placeholder="Numéro, rue, appartement" required>
-              </div>
-              <div class="form-row form-row--delivery">
-                <div class="field">
-                  <label for="delivery-date">Date souhaitée</label>
-                  <input id="delivery-date" name="deliveryDate" type="date" required>
-                </div>
-                <div class="field">
-                  <label for="delivery-time">Moment souhaité</label>
-                  <select id="delivery-time" name="deliveryTime" required>
-                    <option value="" disabled selected>Choisir un moment</option>
-                    <option value="Matin">Matin</option>
-                    <option value="Après-midi">Après-midi</option>
-                    <option value="Soir">Soir</option>
-                  </select>
-                </div>
-              </div>
-              <div class="field">
-                <label for="order-list">Votre liste d’épicerie / notes</label>
-                <textarea
-                  id="order-list"
-                  name="items"
-                  rows="5"
-                  maxlength="10000"
-                  placeholder="Collez votre liste ici…&#10;Ex. lait 2 %, pommes, poitrine de poulet, pain de ménage"
-                  required
-                ></textarea>
-                <span class="field__hint">Les quantités, marques ou préférences? Indiquez-les ici.</span>
-              </div>
-              <button class="button button--red order-form__submit" type="submit">
-                Envoyer ma demande <span aria-hidden="true">↗</span>
-              </button>
-              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-              <p class="order-form__privacy">
-                Votre demande est transmise au marché pour suivi. Aucun paiement n’est effectué sur ce site.
-              </p>
-            </form>
+            <p class="demo-notice">
+              <strong>Aucune commande n’est transmise au marché.</strong>
+              Les essais sont enregistrés chez Tally dans le compte personnel de Jonathan.
+              N’indiquez ni vraies coordonnées, ni données de paiement.
+            </p>
+            <iframe
+              class="demo-form"
+              src="https://tally.so/embed/GexPOO?hideTitle=1&amp;transparentBackground=1"
+              title="Laflamme Express — formulaire de démonstration, données fictives uniquement"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+            <p class="demo-notice">
+              Le formulaire ne s’affiche pas?
+              <a href="https://tally.so/r/GexPOO" target="_blank" rel="noopener noreferrer">Ouvrir la démo dans un nouvel onglet ↗</a>.
+              Protection anti-spam par reCAPTCHA; aucun paiement, appel ou livraison.
+              <a href="https://tally.so/help/privacy-policy" target="_blank" rel="noopener noreferrer">Confidentialité Tally</a>
+              · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Confidentialité Google reCAPTCHA</a>.
+            </p>
           </div>
         </div>
       </section>
@@ -298,7 +271,7 @@
             </div>
             <div class="visit__detail">
               <span class="visit__label">Courriel</span>
-              <a href="mailto:commande@marchelaflamme.com">commande@marchelaflamme.com</a>
+              <a href="mailto:marchelaflamme@hotmail.com">marchelaflamme@hotmail.com</a>
             </div>
             <div class="visit__detail">
               <span class="visit__label">Suivez-nous</span>
