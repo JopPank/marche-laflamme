@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="fr-CA">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fbf8f1">
+    <meta
+      name="description"
+      content="Depuis 1942, Marché Laflamme sert les familles d'Aylmer. Découvrez nos rayons frais et demandez une livraison avec Laflamme Express."
+    >
+    <title>Marché Laflamme | Le marché d'Aylmer depuis 1942</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Passer au contenu</a>
+
+    <div class="announcement">
+      <div class="container announcement__inner">
+        <span class="announcement__dot" aria-hidden="true"></span>
+        <p>Au service des familles d’Aylmer depuis 1942</p>
+        <a href="tel:+18196844156">Appelez-nous <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header__inner">
+        <a class="brand" href="#accueil" aria-label="Marché Laflamme, accueil">
+          <span class="brand__seal" aria-hidden="true">
+            <span class="brand__small">MARCHÉ</span>
+            <span class="brand__name">LAFLAMME</span>
+            <span class="brand__produce">✳</span>
+          </span>
+          <span class="brand__caption">Le goût d’ici, depuis 1942</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navigation"
+          aria-label="Ouvrir le menu"
+        >
+          <span></span><span></span>
+        </button>
+
+        <nav class="navigation" id="navigation" aria-label="Navigation principale">
+          <a href="#rayons">Nos rayons</a>
+          <a href="#histoire">Notre marché</a>
+          <a href="#circulaire">Circulaire</a>
+          <a href="#contact">Nous joindre</a>
+          <a class="button button--small button--red navigation__cta" href="#commande">
+            Commander
+            <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <section class="hero" id="accueil" aria-labelledby="hero-title">
+        <div class="hero__photo" role="img" aria-label="La façade du Marché Laflamme à Aylmer"></div>
+        <div class="hero__wash"></div>
+        <div class="container hero__content">
+          <p class="eyebrow"><span class="eyebrow__line"></span> Votre marché de quartier</p>
+          <h1 id="hero-title">La fraîcheur<br>à deux pas de <em>chez vous.</em></h1>
+          <p class="hero__description">
+            Les bons produits, les visages familiers et le service qui fait du bien.
+            C’est ça, le marché d’Aylmer.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--red" href="#commande">
+              Découvrir Laflamme Express <span aria-hidden="true">↗</span>
+            </a>
+            <a class="text-link" href="#rayons">Explorer nos rayons <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero__note">
+            <span class="hero__note-icon" aria-hidden="true">✳</span>
+            <span>Une histoire de famille<br><strong>depuis 1942</strong></span>
+          </div>
+        </div>
+        <div class="hero__stamp" aria-hidden="true">
+          <span>LE MARCHÉ</span>
+          <strong>D’AYLMER</strong>
+          <span>126, RUE PRINCIPALE</span>
+        </div>
+      </section>
+
+      <section class="intro section-pad" id="histoire">
+        <div class="container intro__grid">
+          <div class="intro__heading">
+            <p class="eyebrow"><span class="eyebrow__line"></span> D’ici, pour vous</p>
+            <h2>Plus qu’une épicerie.<br><em>Un marché de cœur.</em></h2>
+          </div>
+          <div class="intro__copy">
+            <p>
+              Depuis plus de 80 ans, notre famille accueille les gens d’Aylmer avec
+              des produits choisis avec soin et un service attentionné. Entrez pour
+              vos essentiels, restez pour les petites découvertes.
+            </p>
+            <a class="text-link text-link--red" href="#contact">
+              Venez nous voir <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="departments section-pad" id="rayons" aria-labelledby="departments-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow__line"></span> Tout près, tout frais</p>
+              <h2 id="departments-title">Les bons côtés <em>du marché.</em></h2>
+            </div>
+            <p class="section-heading__aside">Du comptoir à votre table,<br>on s’occupe des bons détails.</p>
+          </div>
+
+          <div class="department-grid">
+            <a class="department-card department-card--meat" href="#commande">
+              <span class="department-card__number">01</span>
+              <span class="department-card__icon" aria-hidden="true">✳</span>
+              <span class="department-card__name">Boucherie</span>
+              <span class="department-card__detail">De bons morceaux, bien choisis</span>
+              <span class="department-card__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="department-card department-card--cheese" href="#commande">
+              <span class="department-card__number">02</span>
+              <span class="department-card__icon" aria-hidden="true">◒</span>
+              <span class="department-card__name">Charcuterie<br>& fromages</span>
+              <span class="department-card__detail">Pour les petits et grands plateaux</span>
+              <span class="department-card__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="department-card department-card--produce" href="#commande">
+              <span class="department-card__number">03</span>
+              <span class="department-card__icon" aria-hidden="true">✿</span>
+              <span class="department-card__name">Fruits<br>& légumes</span>
+              <span class="department-card__detail">De la couleur, chaque jour</span>
+              <span class="department-card__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="department-card department-card--bakery" href="#commande">
+              <span class="department-card__number">04</span>
+              <span class="department-card__icon" aria-hidden="true">⌂</span>
+              <span class="department-card__name">Boulangerie</span>
+              <span class="department-card__detail">Le plaisir du bon pain</span>
+              <span class="department-card__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="department-card department-card--catering" href="#commande">
+              <span class="department-card__number">05</span>
+              <span class="department-card__icon" aria-hidden="true">❋</span>
+              <span class="department-card__name">Traiteur</span>
+              <span class="department-card__detail">Des idées pour recevoir</span>
+              <span class="department-card__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="department-card department-card--cakes" href="#commande">
+              <span class="department-card__number">06</span>
+              <span class="department-card__icon" aria-hidden="true">✧</span>
+              <span class="department-card__name">Gâteaux</span>
+              <span class="department-card__detail">Pour célébrer les beaux moments</span>
+              <span class="department-card__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <p class="department-footnote">Un produit en tête? Ajoutez-le simplement à votre liste de commande.</p>
+        </div>
+      </section>
+
+      <section class="flyer" id="circulaire" aria-labelledby="flyer-title">
+        <div class="container flyer__inner">
+          <div class="flyer__mark" aria-hidden="true">
+            <span>LES BONS</span>
+            <strong>PRIX</strong>
+            <span>SONT ICI</span>
+          </div>
+          <div class="flyer__copy">
+            <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> À surveiller</p>
+            <h2 id="flyer-title">Les spéciaux<br><em>du marché.</em></h2>
+            <p>Suivez notre page Facebook pour découvrir les circulaires et nouveautés du moment.</p>
+            <a
+              class="button button--gold"
+              href="https://www.facebook.com/MarcheLaflamme"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Voir les nouvelles du marché <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="flyer__aside" aria-hidden="true">
+            <span class="flyer__sparkle">✳</span>
+            <span class="flyer__aside-label">Des trouvailles<br>à chaque visite</span>
+            <span class="flyer__aside-rule"></span>
+            <span class="flyer__aside-small">À Aylmer<br>depuis 1942</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="order section-pad" id="commande" aria-labelledby="order-title">
+        <div class="container order__grid">
+          <div class="order__intro">
+            <p class="eyebrow"><span class="eyebrow__line"></span> Laflamme Express</p>
+            <h2 id="order-title">Votre liste.<br><em>On s’en occupe.</em></h2>
+            <p>
+              Faites-nous parvenir votre liste d’épicerie. Notre équipe vous
+              contactera pour confirmer les détails de votre demande et la livraison.
+            </p>
+            <ul class="order__benefits">
+              <li><span aria-hidden="true">✓</span> Votre liste, même copiée depuis vos notes</li>
+              <li><span aria-hidden="true">✓</span> Les produits frais préparés avec soin</li>
+              <li><span aria-hidden="true">✓</span> Une confirmation par notre équipe</li>
+            </ul>
+            <div class="order__callout">
+              <span class="order__callout-icon" aria-hidden="true">✳</span>
+              <span>Une question avant de commander?<br><a href="tel:+18196844156">(819) 684-4156</a></span>
+            </div>
+          </div>
+
+          <div class="order-card">
+            <div class="order-card__top">
+              <span class="order-card__step">VOTRE COMMANDE <span>01 / 01</span></span>
+              <span class="order-card__seal" aria-hidden="true">ML</span>
+            </div>
+            <form class="order-form" id="order-form">
+              <div class="form-row">
+                <div class="field">
+                  <label for="customer-name">Votre nom</label>
+                  <input id="customer-name" name="clientName" autocomplete="name" maxlength="150" placeholder="Ex. Marie Tremblay" required>
+                </div>
+                <div class="field">
+                  <label for="customer-phone">Téléphone</label>
+                  <input id="customer-phone" name="phone" type="tel" autocomplete="tel" maxlength="50" placeholder="(819) 555-0123" required>
+                </div>
+              </div>
+              <div class="field">
+                <label for="delivery-address">Adresse de livraison à Aylmer</label>
+                <input id="delivery-address" name="address" autocomplete="street-address" maxlength="400" placeholder="Numéro, rue, appartement" required>
+              </div>
+              <div class="form-row form-row--delivery">
+                <div class="field">
+                  <label for="delivery-date">Date souhaitée</label>
+                  <input id="delivery-date" name="deliveryDate" type="date" required>
+                </div>
+                <div class="field">
+                  <label for="delivery-time">Moment souhaité</label>
+                  <select id="delivery-time" name="deliveryTime" required>
+                    <option value="" disabled selected>Choisir un moment</option>
+                    <option value="Matin">Matin</option>
+                    <option value="Après-midi">Après-midi</option>
+                    <option value="Soir">Soir</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="order-list">Votre liste d’épicerie / notes</label>
+                <textarea
+                  id="order-list"
+                  name="items"
+                  rows="5"
+                  maxlength="10000"
+                  placeholder="Collez votre liste ici…&#10;Ex. lait 2 %, pommes, poitrine de poulet, pain de ménage"
+                  required
+                ></textarea>
+                <span class="field__hint">Les quantités, marques ou préférences? Indiquez-les ici.</span>
+              </div>
+              <button class="button button--red order-form__submit" type="submit">
+                Envoyer ma demande <span aria-hidden="true">↗</span>
+              </button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+              <p class="order-form__privacy">
+                Votre demande est transmise au marché pour suivi. Aucun paiement n’est effectué sur ce site.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="visit section-pad" id="contact" aria-labelledby="visit-title">
+        <div class="container visit__inner">
+          <div>
+            <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> On vous attend</p>
+            <h2 id="visit-title">À bientôt<br><em>au marché.</em></h2>
+          </div>
+          <div class="visit__details">
+            <div class="visit__detail">
+              <span class="visit__label">Adresse</span>
+              <a
+                href="https://maps.google.com/?q=126+rue+Principale,+Aylmer,+QC"
+                target="_blank"
+                rel="noopener noreferrer"
+              >126, rue Principale<br>Aylmer (Québec)</a>
+            </div>
+            <div class="visit__detail">
+              <span class="visit__label">Téléphone</span>
+              <a href="tel:+18196844156">(819) 684-4156</a>
+            </div>
+            <div class="visit__detail">
+              <span class="visit__label">Courriel</span>
+              <a href="mailto:commande@marchelaflamme.com">commande@marchelaflamme.com</a>
+            </div>
+            <div class="visit__detail">
+              <span class="visit__label">Suivez-nous</span>
+              <a href="https://www.facebook.com/MarcheLaflamme" target="_blank" rel="noopener noreferrer">
+                Facebook <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+          <span class="visit__decoration" aria-hidden="true">M</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <a class="footer-brand" href="#accueil">Marché <strong>Laflamme</strong></a>
+        <p>Un marché de famille. Un marché d’Aylmer. Depuis 1942.</p>
+        <a class="site-footer__top" href="#accueil">Retour en haut ↑</a>
+        <span class="site-footer__copyright">© <span id="current-year"></span> Marché Laflamme</span>
+      </div>
+    </footer>
+  </body>
+</html>
