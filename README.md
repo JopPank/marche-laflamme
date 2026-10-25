@@ -32,6 +32,8 @@ Le bandeau de spéciaux présente quatre offres transcrites de la circulaire off
 
 Le logo fourni (`marché laflamme logo.png`) est optimisé en `assets/marche-laflamme-logo.webp` et remplace les anciens emblèmes dessinés dans l'en-tête, le bandeau et la carte du formulaire. Ses proportions sont conservées. La photo de l'équipe dans le bandeau d'accueil est recadrée depuis la capture fournie et enregistrée dans `assets/marche-laflamme-equipe.jpg`. Le bandeau est moins haut sur ordinateur et mobile; la photo conserve une présentation distincte sur mobile.
 
+La carte Boulangerie de l’accueil et la page `boulangerie.html` utilisent la même photo de pains que le bandeau de la [boulangerie officielle](https://marchelaflamme.com/boulangerie/) (`Marche-Laflamme-Boulangerie-Aylmer.jpg`), optimisée localement en `assets/bakery-bread.webp`. Le cadrage est aligné à droite pour garder les pains visibles. Les beignes restent uniquement sur la carte Déjeuners du traiteur, où ils représentent le produit proposé.
+
 La fonction **coller sa liste** est conservée dans « Autres articles » de Tally, avec un guide sur le site (une ligne par article, quantité, format, exemples et regroupement manuel par rayon). Les produits courants restent un raccourci complémentaire. Il n'y a ni classement automatique par rayon ni rapprochement avec un inventaire; la préparation reste à confirmer par le personnel.
 
 ## Pages de démonstration — traiteur et gâteaux

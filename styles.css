@@ -1862,6 +1862,10 @@ a {
   object-fit: cover;
 }
 
+.bakery-bread-photo {
+  object-position: right center;
+}
+
 .butchery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

@@ -436,7 +436,7 @@ const english = {
   "Pains cuits en magasin, desserts et gâteaux personnalisés : retrouvez les options et les tarifs dans un seul endroit.": "Bread baked in-store, desserts and custom cakes: explore the options and prices in one place.",
   "Prix des gâteaux et cupcakes": "Cake and cupcake prices",
   "Personnaliser un gâteau": "Customize a cake",
-  "Beignes à l’ancienne du Marché Laflamme": "Marché Laflamme's old-fashioned doughnuts",
+  "Pains aux céréales sur une table en bois": "Seeded bread rolls on a wooden table",
   "Pour planifier votre fête": "Plan your celebration",
   "Gâteaux :": "Cakes:",
   "formats et prix.": "sizes and prices.",
