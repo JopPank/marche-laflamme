@@ -5,7 +5,7 @@
   --gold: #f4c75e;
   --green: #2e7d50;
   --ink: #24251f;
-  --muted: #6f716a;
+  --muted: #60625b;
   --paper: #fbf8f1;
   --cream: #f2ede2;
   --white: #fffefa;
@@ -106,6 +106,21 @@ a {
   border: 0;
 }
 
+.demo-form-loader summary {
+  width: fit-content;
+  padding: 14px 20px;
+  border-radius: 4px;
+  background: var(--red);
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.demo-form-loader summary:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
 .demo-notice {
   margin: 12px 0;
   color: #54564e;
@@ -134,7 +149,7 @@ a {
 .announcement a {
   position: absolute;
   right: 0;
-  color: var(--gold);
+  color: var(--white);
   font-weight: 700;
   text-decoration: none;
 }
@@ -808,7 +823,7 @@ a {
 
 .hero__photo {
   left: 43%;
-  background-image: url("./assets/marche-laflamme-equipe.jpg");
+  background-image: url("./assets/marche-laflamme-equipe.webp");
   background-position: center top;
   background-size: cover;
 }
@@ -1123,26 +1138,26 @@ a {
 
 .specials-card__image {
   height: 142px;
-  background-image: url("https://marchelaflamme.com/wp-content/uploads/2026/10/IMG_3933.jpeg");
   background-repeat: no-repeat;
-  background-size: 500% auto;
+  background-size: cover;
+  background-position: center;
   background-color: var(--paper);
 }
 
 .specials-card__image--chicken {
-  background-position: 4% 33%;
+  background-image: url("./assets/specials-20261022-chicken.webp");
 }
 
 .specials-card__image--peppers {
-  background-position: 39% 34%;
+  background-image: url("./assets/specials-20261022-peppers.webp");
 }
 
 .specials-card__image--celery {
-  background-position: 28% 50%;
+  background-image: url("./assets/specials-20261022-celery.webp");
 }
 
 .specials-card__image--apples {
-  background-position: 85% 31%;
+  background-image: url("./assets/specials-20261022-apples.webp");
 }
 
 .specials-card__details {
@@ -1222,7 +1237,7 @@ a {
 }
 
 .specials-card__flyer-date {
-  color: #f9e5a4;
+  color: var(--white);
 }
 
 .specials-card__flyer-link {

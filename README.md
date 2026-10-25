@@ -22,6 +22,18 @@ Lorsque GitHub valide les DNS et émet le certificat, activez **Enforce HTTPS** 
 
 Les documents Word et captures d’écran de travail sont exclus du dépôt par `.gitignore`.
 
+## Performance et accessibilité
+
+Les images des cartes de fromages, traiteur et gâteaux de l'accueil sont servies localement en WebP (`assets/department-*.webp`). Les pains utilisent deux variantes de 480 et 960 pixels avec `srcset` et `sizes`, sur l'accueil et la page Boulangerie. La photo de l'équipe utilise `assets/marche-laflamme-equipe.webp`, sans modifier le cadrage des visages.
+
+Sur l'accueil, la feuille Google Fonts est préchargée puis appliquée sans bloquer le premier rendu; les polices de remplacement et `display=swap` restent en place, avec une feuille de style de secours sans JavaScript.
+
+Les quatre cartes de spéciaux utilisent de petits recadrages locaux datés `assets/specials-20261022-*.webp`, plutôt que de télécharger la circulaire entière sur l'accueil. Lors d'un changement d'édition, remplacez ces recadrages et leurs références CSS en même temps que les prix et les dates. Le lien vers la circulaire complète reste disponible.
+
+Le formulaire Tally de l'accueil ne se connecte à Tally ou reCAPTCHA qu'après ouverture de « Ouvrir le formulaire de démonstration ». Replier puis rouvrir le panneau conserve le formulaire et les données fictives déjà saisies. Sans JavaScript ou si le fournisseur est indisponible, le lien permanent vers la démo dans un nouvel onglet et le formulaire combiné bilingue restent disponibles. Les avertissements de confidentialité et de démonstration sont conservés.
+
+Le nom accessible du logo provient de son texte alternatif et de sa légende visible, sans libellé qui masque cette dernière. Les couleurs des textes secondaires, du téléphone et de la date de la carte de circulaire sont ajustées pour améliorer le contraste. Pour vérifier les gains, relancez Lighthouse sur le site publié dans un profil sans extensions; les scores de l'ancien rapport ne sont pas une mesure de ces modifications.
+
 ## Présentation, circulaire et identité visuelle
 
 La section **Circulaire et promotions / Les spéciaux de la semaine** apparaît immédiatement sous la navigation, avant le bandeau du marché, comme point d'entrée prioritaire. La capture Metro fournie sert de référence de hiérarchie seulement; aucune image de produit ou promotion Metro n'est publiée. Les cartes de rayons reprennent des photos déjà utilisées sur le site : saucisses maison de la page officielle de boucherie, légumes recadrés de la circulaire, puis fromages, beignes, bouchées traiteur et gâteau des pages de services. Les badges numérotés des images des cartes ont été retirés.

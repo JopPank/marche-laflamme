@@ -13,8 +13,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     >
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    </noscript>
     <link rel="stylesheet" href="./styles.css?v=20261025-pages">
     <script src="./app.js?v=20261025-pages" defer></script>
     <script src="./language.js" defer></script>
@@ -35,7 +40,7 @@
 
     <header class="site-header">
       <div class="container header__inner">
-        <a class="brand" href="#accueil" aria-label="Marché Laflamme, accueil">
+        <a class="brand" href="#accueil">
           <img class="brand__logo" src="./assets/marche-laflamme-logo.webp" width="316" height="136" alt="Marché Laflamme">
           <span class="brand__caption">Le goût d’ici, depuis 1959</span>
         </a>
@@ -198,7 +203,7 @@
               <span class="department-card__arrow" aria-hidden="true">↗</span>
             </a>
             <a class="department-card department-card--cheese" href="./charcuterie-fromage.html">
-              <img class="department-card__photo" src="https://marchelaflamme.com/wp-content/uploads/2023/12/Petits-cubes-480x480.png" width="480" height="480" loading="lazy" alt="" aria-hidden="true">
+              <img class="department-card__photo" src="./assets/department-cheese.webp" width="480" height="480" loading="lazy" alt="" aria-hidden="true">
               <span class="department-card__name">Charcuterie<br>& fromages</span>
               <span class="department-card__detail">Pour les petits et grands plateaux</span>
               <span class="department-card__arrow" aria-hidden="true">↗</span>
@@ -210,19 +215,19 @@
               <span class="department-card__arrow" aria-hidden="true">↗</span>
             </a>
             <a class="department-card department-card--bakery" href="./boulangerie.html">
-              <img class="department-card__photo bakery-bread-photo" src="./assets/bakery-bread.webp" width="1200" height="695" loading="lazy" alt="" aria-hidden="true">
+              <img class="department-card__photo bakery-bread-photo" src="./assets/bakery-bread-480.webp" srcset="./assets/bakery-bread-480.webp 480w, ./assets/bakery-bread-960.webp 960w" sizes="(max-width: 650px) calc((100vw - 46px) / 2), (max-width: 900px) calc((100vw - 76px) / 3), 377px" width="480" height="278" loading="lazy" alt="" aria-hidden="true">
               <span class="department-card__name">Boulangerie</span>
               <span class="department-card__detail">Le plaisir du bon pain</span>
               <span class="department-card__arrow" aria-hidden="true">↗</span>
             </a>
             <a class="department-card department-card--catering" href="./service-traiteur.html">
-              <img class="department-card__photo" src="https://marchelaflamme.com/wp-content/uploads/2023/12/Duo-de-mini-brochettes-480x480.png" width="480" height="480" loading="lazy" alt="" aria-hidden="true">
+              <img class="department-card__photo" src="./assets/department-catering.webp" width="480" height="480" loading="lazy" alt="" aria-hidden="true">
               <span class="department-card__name">Traiteur</span>
               <span class="department-card__detail">Des idées pour recevoir</span>
               <span class="department-card__arrow" aria-hidden="true">↗</span>
             </a>
             <a class="department-card department-card--cakes" href="./service-gateaux.html">
-              <img class="department-card__photo" src="https://marchelaflamme.com/wp-content/uploads/2023/11/Marche-Laflamme-Gateau-personnalise-Aylmer-2-480x477.png" width="480" height="477" loading="lazy" alt="" aria-hidden="true">
+              <img class="department-card__photo" src="./assets/department-cake.webp" width="480" height="477" loading="lazy" alt="" aria-hidden="true">
               <span class="department-card__name">Gâteaux</span>
               <span class="department-card__detail">Pour célébrer les beaux moments</span>
               <span class="department-card__arrow" aria-hidden="true">↗</span>
@@ -284,12 +289,16 @@
               Le formulaire intégré de démonstration est actuellement disponible en français seulement.
             </p>
             <p class="demo-notice"><a href="./demande-services.html?service=epicerie#demande">Essayer plutôt le formulaire combiné bilingue, sans envoi ↗</a></p>
-            <iframe
-              class="demo-form"
-              src="https://tally.so/embed/GexPOO?hideTitle=1&amp;transparentBackground=1"
-              title="Laflamme Express — formulaire de démonstration, données fictives uniquement"
-              referrerpolicy="strict-origin-when-cross-origin"
-            ></iframe>
+            <details class="demo-form-loader">
+              <summary>Ouvrir le formulaire de démonstration</summary>
+              <p class="demo-notice">En ouvrant ce formulaire, vous chargez Tally et Google reCAPTCHA, qui peuvent utiliser des témoins tiers. Utilisez uniquement des données fictives.</p>
+              <iframe
+                class="demo-form"
+                data-src="https://tally.so/embed/GexPOO?hideTitle=1&amp;transparentBackground=1"
+                title="Laflamme Express — formulaire de démonstration, données fictives uniquement"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+            </details>
             <p class="demo-notice">
               Le formulaire ne s’affiche pas?
               <a href="https://tally.so/r/GexPOO" target="_blank" rel="noopener noreferrer">Ouvrir la démo dans un nouvel onglet ↗</a>.

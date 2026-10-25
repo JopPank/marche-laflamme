@@ -1,6 +1,17 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#navigation");
 
+const demoFormLoader = document.querySelector(".demo-form-loader");
+if (demoFormLoader) {
+  demoFormLoader.addEventListener("toggle", () => {
+    const frame = demoFormLoader.querySelector("iframe[data-src]");
+    if (demoFormLoader.open && frame) {
+      frame.src = frame.dataset.src;
+      frame.removeAttribute("data-src");
+    }
+  });
+}
+
 const pageLinks = [
   ["index.html", "Accueil"],
   ["service-boucherie.html", "Boucherie"],

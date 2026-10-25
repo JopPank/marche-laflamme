@@ -1,4 +1,6 @@
 const english = {
+  "Ouvrir le formulaire de démonstration": "Open the demo form",
+  "En ouvrant ce formulaire, vous chargez Tally et Google reCAPTCHA, qui peuvent utiliser des témoins tiers. Utilisez uniquement des données fictives.": "Opening this form loads Tally and Google reCAPTCHA, which may use third-party cookies. Use fictional information only.",
   "Rayon de fruits et légumes du Marché Laflamme": "Marché Laflamme's produce department",
   "Plateau de crudités et trempette du Marché Laflamme": "Marché Laflamme's raw vegetable platter with dip",
   "La meilleure fraîcheur possible": "The freshest possible produce",
