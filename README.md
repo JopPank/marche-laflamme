@@ -61,7 +61,7 @@ Inventaire vérifié le **25 octobre 2026** via le [plan de site officiel](https
 | `/a-propos/` | `a-propos.html` | Histoire familiale et chronologie |
 | `/nous-joindre/` | `contact.html` | Téléphone, courriel, adresse, carte et réseaux sociaux |
 
-`app.js` centralise les liens de navigation et le répertoire des pages du pied de page. « Nos rayons » est un menu natif accessible au clavier, avec fermeture par Échap; le menu mobile reste défilable. Toutes les pages sont du HTML statique avec la feuille CSS existante : pas de migration Tailwind, de dépendance ni de compilation. Les descriptions sont résumées plutôt que reproduites intégralement; le menu traiteur détaillé reste consultable via le site officiel.
+`app.js` centralise les liens de navigation et le répertoire des pages du pied de page. La barre bordeaux à liens dorés reprend l’organisation du site original : Spéciaux hebdomadaires, Produits frais, Nos services, À propos et Nous joindre. Produits frais regroupe les cinq rayons; Nos services donne accès au traiteur, aux gâteaux, à la livraison et à Laflamme Express. Tous les liens mènent aux pages locales. Les deux menus natifs sont accessibles au clavier, avec fermeture par Échap et fermeture de l’autre menu à l’ouverture; le menu mobile reste défilable. Le sélecteur FR / EN est conservé près du logo. Toutes les pages sont du HTML statique avec la feuille CSS existante : pas de migration Tailwind, de dépendance ni de compilation. Les descriptions sont résumées plutôt que reproduites intégralement; le menu traiteur détaillé reste consultable via le site officiel.
 
 ### Données vérifiées et limites
 

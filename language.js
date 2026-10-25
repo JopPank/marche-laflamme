@@ -1,4 +1,6 @@
 const english = {
+  "Produits frais": "Fresh products",
+  "À propos": "About us",
   "Marché Laflamme | Le marché d'Aylmer depuis 1959": "Marché Laflamme | Aylmer's market since 1959",
   "Service traiteur | Marché Laflamme": "Catering | Marché Laflamme",
   "Gâteaux personnalisés | Marché Laflamme": "Custom Cakes | Marché Laflamme",

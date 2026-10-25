@@ -12,7 +12,7 @@ const pageLinks = [
   ["pret-a-manger.html", "Prêt à manger"],
   ["speciaux-hebdomadaires.html", "Spéciaux hebdomadaires"],
   ["livraison.html", "Livraison"],
-  ["a-propos.html", "Notre marché"],
+  ["a-propos.html", "À propos"],
   ["contact.html", "Nous joindre"],
 ];
 const currentPage = decodeURIComponent(location.pathname).split("/").pop() || "index.html";
@@ -22,14 +22,35 @@ const pageLink = ([file, label]) =>
 navigation.innerHTML = `
   ${pageLink(pageLinks[8])}
   <details class="department-menu">
-    <summary>Nos rayons</summary>
-    <div class="department-menu__links">${pageLinks.slice(1, 8).map(pageLink).join("")}</div>
+    <summary>Produits frais</summary>
+    <div class="department-menu__links">${[...pageLinks.slice(1, 5), pageLinks[7]].map(pageLink).join("")}</div>
+  </details>
+  <details class="department-menu">
+    <summary>Nos services</summary>
+    <div class="department-menu__links">
+      ${[pageLinks[6], pageLinks[5], pageLinks[9]].map(pageLink).join("")}
+      ${pageLink(["demande-services.html", "Laflamme Express"])}
+    </div>
   </details>
   ${pageLink(pageLinks[10])}
-  ${pageLink(pageLinks[9])}
   ${pageLink(pageLinks[11])}
-  <a class="button button--small button--red navigation__cta" href="./demande-services.html">Laflamme Express</a>
 `;
+
+const navigationBar = document.createElement("div");
+navigationBar.className = "navigation-bar";
+navigation.classList.add("container");
+navigationBar.append(navigation);
+document.querySelector(".site-header").append(navigationBar);
+
+navigation.querySelectorAll("details").forEach((menu) => {
+  menu.addEventListener("toggle", () => {
+    if (menu.open) {
+      navigation.querySelectorAll("details").forEach((other) => {
+        if (other !== menu) other.open = false;
+      });
+    }
+  });
+});
 
 const footer = document.querySelector(".site-footer");
 const directory = document.createElement("nav");

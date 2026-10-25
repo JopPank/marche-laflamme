@@ -214,6 +214,59 @@ a {
   outline-offset: 2px;
 }
 
+.navigation-bar {
+  background: #913e47;
+}
+
+.navigation-bar .navigation {
+  justify-content: center;
+  min-height: 50px;
+  gap: clamp(18px, 3vw, 38px);
+}
+
+.navigation-bar .navigation > a,
+.navigation-bar .department-menu > summary {
+  color: #ffdc67;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navigation-bar .navigation > a:hover,
+.navigation-bar .navigation > a[aria-current="page"],
+.navigation-bar .department-menu > summary:hover {
+  color: white;
+}
+
+.navigation-bar .department-menu > summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.navigation-bar .department-menu > summary::-webkit-details-marker {
+  display: none;
+}
+
+.navigation-bar .department-menu > summary::after {
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg) translateY(-2px);
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  content: "";
+}
+
+.navigation-bar .department-menu[open] > summary::after {
+  transform: rotate(225deg);
+}
+
+.navigation-bar .navigation :is(a, summary):focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
 .navigation {
   display: flex;
   align-items: center;
@@ -427,12 +480,43 @@ a {
 }
 
 @media (max-width: 900px) {
+  .navigation-bar .navigation {
+    gap: 18px;
+  }
+
+  .navigation-bar .navigation > a,
+  .navigation-bar .department-menu > summary {
+    font-size: 11px;
+  }
+
   .catalog-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 760px) {
+  .navigation-bar .navigation {
+    width: auto;
+    min-height: 0;
+    gap: 0;
+    background: #913e47;
+  }
+
+  .navigation-bar .department-menu__links {
+    background: var(--paper);
+  }
+
+  .navigation-bar .navigation > a,
+  .navigation-bar .department-menu > summary {
+    padding-block: 15px;
+    border-bottom-color: rgb(255 220 103 / 25%);
+    font-size: 12px;
+  }
+
+  .navigation-bar .department-menu {
+    border-bottom-color: rgb(255 220 103 / 25%);
+  }
+
   .department-menu {
     border-bottom: 1px solid var(--line);
   }
