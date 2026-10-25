@@ -6,17 +6,18 @@
     <meta name="theme-color" content="#fbf8f1">
     <meta
       name="description"
-      content="Depuis 1942, Marché Laflamme sert les familles d'Aylmer. Découvrez nos rayons frais et demandez une livraison avec Laflamme Express."
+      content="Depuis 1959, Marché Laflamme sert les familles d'Aylmer. Découvrez nos rayons frais et demandez une livraison avec Laflamme Express."
     >
-    <title>Marché Laflamme | Le marché d'Aylmer depuis 1942</title>
+    <title>Marché Laflamme | Le marché d'Aylmer depuis 1959</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="./styles.css?v=20261024-brand">
-    <script src="./app.js?v=20261024-tally" defer></script>
+    <link rel="stylesheet" href="./styles.css?v=20261025-pages">
+    <script src="./app.js?v=20261025-pages" defer></script>
+    <script src="./language.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#contenu">Passer au contenu</a>
@@ -27,7 +28,7 @@
     <div class="announcement">
       <div class="container announcement__inner">
         <span class="announcement__dot" aria-hidden="true"></span>
-        <p>Au service des familles d’Aylmer depuis 1942</p>
+        <p>Au service des familles d’Aylmer depuis 1959</p>
         <a href="tel:+18196844156">Appelez-nous <span aria-hidden="true">↗</span></a>
       </div>
     </div>
@@ -36,8 +37,13 @@
       <div class="container header__inner">
         <a class="brand" href="#accueil" aria-label="Marché Laflamme, accueil">
           <img class="brand__logo" src="./assets/marche-laflamme-logo.webp" width="316" height="136" alt="Marché Laflamme">
-          <span class="brand__caption">Le goût d’ici, depuis 1942</span>
+          <span class="brand__caption">Le goût d’ici, depuis 1959</span>
         </a>
+        <div class="language-switch" role="group" aria-label="Langue">
+          <button type="button" data-language="fr" aria-label="Passer en français">FR</button>
+          <span aria-hidden="true">|</span>
+          <button type="button" data-language="en" aria-label="Switch to English">EN</button>
+        </div>
 
         <button
           class="menu-toggle"
@@ -52,6 +58,7 @@
         <nav class="navigation" id="navigation" aria-label="Navigation principale">
           <a href="#circulaire">Circulaire et promotions</a>
           <a href="#rayons">Nos rayons</a>
+          <a href="./service-traiteur.html">Traiteur & gâteaux</a>
           <a href="#histoire">Notre marché</a>
           <a href="#contact">Nous joindre</a>
           <a class="button button--small button--red navigation__cta" href="#commande">
@@ -63,41 +70,75 @@
     </header>
 
     <main id="contenu">
-      <section class="flyer" id="circulaire" aria-labelledby="flyer-title">
-        <div class="container flyer__inner">
-          <div class="flyer__copy">
-            <p class="eyebrow"><span class="eyebrow__line"></span> Circulaire et promotions</p>
-            <h2 id="flyer-title">Les spéciaux<br><em>de la semaine.</em></h2>
-            <p><strong>Circulaire du 22 au 28 octobre 2026.</strong>
-              Retrouvez les offres publiées par Marché Laflamme sur son site officiel.
-              Prix, formats et conditions à vérifier dans la circulaire; disponibilité à confirmer au marché.</p>
-            <a class="button button--red" href="https://marchelaflamme.com/speciaux-hebdomadaires/"
-              target="_blank" rel="noopener noreferrer">
-              Consulter les spéciaux officiels <span aria-hidden="true">↗</span>
-            </a>
-            <p>Cet aperçu daté ne se met pas à jour automatiquement. Pour une autre semaine,
-              consultez la page officielle ou téléphonez au <a href="tel:+18196844156">(819) 684-4156</a>
-              pour les détails des offres.</p>
+      <section class="specials" id="circulaire" aria-labelledby="specials-title">
+        <div class="container specials__inner">
+          <div class="specials__heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow__line"></span> Circulaire et promotions</p>
+              <h2 id="specials-title">Les spéciaux <em>de la semaine.</em></h2>
+            </div>
+            <p class="specials__dates">Du 22 au 28 octobre 2026</p>
           </div>
-          <figure class="flyer__preview">
-            <a href="https://marchelaflamme.com/wp-content/uploads/2026/10/IMG_3933.jpeg"
-              target="_blank" rel="noopener noreferrer" aria-label="Agrandir la circulaire du 22 au 28 octobre 2026 dans un nouvel onglet">
-              <img src="https://marchelaflamme.com/wp-content/uploads/2026/10/IMG_3933.jpeg"
-                width="1179" height="1194" referrerpolicy="no-referrer"
-                alt="Circulaire Marché Laflamme du 22 au 28 octobre : offres sur le poulet, les fruits et légumes, la charcuterie, les fromages et les produits d’épicerie. Agrandissez l’image ou appelez le marché pour les prix, formats et conditions.">
+
+          <div class="specials__rail" aria-label="Sélection des spéciaux de la semaine">
+            <a class="specials-card specials-card--flyer"
+              href="https://marchelaflamme.com/speciaux-hebdomadaires/" target="_blank" rel="noopener noreferrer">
+              <span class="specials-card__eyebrow">Marché Laflamme</span>
+              <span class="specials-card__flyer-title">Les spéciaux<br>de la semaine</span>
+              <span class="specials-card__flyer-date">22 — 28 octobre</span>
+              <span class="specials-card__flyer-link">Voir la circulaire <span aria-hidden="true">↗</span></span>
             </a>
-            <figcaption>Du 22 au 28 octobre 2026 ·
-              <a href="https://marchelaflamme.com/wp-content/uploads/2026/10/IMG_3933.jpeg"
-                target="_blank" rel="noopener noreferrer">Agrandir la circulaire ↗</a><br>
-              Source : <a href="https://marchelaflamme.com/speciaux-hebdomadaires/"
-                target="_blank" rel="noopener noreferrer">site officiel du Marché Laflamme</a>.
-              Si l’image ne s’affiche pas, consultez cette page.</figcaption>
-          </figure>
+
+            <article class="specials-card">
+              <div class="specials-card__image specials-card__image--chicken" aria-hidden="true"></div>
+              <div class="specials-card__details">
+                <p class="specials-card__category">Boucherie</p>
+                <h3>Poitrine de poulet désossée</h3>
+                <p class="specials-card__price">5,99 $ <span>/ lb</span></p>
+                <p class="specials-card__unit">13,21 $ / kg</p>
+              </div>
+            </article>
+
+            <article class="specials-card">
+              <div class="specials-card__image specials-card__image--peppers" aria-hidden="true"></div>
+              <div class="specials-card__details">
+                <p class="specials-card__category">Fruits et légumes</p>
+                <h3>Trio de poivrons</h3>
+                <p class="specials-card__price">2,99 $ <span>chacun</span></p>
+              </div>
+            </article>
+
+            <article class="specials-card">
+              <div class="specials-card__image specials-card__image--celery" aria-hidden="true"></div>
+              <div class="specials-card__details">
+                <p class="specials-card__category">Fruits et légumes</p>
+                <h3>Céleri</h3>
+                <p class="specials-card__price">2 / 3 $</p>
+              </div>
+            </article>
+
+            <article class="specials-card">
+              <div class="specials-card__image specials-card__image--apples" aria-hidden="true"></div>
+              <div class="specials-card__details">
+                <p class="specials-card__category">Fruits et légumes</p>
+                <h3>Pommes Royal Gala ou Granny Smith</h3>
+                <p class="specials-card__price">1,49 $ <span>/ lb</span></p>
+                <p class="specials-card__unit">3,28 $ / kg</p>
+              </div>
+            </article>
+          </div>
+
+          <p class="specials__note">
+            Prix et offres selon la circulaire officielle, valides du 22 au 28 octobre 2026.
+            <a href="https://marchelaflamme.com/speciaux-hebdomadaires/" target="_blank" rel="noopener noreferrer">
+              Consultez la circulaire pour les détails et conditions <span aria-hidden="true">↗</span>
+            </a>
+          </p>
         </div>
       </section>
 
       <section class="hero" id="accueil" aria-labelledby="hero-title">
-        <div class="hero__photo" role="img" aria-label="La façade du Marché Laflamme à Aylmer"></div>
+        <div class="hero__photo" role="img" aria-label="Myriam et son père au rayon des fruits et légumes du Marché Laflamme"></div>
         <div class="hero__wash"></div>
         <div class="container hero__content">
           <p class="eyebrow"><span class="eyebrow__line"></span> Votre marché de quartier</p>
@@ -114,7 +155,7 @@
           </div>
           <div class="hero__note">
             <span class="hero__note-icon" aria-hidden="true">✳</span>
-            <span>Une histoire de famille<br><strong>depuis 1942</strong></span>
+            <span>Une histoire de famille<br><strong>depuis 1959</strong></span>
           </div>
         </div>
         <img class="hero__logo" src="./assets/marche-laflamme-logo.webp" width="316" height="136" alt="" aria-hidden="true">
@@ -128,7 +169,7 @@
           </div>
           <div class="intro__copy">
             <p>
-              Depuis plus de 80 ans, notre famille accueille les gens d’Aylmer avec
+              Depuis plus de 60 ans, notre famille accueille les gens d’Aylmer avec
               des produits choisis avec soin et un service attentionné. Entrez pour
               vos essentiels, restez pour les petites découvertes.
             </p>
@@ -150,50 +191,48 @@
           </div>
 
           <div class="department-grid">
-            <a class="department-card department-card--meat" href="#commande">
-              <span class="department-card__number">01</span>
-              <span class="department-card__icon" aria-hidden="true">✳</span>
+            <a class="department-card department-card--meat" href="./service-boucherie.html">
+              <img class="department-card__photo" src="./assets/butcher-sausages.webp" width="960" height="640" loading="lazy" alt="" aria-hidden="true">
               <span class="department-card__name">Boucherie</span>
               <span class="department-card__detail">De bons morceaux, bien choisis</span>
               <span class="department-card__arrow" aria-hidden="true">↗</span>
             </a>
-            <a class="department-card department-card--cheese" href="#commande">
-              <span class="department-card__number">02</span>
-              <span class="department-card__icon" aria-hidden="true">◒</span>
+            <a class="department-card department-card--cheese" href="./charcuterie-fromage.html">
+              <img class="department-card__photo" src="https://marchelaflamme.com/wp-content/uploads/2023/12/Petits-cubes-480x480.png" width="480" height="480" loading="lazy" alt="" aria-hidden="true">
               <span class="department-card__name">Charcuterie<br>& fromages</span>
               <span class="department-card__detail">Pour les petits et grands plateaux</span>
               <span class="department-card__arrow" aria-hidden="true">↗</span>
             </a>
-            <a class="department-card department-card--produce" href="#commande">
-              <span class="department-card__number">03</span>
-              <span class="department-card__icon" aria-hidden="true">✿</span>
+            <a class="department-card department-card--produce" href="./fruits-legumes.html">
+              <img class="department-card__photo" src="./assets/department-produce.jpg" width="720" height="288" loading="lazy" alt="" aria-hidden="true">
               <span class="department-card__name">Fruits<br>& légumes</span>
               <span class="department-card__detail">De la couleur, chaque jour</span>
               <span class="department-card__arrow" aria-hidden="true">↗</span>
             </a>
-            <a class="department-card department-card--bakery" href="#commande">
-              <span class="department-card__number">04</span>
-              <span class="department-card__icon" aria-hidden="true">⌂</span>
+            <a class="department-card department-card--bakery" href="./boulangerie.html">
+              <img class="department-card__photo" src="https://marchelaflamme.com/wp-content/uploads/2023/12/Trio-de-beignes-a-lancienne-480x480.png" width="480" height="480" loading="lazy" alt="" aria-hidden="true">
               <span class="department-card__name">Boulangerie</span>
               <span class="department-card__detail">Le plaisir du bon pain</span>
               <span class="department-card__arrow" aria-hidden="true">↗</span>
             </a>
-            <a class="department-card department-card--catering" href="#commande">
-              <span class="department-card__number">05</span>
-              <span class="department-card__icon" aria-hidden="true">❋</span>
+            <a class="department-card department-card--catering" href="./service-traiteur.html">
+              <img class="department-card__photo" src="https://marchelaflamme.com/wp-content/uploads/2023/12/Duo-de-mini-brochettes-480x480.png" width="480" height="480" loading="lazy" alt="" aria-hidden="true">
               <span class="department-card__name">Traiteur</span>
               <span class="department-card__detail">Des idées pour recevoir</span>
               <span class="department-card__arrow" aria-hidden="true">↗</span>
             </a>
-            <a class="department-card department-card--cakes" href="#commande">
-              <span class="department-card__number">06</span>
-              <span class="department-card__icon" aria-hidden="true">✧</span>
+            <a class="department-card department-card--cakes" href="./service-gateaux.html">
+              <img class="department-card__photo" src="https://marchelaflamme.com/wp-content/uploads/2023/11/Marche-Laflamme-Gateau-personnalise-Aylmer-2-480x477.png" width="480" height="477" loading="lazy" alt="" aria-hidden="true">
               <span class="department-card__name">Gâteaux</span>
               <span class="department-card__detail">Pour célébrer les beaux moments</span>
               <span class="department-card__arrow" aria-hidden="true">↗</span>
             </a>
           </div>
           <p class="department-footnote">Un produit en tête? Essayez une liste fictive dans notre démonstration.</p>
+          <div class="service-actions">
+            <a class="text-link text-link--red" href="./pret-a-manger.html">Découvrir les plats prêts à manger ↗</a>
+            <a class="text-link text-link--red" href="./livraison.html">Livraison et cueillette ↗</a>
+          </div>
         </div>
       </section>
 
@@ -241,6 +280,10 @@
               avec une feuille privée pour préparer une fiche imprimable.
               N’indiquez ni vraies coordonnées, ni données de paiement.
             </p>
+            <p class="demo-notice demo-form-language-note">
+              Le formulaire intégré de démonstration est actuellement disponible en français seulement.
+            </p>
+            <p class="demo-notice"><a href="./demande-services.html?service=epicerie#demande">Essayer plutôt le formulaire combiné bilingue, sans envoi ↗</a></p>
             <iframe
               class="demo-form"
               src="https://tally.so/embed/GexPOO?hideTitle=1&amp;transparentBackground=1"
@@ -290,13 +333,18 @@
           </div>
           <span class="visit__decoration" aria-hidden="true">M</span>
         </div>
+        <div class="container visit__more">
+          <p>Heures d’ouverture : appelez le marché pour confirmer les heures actuelles et les jours fériés.</p>
+          <a href="./contact.html">Coordonnées, carte et renseignements ↗</a>
+          <p><a href="./a-propos.html">Découvrir notre histoire</a> · <a href="https://maps.google.com/?q=March%C3%A9+Laflamme+126+rue+Principale+Gatineau" target="_blank" rel="noopener noreferrer">Consulter les avis clients sur Google ↗</a></p>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container site-footer__inner">
         <a class="footer-brand" href="#accueil">Marché <strong>Laflamme</strong></a>
-        <p>Un marché de famille. Un marché d’Aylmer. Depuis 1942.</p>
+        <p>Un marché de famille. Un marché d’Aylmer. Depuis 1959.</p>
         <a class="site-footer__top" href="#accueil">Retour en haut ↑</a>
         <span class="site-footer__copyright">© <span id="current-year"></span> Marché Laflamme</span>
       </div>

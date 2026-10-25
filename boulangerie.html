@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr-CA">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Pains, pâtisseries et tarifs des gâteaux et cupcakes du Marché Laflamme.">
+    <title>Boulangerie & pâtisserie | Marché Laflamme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+    <script src="./language.js" defer></script>
+  </head>
+  <body class="service-page">
+    <a class="skip-link" href="#contenu">Passer au contenu</a>
+    <aside class="demo-banner" aria-label="Avis de démonstration">Démonstration de site — aucune commande réelle. Utilisez uniquement des données fictives.</aside>
+    <header class="site-header"><div class="container header__inner">
+      <a class="brand" href="./index.html" aria-label="Marché Laflamme, accueil"><img class="brand__logo" src="./assets/marche-laflamme-logo.webp" width="316" height="136" alt="Marché Laflamme"><span class="brand__caption">Le goût d’ici, depuis 1959</span></a>
+      <div class="language-switch" role="group" aria-label="Langue"><button type="button" data-language="fr" aria-label="Passer en français">FR</button><span aria-hidden="true">|</span><button type="button" data-language="en" aria-label="Switch to English">EN</button></div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Ouvrir le menu"><span></span><span></span></button>
+      <nav class="navigation" id="navigation" aria-label="Navigation principale"><a href="./index.html#rayons">Nos rayons</a><a href="./contact.html">Nous joindre</a></nav>
+    </div></header>
+    <main id="contenu">
+      <section class="service-hero" aria-labelledby="service-title"><div class="container service-hero__inner">
+        <div><p class="eyebrow">Du pain aux célébrations</p><h1 id="service-title">Boulangerie <em>& pâtisserie.</em></h1><p class="service-hero__lead">Pains cuits en magasin, desserts et gâteaux personnalisés : retrouvez les options et les tarifs dans un seul endroit.</p><div class="service-actions"><a class="button button--red" href="#tarifs">Prix des gâteaux et cupcakes</a><a class="text-link text-link--red" href="./service-gateaux.html">Personnaliser un gâteau</a></div></div>
+        <img class="butchery-hero__image" src="https://marchelaflamme.com/wp-content/uploads/2023/12/Trio-de-beignes-a-lancienne-480x480.png" width="480" height="480" alt="Beignes à l’ancienne du Marché Laflamme">
+      </div></section>
+      <section class="service-content" id="tarifs" aria-labelledby="pricing-title"><div class="container">
+        <div class="service-section-heading"><div><p class="eyebrow">Pour planifier votre fête</p><h2 id="pricing-title">Gâteaux : <em>formats et prix.</em></h2></div><p>Tarifs affichés sur la boulangerie officielle, vérifiés le 25 octobre 2026. Prix, portions et disponibilité à confirmer avant de commander.</p></div>
+        <div class="table-scroll" role="region" aria-label="Prix des gâteaux" tabindex="0">
+          <table class="pricing-table">
+            <caption>Gâteaux personnalisés — prix publiés en dollars canadiens</caption>
+            <thead><tr><th scope="col">Format</th><th scope="col">Personnes</th><th scope="col">Prix de base</th><th scope="col">Avec image comestible</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Rond 8 po, 1 étage</th><td>4</td><td>11,99 $</td><td>21,99 $</td></tr>
+              <tr><th scope="row">Rond 8 po, 2 étages</th><td>8–10</td><td>17,99 $</td><td>27,99 $</td></tr>
+              <tr><th scope="row">1 slab, 1 étage</th><td>6–8</td><td>19,99 $</td><td>29,99 $</td></tr>
+              <tr><th scope="row">1 slab, 2 étages</th><td>15–20</td><td>29,99 $</td><td>39,99 $</td></tr>
+              <tr><th scope="row">2 slabs côte à côte, 2 étages</th><td>30–40</td><td>59,99 $</td><td>69,99 $</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="service-footnote">Image comestible : supplément publié de 10 $. La colonne « Avec image comestible » inclut ce supplément; il ne s’ajoute pas une deuxième fois.</p>
+        <p class="service-footnote">Les portions du formulaire officiel diffèrent pour certains formats : 2–4 personnes pour le petit rond et 40–50 pour les deux slabs. Le tableau reprend la page Boulangerie; faites confirmer le format adapté à votre groupe.</p>
+        <div class="butchery-ready">
+          <div><h2>Cupcakes <em>à partager.</em></h2><p>Vanille, chocolat et red velvet.</p></div>
+          <div class="table-scroll" role="region" aria-label="Prix des cupcakes" tabindex="0"><table class="pricing-table"><caption>Tarif par cupcake</caption><thead><tr><th scope="col">Quantité</th><th scope="col">Prix unitaire</th></tr></thead><tbody><tr><th scope="row">1–99</th><td>0,99 $</td></tr><tr><th scope="row">100+</th><td>0,89 $</td></tr></tbody></table></div>
+        </div>
+        <div class="service-actions"><a class="button button--red" href="./demande-services.html?service=gateau#demande">Préparer une demande</a><a class="text-link text-link--red" href="./service-gateaux.html">Formats, saveurs et décorations</a><a class="text-link text-link--red" href="https://marchelaflamme.com/boulangerie/" target="_blank" rel="noopener noreferrer">Consulter la page officielle</a></div>
+      </div></section>
+    </main>
+    <footer class="site-footer"><div class="container site-footer__inner"><a class="footer-brand" href="./index.html">Marché <strong>Laflamme</strong></a><p>Un marché de famille. Un marché d’Aylmer. Depuis 1959.</p><a class="site-footer__top" href="#contenu">Retour en haut ↑</a><span class="site-footer__copyright">© <span id="current-year"></span> Marché Laflamme</span></div></footer>
+  </body>
+</html>

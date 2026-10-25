@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="fr-CA">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fbf8f1">
+    <meta name="description" content="Découvrez les catégories de plateaux du service traiteur du Marché Laflamme à Aylmer et préparez une demande.">
+    <title>Service traiteur | Marché Laflamme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+    <script src="./language.js" defer></script>
+  </head>
+  <body class="service-page">
+    <a class="skip-link" href="#contenu">Passer au contenu</a>
+    <aside class="demo-banner" aria-label="Avis de démonstration">
+      Démonstration de site — aucune commande réelle. Utilisez uniquement des données fictives.
+    </aside>
+
+    <div class="announcement">
+      <div class="container announcement__inner">
+        <span class="announcement__dot" aria-hidden="true"></span>
+        <p>Au service des familles d’Aylmer depuis 1959</p>
+        <a href="tel:+18196844156">Appelez-nous <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header__inner">
+        <a class="brand" href="./index.html#accueil" aria-label="Marché Laflamme, accueil">
+          <img class="brand__logo" src="./assets/marche-laflamme-logo.webp" width="316" height="136" alt="Marché Laflamme">
+          <span class="brand__caption">Le goût d’ici, depuis 1959</span>
+        </a>
+        <div class="language-switch" role="group" aria-label="Langue">
+          <button type="button" data-language="fr" aria-label="Passer en français">FR</button>
+          <span aria-hidden="true">|</span>
+          <button type="button" data-language="en" aria-label="Switch to English">EN</button>
+        </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Ouvrir le menu">
+          <span></span><span></span>
+        </button>
+        <nav class="navigation" id="navigation" aria-label="Navigation principale">
+          <a href="./index.html#circulaire">Circulaire</a>
+          <a href="./index.html#rayons">Nos rayons</a>
+          <a href="./service-traiteur.html" aria-current="page">Traiteur & gâteaux</a>
+          <a href="./index.html#contact">Nous joindre</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <section class="service-hero" aria-labelledby="service-title">
+        <div class="container service-hero__inner">
+          <div>
+            <p class="eyebrow"><span class="eyebrow__line"></span> Pour recevoir en toute simplicité</p>
+            <h1 id="service-title">Le plaisir de partager.<br><em>À votre table.</em></h1>
+            <p class="service-hero__lead">
+              Des plateaux pour les rencontres, les fêtes et les repas en groupe.
+              Parcourez les catégories, puis indiquez vos choix et quantités dans une seule demande.
+            </p>
+            <div class="service-actions">
+              <a class="button button--red" href="./demande-services.html?service=traiteur#demande">
+                Préparer une demande <span aria-hidden="true">↗</span>
+              </a>
+              <a class="text-link text-link--red" href="https://marchelaflamme.com/service-de-traiteur/" target="_blank" rel="noopener noreferrer">
+                Voir le menu officiel <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+          <aside class="service-fact" aria-label="Informations sur les commandes">
+            <span class="service-fact__icon" aria-hidden="true">✳</span>
+            <p>Chaque événement est différent.</p>
+            <strong>Choisissez vos plateaux et quantités; l’équipe confirmera les détails.</strong>
+          </aside>
+        </div>
+      </section>
+
+      <section class="service-switcher" aria-labelledby="service-switcher-title">
+        <div class="container">
+          <p class="eyebrow" id="service-switcher-title"><span class="eyebrow__line"></span> Nos services</p>
+          <nav class="service-switcher__links" aria-label="Choisir un service">
+            <a class="service-switcher__link" href="./service-traiteur.html" aria-current="page">
+              <span class="service-switcher__number" aria-hidden="true">01</span>
+              <span class="service-switcher__copy"><strong>Traiteur</strong><span>Plateaux et repas à partager</span></span>
+              <span class="service-switcher__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="service-switcher__link" href="./service-gateaux.html">
+              <span class="service-switcher__number" aria-hidden="true">02</span>
+              <span class="service-switcher__copy"><strong>Gâteaux personnalisés</strong><span>Formats, saveurs et décorations</span></span>
+              <span class="service-switcher__arrow" aria-hidden="true">↗</span>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="service-content" id="offres" aria-labelledby="catering-categories">
+        <div class="container">
+          <div class="service-photo-story">
+            <img
+              src="https://marchelaflamme.com/wp-content/uploads/2023/08/Service-traiteur-Marche-Laflamme-480x480.png"
+              srcset="https://marchelaflamme.com/wp-content/uploads/2023/08/Service-traiteur-Marche-Laflamme-480x480.png 480w, https://marchelaflamme.com/wp-content/uploads/2023/08/Service-traiteur-Marche-Laflamme.png 512w"
+              sizes="(max-width: 650px) 100vw, 240px"
+              width="512" height="512" loading="lazy"
+              alt="Illustration du service traiteur du Marché Laflamme"
+            >
+            <div>
+              <p class="eyebrow"><span class="eyebrow__line"></span> Toujours frais et préparé avec soin</p>
+              <h2>Des plateaux <em>pour toutes les occasions.</em></h2>
+              <p>Pour une rencontre, une fête ou un repas en groupe, explorez les choix proposés par le marché.</p>
+            </div>
+          </div>
+          <div class="service-section-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow__line"></span> Une offre à votre goût</p>
+              <h2 id="catering-categories">Explorez par <em>catégorie.</em></h2>
+            </div>
+            <p>Un menu clair, sans longue suite de photos à faire défiler.</p>
+          </div>
+          <div class="service-category-grid">
+            <article class="service-category">
+              <img src="https://marchelaflamme.com/wp-content/uploads/2023/12/Trio-de-beignes-a-lancienne-480x480.png" srcset="https://marchelaflamme.com/wp-content/uploads/2023/12/Trio-de-beignes-a-lancienne-480x480.png 480w, https://marchelaflamme.com/wp-content/uploads/2023/12/Trio-de-beignes-a-lancienne-980x980.png 980w" sizes="(max-width: 650px) calc(100vw - 40px), (max-width: 900px) 30vw, 360px" width="480" height="480" loading="lazy" alt="Plateau de beignes à l’ancienne du service déjeuner du Marché Laflamme">
+              <div class="service-category__body"><span>01</span><h3>Déjeuners</h3><p>Viennoiseries, muffins, beignes et autres idées pour commencer la journée.</p></div>
+            </article>
+            <article class="service-category">
+              <img src="https://marchelaflamme.com/wp-content/uploads/2023/12/Duo-de-mini-brochettes-480x480.png" srcset="https://marchelaflamme.com/wp-content/uploads/2023/12/Duo-de-mini-brochettes-480x480.png 480w, https://marchelaflamme.com/wp-content/uploads/2023/12/Duo-de-mini-brochettes-980x980.png 980w" sizes="(max-width: 650px) calc(100vw - 40px), (max-width: 900px) 30vw, 360px" width="480" height="480" loading="lazy" alt="Duo de mini-brochettes du service traiteur du Marché Laflamme">
+              <div class="service-category__body"><span>02</span><h3>Tapas</h3><p>Petites bouchées et assortiments à partager.</p></div>
+            </article>
+            <article class="service-category">
+              <img src="https://marchelaflamme.com/wp-content/uploads/2023/12/Le-multi-pains-480x480.png" srcset="https://marchelaflamme.com/wp-content/uploads/2023/12/Le-multi-pains-480x480.png 480w, https://marchelaflamme.com/wp-content/uploads/2023/12/Le-multi-pains-980x980.png 980w" sizes="(max-width: 650px) calc(100vw - 40px), (max-width: 900px) 30vw, 360px" width="480" height="480" loading="lazy" alt="Plateau de sandwichs multi-pains du Marché Laflamme">
+              <div class="service-category__body"><span>03</span><h3>Sandwichs</h3><p>Plateaux et formats variés pour les lunchs et rencontres.</p></div>
+            </article>
+            <article class="service-category">
+              <img src="https://marchelaflamme.com/wp-content/uploads/2023/12/Salad-cesar-480x480.png" srcset="https://marchelaflamme.com/wp-content/uploads/2023/12/Salad-cesar-480x480.png 480w, https://marchelaflamme.com/wp-content/uploads/2023/12/Salad-cesar-980x980.png 980w" sizes="(max-width: 650px) calc(100vw - 40px), (max-width: 900px) 30vw, 360px" width="480" height="480" loading="lazy" alt="Salade César du service traiteur du Marché Laflamme">
+              <div class="service-category__body"><span>04</span><h3>Salades</h3><p>Salades repas, accompagnements et assortiments.</p></div>
+            </article>
+            <article class="service-category">
+              <img src="https://marchelaflamme.com/wp-content/uploads/2023/12/Petits-cubes-480x480.png" srcset="https://marchelaflamme.com/wp-content/uploads/2023/12/Petits-cubes-480x480.png 480w, https://marchelaflamme.com/wp-content/uploads/2023/12/Petits-cubes-980x980.png 980w" sizes="(max-width: 650px) calc(100vw - 40px), (max-width: 900px) 30vw, 360px" width="480" height="480" loading="lazy" alt="Plateau de fromages et charcuteries du Marché Laflamme">
+              <div class="service-category__body"><span>05</span><h3>Fromages et charcuteries</h3><p>Des plateaux pour composer une table de dégustation.</p></div>
+            </article>
+            <article class="service-category">
+              <img src="https://marchelaflamme.com/wp-content/uploads/2023/12/Fines-pointes-480x480.png" srcset="https://marchelaflamme.com/wp-content/uploads/2023/12/Fines-pointes-480x480.png 480w, https://marchelaflamme.com/wp-content/uploads/2023/12/Fines-pointes-980x980.png 980w" sizes="(max-width: 650px) calc(100vw - 40px), (max-width: 900px) 30vw, 360px" width="480" height="480" loading="lazy" alt="Assortiment de pointes de gâteaux du Marché Laflamme">
+              <div class="service-category__body"><span>06</span><h3>Desserts et fruits</h3><p>Une touche sucrée ou fraîche pour compléter le repas.</p></div>
+            </article>
+          </div>
+          <div class="butchery-ready">
+            <div>
+              <h2>Un buffet froid <em>pour votre groupe.</em></h2>
+              <p>Pour une réunion de travail ou une fête familiale, combinez sandwichs, salades, fromages et charcuteries. Indiquez le nombre d’invités et si les plateaux servent de repas ou d’accompagnement; l’équipe doit confirmer les portions et le prix, sans forfait présumé.</p>
+              <p><a href="./fruits-legumes.html#produce-platters">Voir les portions indicatives des plateaux de fruits et légumes</a></p>
+            </div>
+            <a class="button button--red" href="./demande-services.html?service=traiteur#demande">Préparer une demande</a>
+          </div>
+          <p class="service-footnote">
+            Les choix, prix et disponibilités peuvent changer. Consultez le
+            <a href="https://marchelaflamme.com/service-de-traiteur/" target="_blank" rel="noopener noreferrer">menu officiel</a>
+            ou appelez le <a href="tel:+18196844156">(819) 684-4156</a> pour confirmer.
+          </p>
+          <div class="service-steps" aria-label="Comment préparer une demande traiteur">
+            <article>
+              <img
+                src="https://marchelaflamme.com/wp-content/uploads/2023/08/grocery-delivery-07-480x495.png"
+                srcset="https://marchelaflamme.com/wp-content/uploads/2023/08/grocery-delivery-07-480x495.png 480w, https://marchelaflamme.com/wp-content/uploads/2023/08/grocery-delivery-07-980x1010.png 980w"
+                sizes="(max-width: 650px) 72px, 88px"
+                width="1000" height="1031" loading="lazy"
+                alt=""
+              >
+              <div><h3>Choisissez vos plateaux</h3><p>Notez les articles et les quantités souhaités.</p></div>
+            </article>
+            <article>
+              <img
+                src="https://marchelaflamme.com/wp-content/uploads/2023/10/order-480x480.png"
+                srcset="https://marchelaflamme.com/wp-content/uploads/2023/10/order-480x480.png 480w, https://marchelaflamme.com/wp-content/uploads/2023/10/order.png 512w"
+                sizes="(max-width: 650px) 72px, 88px"
+                width="512" height="512" loading="lazy"
+                alt=""
+              >
+              <div><h3>L’équipe confirme les détails</h3><p>La demande en ligne est un prototype; appelez le marché pour une commande réelle.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-next" aria-label="Autre service">
+        <div class="container service-next__inner">
+          <div><p class="eyebrow"><span class="eyebrow__line"></span> Une autre occasion à célébrer?</p><h2>Découvrez les <em>gâteaux personnalisés.</em></h2></div>
+          <a class="button button--red" href="./service-gateaux.html">Voir le service de gâteaux <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="service-demo-note">
+        <div class="container">
+          <p><strong>Prototype uniquement :</strong> la demande en ligne ne transmet ni n’enregistre aucune information. Pour une vraie commande, communiquez directement avec le marché.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <a class="footer-brand" href="./index.html#accueil">Marché <strong>Laflamme</strong></a>
+        <p>Un marché de famille. Un marché d’Aylmer. Depuis 1959.</p>
+        <a class="site-footer__top" href="#contenu">Retour en haut ↑</a>
+        <span class="site-footer__copyright">© <span id="current-year"></span> Marché Laflamme</span>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="fr-CA">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fbf8f1">
+    <meta name="description" content="Prototype de demande pour les services de gâteaux et de traiteur du Marché Laflamme.">
+    <title>Demande de service | Marché Laflamme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+    <script src="./services.js" defer></script>
+    <script src="./language.js" defer></script>
+  </head>
+  <body class="service-page">
+    <a class="skip-link" href="#contenu">Passer au contenu</a>
+    <aside class="demo-banner" aria-label="Avis de démonstration">
+      Démonstration de site — aucune commande réelle. Utilisez uniquement des données fictives.
+    </aside>
+
+    <div class="announcement">
+      <div class="container announcement__inner">
+        <span class="announcement__dot" aria-hidden="true"></span>
+        <p>Au service des familles d’Aylmer depuis 1959</p>
+        <a href="tel:+18196844156">Appelez-nous <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header__inner">
+        <a class="brand" href="./index.html#accueil" aria-label="Marché Laflamme, accueil">
+          <img class="brand__logo" src="./assets/marche-laflamme-logo.webp" width="316" height="136" alt="Marché Laflamme">
+          <span class="brand__caption">Le goût d’ici, depuis 1959</span>
+        </a>
+        <div class="language-switch" role="group" aria-label="Langue">
+          <button type="button" data-language="fr" aria-label="Passer en français">FR</button>
+          <span aria-hidden="true">|</span>
+          <button type="button" data-language="en" aria-label="Switch to English">EN</button>
+        </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Ouvrir le menu">
+          <span></span><span></span>
+        </button>
+        <nav class="navigation" id="navigation" aria-label="Navigation principale">
+          <a href="./index.html#circulaire">Circulaire</a>
+          <a href="./index.html#rayons">Nos rayons</a>
+          <a href="./service-traiteur.html" aria-current="page">Traiteur & gâteaux</a>
+          <a href="./index.html#contact">Nous joindre</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <section class="service-hero service-hero--compact" aria-labelledby="request-title">
+        <div class="container">
+          <p class="eyebrow"><span class="eyebrow__line"></span> Une seule demande, le bon parcours</p>
+          <h1 id="request-title">Parlons de votre <em>occasion.</em></h1>
+          <p class="service-hero__lead">Choisissez un service pour afficher uniquement les détails utiles. L’équipe doit confirmer la commande, le prix et la disponibilité.</p>
+        </div>
+      </section>
+
+      <section class="service-request-section" id="demande" aria-labelledby="request-form-title">
+        <div class="container service-request-layout">
+          <div class="service-request-intro">
+            <p class="eyebrow"><span class="eyebrow__line"></span> Formulaire combiné</p>
+            <h2 id="request-form-title">Votre demande,<br><em>en quelques étapes.</em></h2>
+            <p>Dans une version réelle, le choix du service adapterait les questions et transmettrait la demande à une boîte gérée par le marché.</p>
+            <div class="service-demo-warning">
+              <strong>Ce formulaire est une maquette.</strong>
+              N’entrez pas de vraies coordonnées. Rien n’est envoyé, stocké ou téléversé.
+              Pour une vraie commande, appelez le <a href="tel:+18196844156">(819) 684-4156</a>.
+            </div>
+          </div>
+
+          <div class="request-card" data-service-request>
+            <fieldset class="request-type">
+              <legend>Qu’aimeriez-vous demander?</legend>
+              <label><input type="radio" name="service-type" value="gateau" checked> <span>Un gâteau</span></label>
+              <label><input type="radio" name="service-type" value="traiteur"> <span>Du traiteur</span></label>
+              <label><input type="radio" name="service-type" value="both"> <span>Les deux</span></label>
+              <label><input type="radio" name="service-type" value="epicerie"> <span>Épicerie ou autre</span></label>
+            </fieldset>
+
+            <div class="request-fields">
+              <fieldset class="request-panel" data-request-panel="gateau">
+                <legend>Détails du gâteau</legend>
+                <div class="request-grid">
+                  <label>Format
+                    <select>
+                      <option value="">Choisir un format</option>
+                      <option>Rond 8 po, 1 étage (2 à 4 personnes)</option>
+                      <option>Rond 8 po, 2 étages (8 à 10 personnes)</option>
+                      <option>Slab, 1 étage (6 à 8 personnes)</option>
+                      <option>Slab, 2 étages (15 à 20 personnes)</option>
+                      <option>Deux slabs, 2 étages (40 à 50 personnes)</option>
+                    </select>
+                  </label>
+                  <label>Saveur
+                    <select>
+                      <option value="">Choisir une saveur</option>
+                      <option>Vanille</option>
+                      <option>Chocolat</option>
+                      <option>Moitié-moitié</option>
+                    </select>
+                  </label>
+                  <label>Glaçage
+                    <select>
+                      <option value="">Choisir un glaçage</option>
+                      <option>Vanille fouettée</option>
+                      <option>Chocolat fouetté</option>
+                      <option>Crème au beurre (supplément à confirmer)</option>
+                    </select>
+                  </label>
+                  <label>Texte à écrire sur le gâteau
+                    <input type="text" maxlength="100" placeholder="Ex. : Bonne fête!">
+                  </label>
+                  <label class="request-grid__wide">Couleurs ou autres précisions
+                    <textarea rows="3" placeholder="Couleurs, occasion, demande d’image comestible…"></textarea>
+                  </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="request-panel" data-request-panel="traiteur" hidden>
+                <legend>Détails du traiteur</legend>
+                <div class="request-grid">
+                  <label>Nombre approximatif d’invités
+                    <input type="number" min="1" step="1" placeholder="Ex. : 12">
+                  </label>
+                  <label>Catégorie
+                    <select>
+                      <option value="">Choisir une catégorie</option>
+                      <option>Déjeuners</option>
+                      <option>Tapas</option>
+                      <option>Sandwichs</option>
+                      <option>Salades</option>
+                      <option>Plateaux de fromages</option>
+                      <option>Charcuteries fines</option>
+                      <option>Desserts et fruits</option>
+                    </select>
+                  </label>
+                  <label class="request-grid__wide">Plateaux souhaités et quantités
+                    <textarea rows="4" placeholder="Un article par ligne, avec la quantité souhaitée."></textarea>
+                  </label>
+                  <label class="request-grid__wide">Allergies ou autres précisions
+                    <textarea rows="3" placeholder="À confirmer avec l’équipe."></textarea>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <fieldset class="request-panel">
+              <legend>Liste libre ou demande spéciale</legend>
+              <label>Liste d’épicerie, commande de viande ou autres précisions
+                <textarea rows="4" placeholder="Un article par ligne : quantité, format et préférences. Données fictives seulement."></textarea>
+              </label>
+              <p>Ce champ complète votre demande. Il ne vérifie ni les stocks ni les prix et ne transmet aucune commande.</p>
+            </fieldset>
+
+            <fieldset class="request-panel">
+              <legend>Date et coordonnées (champs à confirmer pour une vraie demande)</legend>
+              <div class="request-grid">
+                <label>Date souhaitée
+                  <input type="date">
+                </label>
+                <label>Heure souhaitée
+                  <input type="time">
+                </label>
+                <label>Prénom
+                  <input type="text" autocomplete="given-name">
+                </label>
+                <label>Nom
+                  <input type="text" autocomplete="family-name">
+                </label>
+                <label>Téléphone
+                  <input type="tel" autocomplete="tel" placeholder="Données fictives seulement">
+                </label>
+                <label>Courriel
+                  <input type="email" autocomplete="email" placeholder="Données fictives seulement">
+                </label>
+              </div>
+            </fieldset>
+
+            <button class="button button--red request-demo-button" type="button" data-demo-request>
+              Simuler la demande <span aria-hidden="true">↗</span>
+            </button>
+            <p class="request-status" data-request-status aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <a class="footer-brand" href="./index.html#accueil">Marché <strong>Laflamme</strong></a>
+        <p>Un marché de famille. Un marché d’Aylmer. Depuis 1959.</p>
+        <a class="site-footer__top" href="#contenu">Retour en haut ↑</a>
+        <span class="site-footer__copyright">© <span id="current-year"></span> Marché Laflamme</span>
+      </div>
+    </footer>
+  </body>
+</html>

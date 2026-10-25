@@ -27,6 +27,10 @@ textarea { resize: vertical; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; }
 button { background: #b81d24; color: white; border: 1px solid #b81d24; border-radius: 4px; padding: 12px 20px; font: inherit; cursor: pointer; }
 button.secondary { background: white; color: #971820; }
+.language-switch { display: inline-flex; align-items: center; gap: 3px; margin-bottom: 16px; color: #555; font-size: 12px; font-weight: bold; }
+.language-switch button { width: auto; margin: 0; padding: 6px 8px; background: transparent; color: inherit; border: 0; }
+.language-switch button[aria-pressed="true"] { background: #971820; color: white; }
+.language-switch button:focus-visible { outline: 2px solid #176ca4; outline-offset: 2px; }
 :focus-visible { outline: 3px solid #176ca4; outline-offset: 3px; }
 .slip-heading { border-bottom: 2px solid; padding-bottom: 12px; }
 .slip-heading strong { font-size: 0.85rem; }

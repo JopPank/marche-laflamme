@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr-CA">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Livraison et cueillette au Marché Laflamme : rayon de 5 km et frais publiés.">
+    <title>Livraison & cueillette | Marché Laflamme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+    <script src="./language.js" defer></script>
+  </head>
+  <body class="service-page">
+    <a class="skip-link" href="#contenu">Passer au contenu</a>
+    <aside class="demo-banner" aria-label="Avis de démonstration">Démonstration de site — aucune commande réelle. Utilisez uniquement des données fictives.</aside>
+    <header class="site-header"><div class="container header__inner">
+      <a class="brand" href="./index.html" aria-label="Marché Laflamme, accueil"><img class="brand__logo" src="./assets/marche-laflamme-logo.webp" width="316" height="136" alt="Marché Laflamme"><span class="brand__caption">Le goût d’ici, depuis 1959</span></a>
+      <div class="language-switch" role="group" aria-label="Langue"><button type="button" data-language="fr" aria-label="Passer en français">FR</button><span aria-hidden="true">|</span><button type="button" data-language="en" aria-label="Switch to English">EN</button></div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Ouvrir le menu"><span></span><span></span></button>
+      <nav class="navigation" id="navigation" aria-label="Navigation principale"><a href="./index.html#rayons">Nos rayons</a><a href="./contact.html">Nous joindre</a></nav>
+    </div></header>
+    <main id="contenu">
+      <section class="service-hero service-hero--compact" aria-labelledby="service-title"><div class="container">
+        <p class="eyebrow">Votre épicerie, à votre façon</p><h1 id="service-title">Livraison <em>& cueillette.</em></h1><p class="service-hero__lead">Le marché annonce un service dans un rayon de 5 km autour du 126, rue Principale, à Aylmer. Appelez pour confirmer votre adresse, le jour et les modalités.</p><div class="service-actions"><a class="button button--red" href="tel:+18196844156">Appelez le (819) 684-4156</a><a class="text-link text-link--red" href="./demande-services.html?service=epicerie#demande">Essayer la demande combinée</a></div>
+      </div></section>
+      <section class="service-content" aria-labelledby="delivery-options"><div class="container">
+        <div class="service-section-heading"><h2 id="delivery-options">Trois façons <em>de faire vos courses.</em></h2></div>
+        <div class="butchery-grid">
+          <article class="butchery-card"><h3>Vous magasinez, le marché livre</h3><p>Sélectionnez vos articles en magasin. La livraison est annoncée gratuite pour les commandes de plus de 50 $.</p></article>
+          <article class="butchery-card"><h3>Commande préparée et livrée</h3><p>Commandez par téléphone. Frais publiés : 6 $ pour une commande de plus de 50 $; 8 $ pour une commande de moins de 50 $.</p></article>
+          <article class="butchery-card"><h3>Commande préparée pour cueillette</h3><p>Commandez à l’avance puis récupérez vos articles. La préparation est annoncée gratuite pour les commandes de plus de 50 $.</p></article>
+        </div>
+        <div class="butchery-ready"><div><h2>Avant de <em>commander.</em></h2><p>Le site officiel ne précise pas le tarif à exactement 50 $, les créneaux de livraison ni les frais de préparation des petites cueillettes. Confirmez ces détails avec l’équipe. Aucune livraison dans tout Gatineau n’est promise.</p></div><a class="button button--red" href="./contact.html">Nous joindre</a></div>
+        <p class="service-footnote">Conditions consultées le 25 octobre 2026. <a href="https://marchelaflamme.com/livraison-a-domicile/" target="_blank" rel="noopener noreferrer">Consulter la page officielle</a></p>
+      </div></section>
+    </main>
+    <footer class="site-footer"><div class="container site-footer__inner"><a class="footer-brand" href="./index.html">Marché <strong>Laflamme</strong></a><p>Un marché de famille. Un marché d’Aylmer. Depuis 1959.</p><a class="site-footer__top" href="#contenu">Retour en haut ↑</a><span class="site-footer__copyright">© <span id="current-year"></span> Marché Laflamme</span></div></footer>
+  </body>
+</html>

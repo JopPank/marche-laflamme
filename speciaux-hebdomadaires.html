@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr-CA">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Consultez la circulaire et les spéciaux hebdomadaires du Marché Laflamme.">
+    <title>Spéciaux hebdomadaires | Marché Laflamme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+    <script src="./language.js" defer></script>
+  </head>
+  <body class="service-page">
+    <a class="skip-link" href="#contenu">Passer au contenu</a>
+    <aside class="demo-banner" aria-label="Avis de démonstration">Démonstration de site — aucune commande réelle. Utilisez uniquement des données fictives.</aside>
+    <header class="site-header"><div class="container header__inner">
+      <a class="brand" href="./index.html" aria-label="Marché Laflamme, accueil"><img class="brand__logo" src="./assets/marche-laflamme-logo.webp" width="316" height="136" alt="Marché Laflamme"><span class="brand__caption">Le goût d’ici, depuis 1959</span></a>
+      <div class="language-switch" role="group" aria-label="Langue"><button type="button" data-language="fr" aria-label="Passer en français">FR</button><span aria-hidden="true">|</span><button type="button" data-language="en" aria-label="Switch to English">EN</button></div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Ouvrir le menu"><span></span><span></span></button>
+      <nav class="navigation" id="navigation" aria-label="Navigation principale"><a href="./index.html#rayons">Nos rayons</a><a href="./contact.html">Nous joindre</a></nav>
+    </div></header>
+    <main id="contenu">
+      <section class="service-hero service-hero--compact" aria-labelledby="service-title"><div class="container">
+        <p class="eyebrow">Circulaire et promotions</p><h1 id="service-title">Les spéciaux <em>de la semaine.</em></h1><p class="service-hero__lead">Du 22 au 28 octobre 2026</p><p>Cette édition est une copie datée, sans mise à jour automatique. La page officielle reste la référence pour la circulaire la plus récente.</p><div class="service-actions"><a class="button button--red" href="https://marchelaflamme.com/speciaux-hebdomadaires/" target="_blank" rel="noopener noreferrer">Voir la circulaire officielle ↗</a><a class="text-link text-link--red" href="./index.html#circulaire">Aperçu des offres</a></div>
+      </div></section>
+      <section class="service-content" aria-labelledby="flyer-title"><div class="container">
+        <h2 id="flyer-title">Toutes les offres <em>de cette édition.</em></h2>
+        <p>Le visuel officiel est en français. Ouvrez l’image pour l’agrandir; les dates et conditions de la circulaire s’appliquent.</p>
+        <a href="https://marchelaflamme.com/wp-content/uploads/2026/10/IMG_3933.jpeg" target="_blank" rel="noopener noreferrer"><img class="flyer-image" src="https://marchelaflamme.com/wp-content/uploads/2026/10/IMG_3933.jpeg" width="1179" height="1194" loading="lazy" alt="Circulaire du Marché Laflamme du 22 au 28 octobre 2026 — ouvrir pour agrandir"></a>
+      </div></section>
+    </main>
+    <footer class="site-footer"><div class="container site-footer__inner"><a class="footer-brand" href="./index.html">Marché <strong>Laflamme</strong></a><p>Un marché de famille. Un marché d’Aylmer. Depuis 1959.</p><a class="site-footer__top" href="#contenu">Retour en haut ↑</a><span class="site-footer__copyright">© <span id="current-year"></span> Marché Laflamme</span></div></footer>
+  </body>
+</html>

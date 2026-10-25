@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr-CA">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Repas prêts à manger, sandwichs et plats cuisinés au Marché Laflamme.">
+    <title>Prêt à manger | Marché Laflamme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+    <script src="./language.js" defer></script>
+  </head>
+  <body class="service-page">
+    <a class="skip-link" href="#contenu">Passer au contenu</a>
+    <aside class="demo-banner" aria-label="Avis de démonstration">Démonstration de site — aucune commande réelle. Utilisez uniquement des données fictives.</aside>
+    <header class="site-header"><div class="container header__inner">
+      <a class="brand" href="./index.html" aria-label="Marché Laflamme, accueil"><img class="brand__logo" src="./assets/marche-laflamme-logo.webp" width="316" height="136" alt="Marché Laflamme"><span class="brand__caption">Le goût d’ici, depuis 1959</span></a>
+      <div class="language-switch" role="group" aria-label="Langue"><button type="button" data-language="fr" aria-label="Passer en français">FR</button><span aria-hidden="true">|</span><button type="button" data-language="en" aria-label="Switch to English">EN</button></div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Ouvrir le menu"><span></span><span></span></button>
+      <nav class="navigation" id="navigation" aria-label="Navigation principale"><a href="./index.html#rayons">Nos rayons</a><a href="./contact.html">Nous joindre</a></nav>
+    </div></header>
+    <main id="contenu">
+      <section class="service-hero service-hero--compact" aria-labelledby="service-title"><div class="container">
+        <p class="eyebrow">Le repas, sans tout préparer</p><h1 id="service-title">Du fait maison, <em>prêt à manger.</em></h1><p class="service-hero__lead">Sandwichs, pizzas et collations préparés chaque jour, avec des plats cuisinés offerts en portions individuelles ou familiales.</p><div class="service-actions"><a class="button button--red" href="tel:+18196844156">Vérifier les plats du jour</a><a class="text-link text-link--red" href="./service-traiteur.html">Pour un groupe : service traiteur</a></div>
+      </div></section>
+      <section class="service-content" aria-labelledby="meals-title"><div class="container">
+        <div class="service-section-heading"><h2 id="meals-title">Des idées <em>pour le repas.</em></h2><p>Exemples annoncés sur le site officiel, selon la disponibilité du comptoir. Appelez pour les formats et prix du jour.</p></div>
+        <div class="butchery-grid meal-lists">
+          <article class="butchery-card"><h3>Pâtes et classiques</h3><ul><li>Spaghetti et sauce à la viande maison</li><li>Chili</li><li>Macaroni à la viande, nature ou gratiné</li><li>Macaroni trois fromages</li><li>Boucles au bœuf en sauce brune</li><li>Rotini au poulet Tex-Mex</li><li>Ravioli à la viande, sauce rosée</li><li>Penne aux saucisses italiennes maison</li><li>Poulet Alfredo</li><li>Riz au poulet</li></ul></article>
+          <article class="butchery-card"><h3>Plats réconfortants</h3><ul><li>Hamburger steak</li><li>Poulet en sauce</li><li>Vol-au-vent au poulet</li><li>Pain de viande</li><li>Ragoût de boulettes BBQ</li><li>Gratin de jambon et légumes</li><li>Tourtière</li><li>Pâté au poulet</li><li>Pâté chinois</li></ul></article>
+          <article class="butchery-card"><h3>Viandes et accompagnements</h3><ul><li>Côtelettes de porc BBQ</li><li>Rôti de bœuf, sauce au poivre</li><li>Poulet pané aux asperges</li><li>Poulet général Tao avec riz</li><li>Cigares au chou</li></ul><p>Plusieurs plats sont proposés avec purée de pommes de terre et légumes; confirmez l’accompagnement au comptoir.</p></article>
+        </div>
+        <p class="service-footnote"><a href="https://marchelaflamme.com/pret-a-manger/" target="_blank" rel="noopener noreferrer">Consulter la page officielle</a> · <a href="./livraison.html">Livraison et cueillette</a></p>
+      </div></section>
+    </main>
+    <footer class="site-footer"><div class="container site-footer__inner"><a class="footer-brand" href="./index.html">Marché <strong>Laflamme</strong></a><p>Un marché de famille. Un marché d’Aylmer. Depuis 1959.</p><a class="site-footer__top" href="#contenu">Retour en haut ↑</a><span class="site-footer__copyright">© <span id="current-year"></span> Marché Laflamme</span></div></footer>
+  </body>
+</html>
