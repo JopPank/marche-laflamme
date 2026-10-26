@@ -28,7 +28,13 @@ Les images des cartes de fromages, traiteur et gâteaux de l'accueil sont servie
 
 Sur l'accueil, la feuille Google Fonts est préchargée puis appliquée sans bloquer le premier rendu; les polices de remplacement et `display=swap` restent en place, avec une feuille de style de secours sans JavaScript.
 
-Les quatre cartes de spéciaux utilisent de petits recadrages locaux datés `assets/specials-20261022-*.webp`, plutôt que de télécharger la circulaire entière sur l'accueil. Lors d'un changement d'édition, remplacez ces recadrages et leurs références CSS en même temps que les prix et les dates. Le lien vers la circulaire complète reste disponible.
+Les quatre cartes de spéciaux utilisent des photos de produits locales en WebP de 640 × 416 pixels (`assets/specials-{chicken,peppers,celery,apples}.webp`), plutôt que les recadrages flous de la circulaire. Elles sont illustratives, sans prix ni texte imprimé dans l'image; les offres et le lien vers la circulaire complète restent inchangés. Lors d'un changement d'édition, adaptez les photos aux produits annoncés en même temps que les prix et les dates.
+
+Photos utilisées sous la [licence Pexels](https://www.pexels.com/license/), avec recadrage et compression :
+- [Poitrines de poulet, photo 5769375](https://www.pexels.com/photo/seasoned-raw-chicken-breasts-on-cutting-board-5769375/).
+- [Poivrons, photo 5268270](https://www.pexels.com/photo/yellow-red-and-green-bell-peppers-5268270/).
+- [Céleri, photo 13044694](https://www.pexels.com/photo/close-up-photo-of-celery-stalks-13044694/).
+- [Pommes rouges et vertes, photo 1402659](https://www.pexels.com/photo/red-and-green-apples-1402659/).
 
 Le formulaire Tally de l'accueil ne se connecte à Tally ou reCAPTCHA qu'après ouverture de « Ouvrir le formulaire de démonstration ». Replier puis rouvrir le panneau conserve le formulaire et les données fictives déjà saisies. Sans JavaScript ou si le fournisseur est indisponible, le lien permanent vers la démo dans un nouvel onglet et le formulaire combiné bilingue restent disponibles. Les avertissements de confidentialité et de démonstration sont conservés.
 
@@ -38,7 +44,7 @@ Le nom accessible du logo provient de son texte alternatif et de sa légende vis
 
 La section **Circulaire et promotions / Les spéciaux de la semaine** apparaît immédiatement sous la navigation, avant le bandeau du marché, comme point d'entrée prioritaire. La capture Metro fournie sert de référence de hiérarchie seulement; aucune image de produit ou promotion Metro n'est publiée. Les cartes de rayons reprennent des photos déjà utilisées sur le site : saucisses maison de la page officielle de boucherie, légumes recadrés de la circulaire, puis fromages, beignes, bouchées traiteur et gâteau des pages de services. Les badges numérotés des images des cartes ont été retirés.
 
-Le bandeau de spéciaux présente quatre offres transcrites de la circulaire officielle du **22 au 28 octobre 2026**, vérifiée le 25 octobre sur la [page officielle des spéciaux](https://marchelaflamme.com/speciaux-hebdomadaires/) : poitrine de poulet désossée (5,99 $/lb), trio de poivrons (2,99 $ chacun), céleri (2 pour 3 $) et pommes Royal Gala ou Granny Smith (1,49 $/lb). Les recadrages des produits proviennent de l'image officielle `https://marchelaflamme.com/wp-content/uploads/2026/10/IMG_3933.jpeg`; le lien du bandeau ouvre la page officielle pour consulter l'ensemble des offres, formats et conditions.
+Le bandeau de spéciaux présente quatre offres transcrites de la circulaire officielle du **22 au 28 octobre 2026**, vérifiée le 25 octobre sur la [page officielle des spéciaux](https://marchelaflamme.com/speciaux-hebdomadaires/) : poitrine de poulet désossée (5,99 $/lb), trio de poivrons (2,99 $ chacun), céleri (2 pour 3 $) et pommes Royal Gala ou Granny Smith (1,49 $/lb). Les photos sont illustratives; le lien du bandeau ouvre la page officielle pour consulter l'ensemble des offres, formats et conditions.
 
 **Pas de synchronisation hebdomadaire automatique.** Les dates, prix, offres et URL du visuel sont saisis manuellement et peuvent changer chaque semaine. Avant de publier une nouvelle édition, vérifiez la circulaire officielle et mettez à jour dans `index.html` les dates, offres et lien du visuel ainsi que les recadrages dans `styles.css`. Ne présentez pas une ancienne édition comme une nouvelle promotion; les prix et offres du bandeau sont limités aux dates indiquées. `assets/circulaire-a-venir.svg` reste disponible comme illustration d'attente, mais n'est plus affichée.
 

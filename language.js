@@ -1,4 +1,5 @@
 const english = {
+  "Photos à titre illustratif.": "Photos for illustration only.",
   "Ouvrir le formulaire de démonstration": "Open the demo form",
   "En ouvrant ce formulaire, vous chargez Tally et Google reCAPTCHA, qui peuvent utiliser des témoins tiers. Utilisez uniquement des données fictives.": "Opening this form loads Tally and Google reCAPTCHA, which may use third-party cookies. Use fictional information only.",
   "Rayon de fruits et légumes du Marché Laflamme": "Marché Laflamme's produce department",
