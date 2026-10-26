@@ -2051,6 +2051,14 @@ a {
   object-position: right center;
 }
 
+.delivery-truck {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: contain;
+}
+
 .butchery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

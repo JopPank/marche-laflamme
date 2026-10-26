@@ -42,6 +42,8 @@ Le nom accessible du logo provient de son texte alternatif et de sa légende vis
 
 ## Présentation, circulaire et identité visuelle
 
+La page Livraison utilise la photo fournie `Delivery Truck.png`, optimisée en `assets/delivery-truck.webp` (1100 × 509 pixels). Le camion reste entièrement visible, sans recadrage, à côté de l'introduction sur ordinateur et sous celle-ci sur mobile; son texte alternatif est bilingue.
+
 La section **Circulaire et promotions / Les spéciaux de la semaine** apparaît immédiatement sous la navigation, avant le bandeau du marché, comme point d'entrée prioritaire. La capture Metro fournie sert de référence de hiérarchie seulement; aucune image de produit ou promotion Metro n'est publiée. Les cartes de rayons reprennent des photos déjà utilisées sur le site : saucisses maison de la page officielle de boucherie, légumes recadrés de la circulaire, puis fromages, beignes, bouchées traiteur et gâteau des pages de services. Les badges numérotés des images des cartes ont été retirés.
 
 Le bandeau de spéciaux présente quatre offres transcrites de la circulaire officielle du **22 au 28 octobre 2026**, vérifiée le 25 octobre sur la [page officielle des spéciaux](https://marchelaflamme.com/speciaux-hebdomadaires/) : poitrine de poulet désossée (5,99 $/lb), trio de poivrons (2,99 $ chacun), céleri (2 pour 3 $) et pommes Royal Gala ou Granny Smith (1,49 $/lb). Les photos sont illustratives; le lien du bandeau ouvre la page officielle pour consulter l'ensemble des offres, formats et conditions.
