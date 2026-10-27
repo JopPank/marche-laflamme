@@ -34,7 +34,10 @@
       <div class="container announcement__inner">
         <span class="announcement__dot" aria-hidden="true"></span>
         <p>Au service des familles d’Aylmer depuis 1959</p>
-        <a href="tel:+18196844156">Appelez-nous <span aria-hidden="true">↗</span></a>
+        <div class="announcement__actions">
+          <a href="mailto:info@marchelaflamme.com">Contactez-nous <span aria-hidden="true">↗</span></a>
+          <a href="tel:+18196844156">Appelez-nous <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </div>
 
@@ -63,8 +66,9 @@
         <nav class="navigation" id="navigation" aria-label="Navigation principale">
           <a href="#circulaire">Circulaire et promotions</a>
           <a href="#rayons">Nos rayons</a>
-          <a href="./service-traiteur.html">Traiteur & gâteaux</a>
-          <a href="#histoire">Notre marché</a>
+          <a href="./service-traiteur.html">Traiteur</a>
+          <a href="./boulangerie.html#gateaux">Gâteaux personnalisés</a>
+          <a href="./a-propos.html">Notre marché</a>
           <a href="#contact">Nous joindre</a>
           <a class="button button--small button--red navigation__cta" href="#commande">
             Essayer la démo
@@ -167,25 +171,6 @@
         <img class="hero__logo" src="./assets/marche-laflamme-logo.webp" width="316" height="136" alt="" aria-hidden="true">
       </section>
 
-      <section class="intro section-pad" id="histoire">
-        <div class="container intro__grid">
-          <div class="intro__heading">
-            <p class="eyebrow"><span class="eyebrow__line"></span> D’ici, pour vous</p>
-            <h2>Plus qu’une épicerie.<br><em>Un marché de cœur.</em></h2>
-          </div>
-          <div class="intro__copy">
-            <p>
-              Depuis plus de 60 ans, notre famille accueille les gens d’Aylmer avec
-              des produits choisis avec soin et un service attentionné. Entrez pour
-              vos essentiels, restez pour les petites découvertes.
-            </p>
-            <a class="text-link text-link--red" href="#contact">
-              Venez nous voir <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
       <section class="departments section-pad" id="rayons" aria-labelledby="departments-title">
         <div class="container">
           <div class="section-heading">
@@ -193,7 +178,6 @@
               <p class="eyebrow"><span class="eyebrow__line"></span> Tout près, tout frais</p>
               <h2 id="departments-title">Les bons côtés <em>du marché.</em></h2>
             </div>
-            <p class="section-heading__aside">Du comptoir à votre table,<br>on s’occupe des bons détails.</p>
           </div>
 
           <div class="department-grid">
@@ -215,6 +199,12 @@
               <span class="department-card__detail">De la couleur, chaque jour</span>
               <span class="department-card__arrow" aria-hidden="true">↗</span>
             </a>
+            <a class="department-card department-card--ready-meals" href="./pret-a-manger.html">
+              <img class="department-card__photo" src="./assets/produce-salade-toscane.webp" width="480" height="317" loading="lazy" alt="" aria-hidden="true">
+              <span class="department-card__name">Prêt à manger</span>
+              <span class="department-card__detail">Des repas préparés chaque jour</span>
+              <span class="department-card__arrow" aria-hidden="true">↗</span>
+            </a>
             <a class="department-card department-card--bakery" href="./boulangerie.html">
               <img class="department-card__photo bakery-bread-photo" src="./assets/bakery-bread-480.webp" srcset="./assets/bakery-bread-480.webp 480w, ./assets/bakery-bread-960.webp 960w" sizes="(max-width: 650px) calc((100vw - 46px) / 2), (max-width: 900px) calc((100vw - 76px) / 3), 377px" width="480" height="278" loading="lazy" alt="" aria-hidden="true">
               <span class="department-card__name">Boulangerie</span>
@@ -227,7 +217,7 @@
               <span class="department-card__detail">Des idées pour recevoir</span>
               <span class="department-card__arrow" aria-hidden="true">↗</span>
             </a>
-            <a class="department-card department-card--cakes" href="./service-gateaux.html">
+            <a class="department-card department-card--cakes" href="./boulangerie.html#gateaux">
               <img class="department-card__photo" src="./assets/department-cake.webp" width="480" height="477" loading="lazy" alt="" aria-hidden="true">
               <span class="department-card__name">Gâteaux</span>
               <span class="department-card__detail">Pour célébrer les beaux moments</span>
@@ -235,10 +225,6 @@
             </a>
           </div>
           <p class="department-footnote">Un produit en tête? Essayez une liste fictive dans notre démonstration.</p>
-          <div class="service-actions">
-            <a class="text-link text-link--red" href="./pret-a-manger.html">Découvrir les plats prêts à manger ↗</a>
-            <a class="text-link text-link--red" href="./livraison.html">Livraison et cueillette ↗</a>
-          </div>
         </div>
       </section>
 
@@ -289,7 +275,7 @@
             <p class="demo-notice demo-form-language-note">
               Le formulaire intégré de démonstration est actuellement disponible en français seulement.
             </p>
-            <p class="demo-notice"><a href="./demande-services.html?service=epicerie#demande">Essayer plutôt le formulaire combiné bilingue, sans envoi ↗</a></p>
+            <p class="demo-notice"><a href="./demande-services.html#demande">Essayer plutôt le formulaire combiné bilingue, sans envoi ↗</a></p>
             <details class="demo-form-loader">
               <summary>Ouvrir le formulaire de démonstration</summary>
               <p class="demo-notice">En ouvrant ce formulaire, vous chargez Tally et Google reCAPTCHA, qui peuvent utiliser des témoins tiers. Utilisez uniquement des données fictives.</p>
@@ -311,44 +297,6 @@
         </div>
       </section>
 
-      <section class="visit section-pad" id="contact" aria-labelledby="visit-title">
-        <div class="container visit__inner">
-          <div>
-            <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> On vous attend</p>
-            <h2 id="visit-title">À bientôt<br><em>au marché.</em></h2>
-          </div>
-          <div class="visit__details">
-            <div class="visit__detail">
-              <span class="visit__label">Adresse</span>
-              <a
-                href="https://maps.google.com/?q=126+rue+Principale,+Aylmer,+QC"
-                target="_blank"
-                rel="noopener noreferrer"
-              >126, rue Principale<br>Aylmer (Québec)</a>
-            </div>
-            <div class="visit__detail">
-              <span class="visit__label">Téléphone</span>
-              <a href="tel:+18196844156">(819) 684-4156</a>
-            </div>
-            <div class="visit__detail">
-              <span class="visit__label">Courriel</span>
-              <a href="mailto:marchelaflamme@hotmail.com">marchelaflamme@hotmail.com</a>
-            </div>
-            <div class="visit__detail">
-              <span class="visit__label">Suivez-nous</span>
-              <a href="https://www.facebook.com/MarcheLaflamme" target="_blank" rel="noopener noreferrer">
-                Facebook <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </div>
-          <span class="visit__decoration" aria-hidden="true">M</span>
-        </div>
-        <div class="container visit__more">
-          <p>Heures d’ouverture : appelez le marché pour confirmer les heures actuelles et les jours fériés.</p>
-          <a href="./contact.html">Coordonnées, carte et renseignements ↗</a>
-          <p><a href="./a-propos.html">Découvrir notre histoire</a> · <a href="https://maps.google.com/?q=March%C3%A9+Laflamme+126+rue+Principale+Gatineau" target="_blank" rel="noopener noreferrer">Consulter les avis clients sur Google ↗</a></p>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">

@@ -58,9 +58,9 @@ La fonction **coller sa liste** est conservée dans « Autres articles » de Tal
 
 ## Pages de démonstration — traiteur et gâteaux
 
-`service-traiteur.html`, `service-gateaux.html` et `service-boucherie.html` proposent des pages courtes en français et en anglais, avec une navigation vers les sections pertinentes et des liens vers les pages officielles pour le menu, les prix et disponibilités à jour. La page Boucherie présente les saucisses maison, la viande hachée et les boulettes préparées en magasin, les coupes personnalisées (à commander un jour d’avance) et les produits prêts à cuire. Elle réutilise une photo de saucisses de la page officielle de boucherie. Les pages Traiteur et Gâteaux gardent des catégories/options concises à la place des longs carrousels; les cartes Déjeuners, Tapas, Sandwichs, Salades, Fromages et Desserts utilisent les photos des produits de l’accordéon de la page officielle du traiteur. Les galeries de gâteaux et les images des cartes sont dimensionnées pour rester compactes. La carte Boucherie, ainsi que les cartes Traiteur et Gâteaux, sur l’accueil mènent à leurs pages respectives.
+`service-traiteur.html` est une page autonome en français et en anglais. Le contenu des gâteaux et cupcakes se trouve dans `boulangerie.html#gateaux`, avec les options, tarifs, formulaire de demande et informations pratiques regroupés dans cette page. La navigation, les cartes de l’accueil et les liens de services pointent vers ces destinations; l’ancien `service-gateaux.html` redirige vers la section Boulangerie pour conserver les liens enregistrés. La page Boucherie présente les saucisses maison, la viande hachée et les boulettes préparées en magasin, les coupes personnalisées (à commander un jour d’avance) et les produits prêts à cuire. Elle réutilise une photo de saucisses de la page officielle de boucherie. La page Traiteur garde des catégories de plateaux concises à la place des longs carrousels; les cartes Déjeuners, Tapas, Sandwichs, Salades, Fromages et Desserts utilisent les photos des produits de l’accordéon de la page officielle du traiteur. La carte Boucherie et la carte Traiteur de l’accueil mènent à leurs pages respectives.
 
-Les deux pages conduisent à `demande-services.html`, un prototype à parcours conditionnel unique : gâteau, traiteur, les deux ou épicerie/autre. Le choix « les deux » affiche les deux sections; épicerie/autre utilise uniquement les champs communs. Une liste libre (épicerie, viande, précisions), la date, l’heure et les coordonnées sont communes. Les paramètres `?service=gateau`, `traiteur`, `both` et `epicerie` présélectionnent le parcours. `services.js` ne transmet ni n’enregistre aucune donnée; le bouton affiche uniquement un message de démonstration. Ne pas saisir de vrais renseignements. Le formulaire n’est pas connecté aux deux formulaires WordPress officiels ni à la démo Tally; un lien depuis l’accueil permet de choisir cette maquette bilingue à la place de Tally.
+Les pages conduisent à `demande-services.html`, un prototype à parcours conditionnel unique : gâteau, cupcakes, traiteur ou les deux. Le choix « les deux » affiche les sections gâteau et traiteur; une liste libre permet d’ajouter d’autres précisions. Le parcours cupcakes permet de préciser la saveur (vanille, chocolat ou red velvet) et la quantité, avec les prix publiés indiqués. La date, l’heure et les coordonnées sont communes. Les paramètres `?service=gateau`, `cupcakes`, `traiteur` et `both` présélectionnent le parcours. Le bouton Laflamme Express mène au formulaire d’épicerie sur l’accueil. `services.js` ne transmet ni n’enregistre aucune donnée; le bouton de simulation affiche uniquement un message de démonstration. Ne pas saisir de vrais renseignements. Le formulaire n’est pas connecté aux deux formulaires WordPress officiels ni à la démo Tally; un lien depuis l’accueil permet de choisir cette maquette bilingue à la place de Tally.
 
 La séparation de deux pages de contenu tout en centralisant la demande garde des pages faciles à trouver et une seule expérience de formulaire. Avant tout lancement réel, le marché doit valider les options, prix, délais, allergies, modalités de cueillette et champs requis, puis choisir une boîte professionnelle ou un compte de formulaire géré par l’entreprise comme destination. La maquette n’implique aucune intégration au WordPress du marché.
 
@@ -80,8 +80,8 @@ Inventaire vérifié le **25 octobre 2026** via le [plan de site officiel](https
 | `/boucherie/` | `service-boucherie.html` | Saucisses, viande hachée, coupes et demande spéciale |
 | `/charcuterie-fromage/` | `charcuterie-fromage.html` | Viandes froides, fromages, salades et traiteur |
 | `/fruits-legumes/` | `fruits-legumes.html` | Arrivages quotidiens, plateaux, portions et délai de 48 h |
-| `/boulangerie/` | `boulangerie.html` | Pains, desserts, tarifs des gâteaux et cupcakes |
-| `/service-de-gateau/` | `service-gateaux.html` | Personnalisation, formats et lien direct vers les tarifs |
+| `/boulangerie/` | `boulangerie.html` | Pains et desserts |
+| `/service-de-gateau/` | `boulangerie.html#gateaux` | Personnalisation, formats, prix des gâteaux et cupcakes |
 | `/service-de-traiteur/` | `service-traiteur.html` | Catégories de plateaux et demande combinée |
 | `/pret-a-manger/` | `pret-a-manger.html` | Plats cuisinés, portions individuelles et familiales |
 | `/speciaux-hebdomadaires/` | `speciaux-hebdomadaires.html` | Circulaire complète datée et lien vers l’édition officielle |
@@ -89,18 +89,18 @@ Inventaire vérifié le **25 octobre 2026** via le [plan de site officiel](https
 | `/a-propos/` | `a-propos.html` | Histoire familiale et chronologie |
 | `/nous-joindre/` | `contact.html` | Téléphone, courriel, adresse, carte et réseaux sociaux |
 
-`app.js` centralise les liens de navigation et le répertoire des pages du pied de page. La barre bordeaux à liens dorés reprend l’organisation du site original : Spéciaux hebdomadaires, Produits frais, Nos services, À propos et Nous joindre. Produits frais regroupe les cinq rayons; Nos services donne accès au traiteur, aux gâteaux, à la livraison et à Laflamme Express. Tous les liens mènent aux pages locales. Les deux menus natifs sont accessibles au clavier, avec fermeture par Échap et fermeture de l’autre menu à l’ouverture; le menu mobile reste défilable. Le sélecteur FR / EN est conservé près du logo. Toutes les pages sont du HTML statique avec la feuille CSS existante : pas de migration Tailwind, de dépendance ni de compilation. Les descriptions sont résumées plutôt que reproduites intégralement; le menu traiteur détaillé reste consultable via le site officiel.
+`app.js` centralise les liens de navigation, le répertoire des pages et le bloc de coordonnées compact partagé dans le pied de page de toutes les pages du site. Trois boutons dans l’espace de l’en-tête donnent accès à la circulaire hebdomadaire, à la page Livraison et cueillette et au formulaire Laflamme Express; les boutons Facebook et Instagram sont adjacents au sélecteur de langue. La barre bordeaux regroupe Produits frais, Nos services, À propos et Nous joindre. Produits frais regroupe les cinq rayons; Nos services donne accès aux pages distinctes Traiteur et Gâteaux, à la livraison et à Laflamme Express. Tous les liens mènent aux pages locales. Le pied de page reste dans le flux normal et se place au bas des pages courtes; il n’est pas fixé à l’écran. Les deux menus natifs sont accessibles au clavier, avec fermeture par Échap et fermeture de l’autre menu à l’ouverture; le menu mobile reste défilable. Le sélecteur FR / EN est conservé près du logo. Toutes les pages sont du HTML statique avec la feuille CSS existante : pas de migration Tailwind, de dépendance ni de compilation. Les descriptions sont résumées plutôt que reproduites intégralement; le menu traiteur détaillé reste consultable via le site officiel.
 
 La page À propos regroupe l’introduction et la photo à gauche, avec la chronologie à droite sur ordinateur, pour voir les deux parties sans parcourir deux grandes sections. Sous 760 px, les colonnes s’empilent pour garder une lecture confortable.
 
 ### Données vérifiées et limites
 
 - L’histoire officielle commence en **1959**, et non 1942. Les textes du site et leurs traductions ont été corrigés.
-- Le courriel publié est **marchelaflamme@hotmail.com**. `commande@marchelaflamme.com` n’est pas confirmé et n’est pas présenté comme une adresse active.
-- Les tarifs de boulangerie sont regroupés dans un seul tableau de référence : 11,99 $, 17,99 $, 19,99 $, 29,99 $ et 59,99 $ selon le format; image comestible +10 $; cupcakes 0,99 $ (1–99), 0,89 $ (100+). La colonne avec image inclut déjà le supplément. Aucun calcul de commande ni régime de taxes n’est inventé.
+- Le courriel affiché sur le site est **info@marchelaflamme.com**, selon la demande du propriétaire.
+- Les tarifs des gâteaux et cupcakes sont regroupés dans un seul tableau de référence sur la page Gâteaux : 11,99 $, 17,99 $, 19,99 $, 29,99 $ et 59,99 $ selon le format; image comestible +10 $; cupcakes 0,99 $ (1–99), 0,89 $ (100+). La colonne avec image inclut déjà le supplément. Aucun calcul de commande ni régime de taxes n’est inventé.
 - Les portions annoncées pour le petit rond et les deux slabs diffèrent entre la page Boulangerie et le formulaire officiel. Le tableau suit Boulangerie et signale l’écart; le formulaire conserve ses choix d’origine. Faire valider ces chiffres avant lancement.
 - Livraison dans un **rayon de 5 km**, pas dans tout Gatineau : livraison gratuite après achats en magasin de plus de 50 $; commande préparée et livrée à 6 $ au-dessus de 50 $, 8 $ en dessous. Préparation gratuite des cueillettes de plus de 50 $. Le cas exactement 50 $, les frais des petites cueillettes et les créneaux ne sont pas précisés : confirmation téléphonique.
-- Aucun horaire non vérifié ni faux témoignage n’est ajouté. Un lien vers les avis Google et un avis de confirmation des heures sont proposés sur l’accueil.
+- Les heures affichées sur la page Nous joindre sont de 8 h à 22 h tous les jours; les heures des jours fériés peuvent varier. Aucun faux témoignage n’est ajouté. Un lien vers les avis Google est proposé sur l’accueil.
 - La carte Google est chargée à la demande du navigateur (`loading="lazy"`) et dispose d’un lien d’itinéraire de secours. La circulaire officielle reste une image en français, même dans l’interface anglaise; un avis le précise.
 - Les prix, horaires, disponibilités et circulaires ne sont pas synchronisés automatiquement. Revérifier les pages sources avant publication et actualiser les deux langues ensemble.
 
@@ -161,13 +161,13 @@ Le déploiement Apps Script `MarchéLaflamme2` a été archivé par le propriét
 
 Le projet Google et la feuille privée historique n'ont pas été supprimés. Ne réactivez pas l'ancien déploiement public : il ne possédait pas de protection anti-abus adaptée.
 
-## Courriel professionnel — proposition seulement
+## Courriel professionnel — configuration à confirmer
 
-Le site affiche l'adresse Hotmail existante fournie dans les documents. Aucune boîte `info@marchelaflamme.com` ou `commande@marchelaflamme.com` n'a été créée.
+Le site affiche `info@marchelaflamme.com`, selon la demande du propriétaire. La réception des messages et la configuration de la boîte doivent être confirmées avant le lancement.
 
 Pour un futur lancement, le propriétaire de `marchelaflamme.com` peut choisir :
 
-- Une redirection de `info@marchelaflamme.com` vers sa boîte Hotmail existante : réception au même endroit, mais une réponse depuis Hotmail n'utilise pas automatiquement l'adresse professionnelle.
+- Une redirection de `info@marchelaflamme.com` vers une boîte existante : réception au même endroit, mais une réponse depuis cette boîte n'utilise pas automatiquement l'adresse professionnelle.
 - Une véritable boîte chez un fournisseur de courriel professionnel : réception et envoi sous l'adresse du domaine, dans Outlook, webmail ou une application mobile. Un abonnement est généralement nécessaire.
 
 Vérifiez le domaine (le nom existant contient bien `marche`, avec un `e`), les accès DNS et les enregistrements de messagerie actuels avant toute modification MX/SPF/DKIM/DMARC. Le sous-domaine de démonstration `marchelaflamme.jopism.com` ne donne aucun contrôle sur le domaine du marché. Aucun paramètre de messagerie n'a été modifié.
@@ -177,7 +177,7 @@ Vérifiez le domaine (le nom existant contient bien `marche`, avec un `e`), les 
 - `index.html` — contenu et structure de la page.
 - `styles.css` — mise en page responsive et styles de marque.
 - `app.js` — navigation mobile et année du pied de page; aucune collecte de commandes.
-- `service-traiteur.html`, `service-gateaux.html`, `demande-services.html`, `services.js` — pages de démonstration des services et formulaire conditionnel sans envoi.
+- `service-traiteur.html`, `boulangerie.html#gateaux`, `demande-services.html`, `services.js` — pages de démonstration des services et formulaire conditionnel sans envoi.
 - `fiche-preparation.html`, `fiche-preparation.css`, `fiche-preparation.js` — saisie manuelle et impression d'une fiche de démonstration, sans backend.
 - `tally-picking-slip.formula.txt` — copie de récupération de la formule native de la fiche Google Sheets connectée; aucune réponse client.
 - `assets/marche-laflamme-logo.webp`, `assets/marche-laflamme-equipe.jpg` — logo fourni et photo recadrée de l'équipe dans le bandeau d'accueil. `assets/marche-laflamme-banner.webp` est conservée, mais n'est plus utilisée.

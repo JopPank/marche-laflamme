@@ -7,7 +7,7 @@ if (request) {
   const params = new URLSearchParams(window.location.search);
   const initialService = params.get("service");
 
-  if (["traiteur", "gateau", "both", "epicerie"].includes(initialService)) {
+  if (["traiteur", "gateau", "cupcakes", "both"].includes(initialService)) {
     request.querySelector(`input[name="service-type"][value="${initialService}"]`).checked = true;
   }
 

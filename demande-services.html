@@ -24,7 +24,10 @@
       <div class="container announcement__inner">
         <span class="announcement__dot" aria-hidden="true"></span>
         <p>Au service des familles d’Aylmer depuis 1959</p>
-        <a href="tel:+18196844156">Appelez-nous <span aria-hidden="true">↗</span></a>
+        <div class="announcement__actions">
+          <a href="mailto:info@marchelaflamme.com">Contactez-nous <span aria-hidden="true">↗</span></a>
+          <a href="tel:+18196844156">Appelez-nous <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </div>
 
@@ -45,7 +48,7 @@
         <nav class="navigation" id="navigation" aria-label="Navigation principale">
           <a href="./index.html#circulaire">Circulaire</a>
           <a href="./index.html#rayons">Nos rayons</a>
-          <a href="./service-traiteur.html" aria-current="page">Traiteur & gâteaux</a>
+          <a href="./service-traiteur.html">Traiteur</a>
           <a href="./index.html#contact">Nous joindre</a>
         </nav>
       </div>
@@ -77,10 +80,11 @@
             <fieldset class="request-type">
               <legend>Qu’aimeriez-vous demander?</legend>
               <label><input type="radio" name="service-type" value="gateau" checked> <span>Un gâteau</span></label>
+              <label><input type="radio" name="service-type" value="cupcakes"> <span>Des cupcakes</span></label>
               <label><input type="radio" name="service-type" value="traiteur"> <span>Du traiteur</span></label>
               <label><input type="radio" name="service-type" value="both"> <span>Les deux</span></label>
-              <label><input type="radio" name="service-type" value="epicerie"> <span>Épicerie ou autre</span></label>
             </fieldset>
+            <p><a class="button button--red" href="./index.html#commande">Commander avec Laflamme Express <span aria-hidden="true">↗</span></a></p>
 
             <div class="request-fields">
               <fieldset class="request-panel" data-request-panel="gateau">
@@ -118,6 +122,24 @@
                   <label class="request-grid__wide">Couleurs ou autres précisions
                     <textarea rows="3" placeholder="Couleurs, occasion, demande d’image comestible…"></textarea>
                   </label>
+                </div>
+              </fieldset>
+
+              <fieldset class="request-panel" data-request-panel="cupcakes" hidden>
+                <legend>Détails des cupcakes</legend>
+                <div class="request-grid">
+                  <label>Quantité
+                    <input type="number" min="1" step="1" placeholder="Ex. : 12">
+                  </label>
+                  <label>Saveur
+                    <select>
+                      <option value="">Choisir une saveur</option>
+                      <option>Vanille</option>
+                      <option>Chocolat</option>
+                      <option>Red velvet</option>
+                    </select>
+                  </label>
+                  <p class="request-grid__wide">Prix affichés : 0,99 $ par cupcake pour 1 à 99 unités; 0,89 $ par cupcake à partir de 100. Prix et disponibilité à confirmer avec l’équipe.</p>
                 </div>
               </fieldset>
 
