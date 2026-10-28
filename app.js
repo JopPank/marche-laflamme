@@ -46,7 +46,7 @@ headerActions.innerHTML = `
       <span class="header-action__subtitle">Voir les options</span>
     </span>
   </a>
-  <a class="header-action header-action--express" href="./index.html#commande">
+  <a class="header-action header-action--express" href="./livraison.html#commande">
     <span class="header-action__icon" aria-hidden="true">▣</span>
     <span class="header-action__copy">
       <span class="header-action__title">Laflamme Express</span>
@@ -81,7 +81,7 @@ navigation.innerHTML = `
       ${pageLink(pageLinks[5])}
       ${pageLink(["boulangerie.html#gateaux", "Gâteaux personnalisés"])}
       ${pageLink(pageLinks[8])}
-      ${pageLink(["index.html#commande", "Laflamme Express"])}
+      ${pageLink(["livraison.html#commande", "Laflamme Express"])}
     </div>
   </details>
   ${pageLink(pageLinks[9])}

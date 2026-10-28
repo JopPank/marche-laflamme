@@ -1,5 +1,9 @@
 *.docx
 *.png
+!assets/fromage-plateau.png
+!assets/charcuterie-plateau.png
+!assets/gateaux-fruits.png
+!assets/boulangerie-muffins.png
 node_modules/
 .env
 .env.*

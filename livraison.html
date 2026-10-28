@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
     <meta name="description" content="Livraison et cueillette au Marché Laflamme : rayon de 5 km et frais publiés.">
     <title>Livraison & cueillette | Marché Laflamme</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css?v=20261026-delivery">
+    <link rel="stylesheet" href="./styles.css?v=20261028-document-updates">
     <script src="./app.js" defer></script>
     <script src="./language.js" defer></script>
   </head>
@@ -24,20 +25,87 @@
     <main id="contenu">
       <section class="service-hero service-hero--compact" aria-labelledby="service-title"><div class="container service-hero__inner">
         <div>
-        <p class="eyebrow">Votre épicerie, à votre façon</p><h1 id="service-title">Livraison <em>& cueillette.</em></h1><p class="service-hero__lead">Le marché annonce un service dans un rayon de 5 km autour du 126, rue Principale, à Aylmer. Appelez pour confirmer votre adresse, le jour et les modalités.</p><div class="service-actions"><a class="button button--red" href="tel:+18196844156">Appelez le (819) 684-4156</a><a class="text-link text-link--red" href="./index.html#commande">Commander avec Laflamme Express</a></div>
+        <p class="eyebrow">Votre épicerie, à votre façon</p><h1 id="service-title">Livraison <em>& cueillette.</em></h1><p class="service-hero__lead">Le marché annonce un service dans un rayon de 5 km autour du 126, rue Principale, à Aylmer. Appelez pour confirmer votre adresse, le jour et les modalités.</p><div class="service-actions"><a class="button button--red" href="tel:+18196844156">Appelez le (819) 684-4156</a><a class="button button--red" href="#commande">Commander avec Laflamme Express</a></div>
         </div>
         <img class="delivery-truck" src="./assets/delivery-truck.webp" width="1100" height="509" alt="Camion de livraison du Marché Laflamme décoré de fruits et légumes">
       </div></section>
       <section class="service-content" aria-labelledby="delivery-options"><div class="container">
-        <div class="service-section-heading"><h2 id="delivery-options">Trois façons <em>de faire vos courses.</em></h2></div>
-        <div class="butchery-grid">
-          <article class="butchery-card"><h3>Vous magasinez, le marché livre</h3><p>Sélectionnez vos articles en magasin. La livraison est annoncée gratuite pour les commandes de plus de 50 $.</p></article>
-          <article class="butchery-card"><h3>Commande préparée et livrée</h3><p>Commandez par téléphone. Frais publiés : 6 $ pour une commande de plus de 50 $; 8 $ pour une commande de moins de 50 $.</p></article>
-          <article class="butchery-card"><h3>Commande préparée pour cueillette</h3><p>Commandez à l’avance puis récupérez vos articles. La préparation est annoncée gratuite pour les commandes de plus de 50 $.</p></article>
+        <div class="service-section-heading"><h2 id="delivery-options">Deux façons <em>de faire vos courses.</em></h2></div>
+        <div class="butchery-grid delivery-options-grid">
+          <article class="butchery-card"><h3>Venez en magasin</h3><p>Choisissez vos articles directement au marché. Appelez pour vérifier les disponibilités ou poser vos questions à l’équipe.</p></article>
+          <article class="butchery-card"><h3>Livraison à Domicile</h3><p>Commandez par téléphone pour une livraison dans le rayon annoncé de 5 km. Frais publiés : 6 $ pour une commande de plus de 50 $; 8 $ pour une commande de moins de 50 $.</p></article>
         </div>
         <div class="butchery-ready"><div><h2>Avant de <em>commander.</em></h2><p>Le site officiel ne précise pas le tarif à exactement 50 $, les créneaux de livraison ni les frais de préparation des petites cueillettes. Confirmez ces détails avec l’équipe. Aucune livraison dans tout Gatineau n’est promise.</p></div><a class="button button--red" href="./contact.html">Nous joindre</a></div>
         <p class="service-footnote">Conditions consultées le 25 octobre 2026. <a href="https://marchelaflamme.com/livraison-a-domicile/" target="_blank" rel="noopener noreferrer">Consulter la page officielle</a></p>
       </div></section>
+      <section class="order section-pad" id="commande" aria-labelledby="order-title">
+        <div class="container order__grid">
+          <div class="order__intro">
+            <p class="eyebrow"><span class="eyebrow__line"></span> Laflamme Express</p>
+            <h2 id="order-title">Votre liste.<br><em>On s’en occupe.</em></h2>
+            <p>
+              Découvrez une façon simple de transmettre une liste d’épicerie.
+              Sur le futur site, le marché pourrait rappeler pour confirmer les produits,
+              le montant et la livraison. Ici, il s’agit uniquement d’un essai.
+            </p>
+            <ul class="order__benefits">
+              <li><span aria-hidden="true">✓</span> Des produits courants avec quantités et formats</li>
+              <li><span aria-hidden="true">✓</span> Une liste libre pour les autres articles</li>
+              <li><span aria-hidden="true">✓</span> Une préférence de jour, sans réserver de créneau</li>
+              <li><span aria-hidden="true">✓</span> Une préférence en cas de produit indisponible</li>
+            </ul>
+            <div class="smart-list-guide">
+              <h3>Collez votre liste, à votre façon.</h3>
+              <p>Depuis vos notes, copiez votre liste dans « Autres articles ».
+                Un article par ligne, avec la quantité, le format et vos préférences :</p>
+              <p class="smart-list-guide__example">500 g de bœuf haché<br>2 steaks de faux-filet<br>1 beurre salé de 454 g</p>
+              <p>Pour faciliter la préparation, vous pouvez regrouper vos lignes :
+                fruits et légumes, boucherie, produits laitiers, boulangerie, autres.
+                Ne répétez pas les produits déjà choisis dans les quantités rapides.</p>
+              <p><strong>Pas de correspondance automatique avec les stocks :</strong>
+                le personnel doit vérifier les produits et les substitutions.</p>
+            </div>
+            <div class="order__callout">
+              <span class="order__callout-icon" aria-hidden="true">✳</span>
+              <span>Pour une vraie commande, téléphonez au marché :<br><a href="tel:+18196844156">(819) 684-4156</a></span>
+            </div>
+          </div>
+
+          <div class="order-card">
+            <div class="order-card__top">
+              <span class="order-card__step">ESSAI DU FORMULAIRE <span>DÉMO</span></span>
+              <img class="order-card__logo" src="./assets/marche-laflamme-logo.webp" width="316" height="136" alt="" aria-hidden="true">
+            </div>
+            <p class="demo-notice">
+              <strong>Aucune commande n’est transmise au marché.</strong>
+              Les essais sont enregistrés dans les comptes personnels Tally et Google de Jonathan,
+              avec une feuille privée pour préparer une fiche imprimable.
+              N’indiquez ni vraies coordonnées, ni données de paiement.
+            </p>
+            <p class="demo-notice demo-form-language-note">
+              Le formulaire intégré de démonstration est actuellement disponible en français seulement.
+            </p>
+            <p class="demo-notice"><a href="./demande-services.html#demande">Essayer plutôt le formulaire combiné bilingue, sans envoi ↗</a></p>
+            <details class="demo-form-loader">
+              <summary>Ouvrir le formulaire de démonstration</summary>
+              <p class="demo-notice">En ouvrant ce formulaire, vous chargez Tally et Google reCAPTCHA, qui peuvent utiliser des témoins tiers. Utilisez uniquement des données fictives.</p>
+              <iframe
+                class="demo-form"
+                data-src="https://tally.so/embed/GexPOO?hideTitle=1&amp;transparentBackground=1"
+                title="Laflamme Express — formulaire de démonstration, données fictives uniquement"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+            </details>
+            <p class="demo-notice">
+              Le formulaire ne s’affiche pas?
+              <a href="https://tally.so/r/GexPOO" target="_blank" rel="noopener noreferrer">Ouvrir la démo dans un nouvel onglet ↗</a>.
+              Protection anti-spam par reCAPTCHA; aucun paiement, appel ou livraison.
+              <a href="https://tally.so/help/privacy-policy" target="_blank" rel="noopener noreferrer">Confidentialité Tally</a>
+              · <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Confidentialité Google reCAPTCHA</a>.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="site-footer"><div class="container site-footer__inner"><a class="footer-brand" href="./index.html">Marché <strong>Laflamme</strong></a><p>Un marché de famille. Un marché d’Aylmer. Depuis 1959.</p><a class="site-footer__top" href="#contenu">Retour en haut ↑</a><span class="site-footer__copyright">© <span id="current-year"></span> Marché Laflamme</span></div></footer>
   </body>

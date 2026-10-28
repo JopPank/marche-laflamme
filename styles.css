@@ -132,7 +132,7 @@ a {
 .demo-notice {
   margin: 12px 0;
   color: #54564e;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -488,7 +488,7 @@ a {
 }
 
 .produce-freshness {
-  padding-bottom: 0;
+  padding-top: 40px;
 }
 
 .produce-freshness__inner {
@@ -512,7 +512,7 @@ a {
 
 .produce-freshness p:not(.eyebrow) {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -559,7 +559,7 @@ a {
 .produce-menu__item p {
   margin: 6px 0 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.7;
 }
 
@@ -657,14 +657,21 @@ a {
 .contact-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  align-items: stretch;
   gap: 32px;
   margin-top: 24px;
+}
+
+.contact-map {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
 }
 
 .contact-details a,
 .contact-details address {
   overflow-wrap: anywhere;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   line-height: 1.7;
 }
@@ -675,7 +682,7 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.7;
 }
 
@@ -686,7 +693,9 @@ a {
 }
 
 .store-map {
+  flex: 1 1 auto;
   width: 100%;
+  min-height: 520px;
   max-width: 100%;
   border: 1px solid var(--line);
   border-radius: 6px;
@@ -783,7 +792,7 @@ a {
 .history-timeline p,
 .meal-lists li {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -801,7 +810,7 @@ a {
 .visit__more {
   position: relative;
   padding-top: 24px;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.7;
 }
 
@@ -854,7 +863,7 @@ a {
   align-items: center;
   gap: 4px 20px;
   padding-top: 15px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -964,6 +973,10 @@ a {
 
   .contact-layout {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .store-map {
+    min-height: 400px;
   }
 
   .history-timeline li {
@@ -1123,7 +1136,7 @@ a {
   max-width: 405px;
   margin: 24px 0 25px;
   color: #5e5d56;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -1190,7 +1203,7 @@ a {
 .order__intro > p {
   margin: 0 0 20px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.9;
 }
 
@@ -1275,7 +1288,7 @@ a {
   z-index: 1;
   margin-top: 7px;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .department-card__arrow {
@@ -1299,7 +1312,7 @@ a {
 .department-footnote {
   margin: 19px 0 0;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
   text-align: right;
 }
 
@@ -1488,7 +1501,7 @@ a {
   border: 1px solid var(--line);
   border-radius: 6px;
   background: var(--white);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -1539,7 +1552,7 @@ a {
   align-items: center;
   gap: 11px;
   color: #54564e;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .order__benefits li span {
@@ -1553,7 +1566,7 @@ a {
   align-items: center;
   gap: 14px;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.8;
 }
 
@@ -1564,7 +1577,7 @@ a {
 
 .order__callout a {
   color: var(--ink);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   text-decoration-color: var(--gold);
   text-underline-offset: 3px;
@@ -2047,7 +2060,7 @@ a {
   .hero__description {
     max-width: 340px;
     margin: 13px 0 15px;
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .hero__actions {
@@ -2080,7 +2093,7 @@ a {
   }
 
   .order__intro > p {
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .departments {
@@ -2096,7 +2109,7 @@ a {
   }
 
   .section-heading__aside {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .department-grid {
@@ -2119,7 +2132,7 @@ a {
 
   .department-card__detail {
     max-width: 120px;
-    font-size: 9px;
+    font-size: 11px;
     line-height: 1.45;
   }
 
@@ -2130,7 +2143,7 @@ a {
   }
 
   .department-footnote {
-    font-size: 9px;
+    font-size: 11px;
     line-height: 1.6;
     text-align: left;
   }
@@ -2195,7 +2208,7 @@ a {
   }
 
   .order__benefits li {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .order__callout {
@@ -2396,6 +2409,81 @@ a {
   object-fit: cover;
 }
 
+.butchery-hero {
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  align-items: start;
+  gap: 56px;
+}
+
+.service-hero .butchery-hero__intro h1 {
+  font-family: var(--sans);
+  font-size: clamp(30px, 3.8vw, 42px);
+  font-weight: 700;
+  letter-spacing: -.035em;
+  line-height: 1.15;
+}
+
+.butchery-hero__image {
+  height: 340px;
+  margin-top: 22px;
+}
+
+.butchery-hero__details {
+  padding-top: 12px;
+}
+
+.butchery-hero__highlights {
+  display: grid;
+  gap: 14px;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.butchery-hero__highlights li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.butchery-hero__highlights li::before {
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  content: "\2713";
+  font-weight: 700;
+}
+
+.butchery-hero__details > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.charcuterie-hero__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-self: center;
+  gap: 10px;
+}
+
+.charcuterie-hero__gallery img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  border-radius: 6px;
+  background: var(--white);
+  object-fit: cover;
+}
+
+.charcuterie-hero__gallery img:last-child {
+  grid-column: 1 / -1;
+  height: 120px;
+  object-fit: contain;
+}
+
 .bakery-bread-photo {
   object-position: right center;
 }
@@ -2442,7 +2530,7 @@ a {
   max-width: 480px;
   margin: 18px 0;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -2453,11 +2541,22 @@ a {
   margin-top: 2px;
 }
 
-.bakery-feature__cake {
-  width: min(52%, 230px);
-  height: auto;
-  max-height: 210px;
-  margin: 28px 0 0 auto;
+.bakery-feature__gallery {
+  display: grid;
+  width: 100%;
+  max-width: 450px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.bakery-feature__gallery img {
+  display: block;
+  width: 100%;
+  height: 130px;
+  border-radius: 6px;
+  background: var(--white);
   object-fit: contain;
 }
 
@@ -2473,6 +2572,10 @@ a {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
+}
+
+.delivery-options-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .butchery-card {
@@ -2498,7 +2601,7 @@ a {
 .butchery-ready > div > p:last-child {
   margin: 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.75;
 }
 
@@ -2618,7 +2721,7 @@ a {
 
 .service-cake-gallery__note strong {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
@@ -2658,8 +2761,16 @@ a {
   max-width: 630px;
   margin: 18px 0 22px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8;
+}
+
+.service-hero__lead p {
+  margin: 0 0 12px;
+}
+
+.service-hero__lead p:last-child {
+  margin-bottom: 0;
 }
 
 .service-actions {
@@ -2685,7 +2796,7 @@ a {
 .service-fact p {
   margin: 14px 0 8px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .service-fact strong {
@@ -2721,7 +2832,7 @@ a {
   max-width: 300px;
   margin: 0 0 5px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -2767,7 +2878,7 @@ a {
 .service-photo-story p:last-child {
   margin: 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -2813,7 +2924,7 @@ a {
 .cake-option p,
 .cake-option li {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -2825,7 +2936,7 @@ a {
 .service-footnote {
   margin: 16px 0 0;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.7;
 }
 
@@ -2869,7 +2980,7 @@ a {
 .service-steps p {
   margin: 0;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
@@ -2904,6 +3015,31 @@ a {
   gap: 12px;
 }
 
+.cake-options-intro {
+  max-width: 860px;
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.cake-options-intro h3 {
+  margin: 0 0 8px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 24px;
+}
+
+.cake-options-intro p {
+  margin: 0 0 10px;
+}
+
+.cake-options-intro p:last-child {
+  margin-bottom: 0;
+  color: var(--red-dark);
+  font-weight: 700;
+}
+
 .cake-option ul {
   display: grid;
   gap: 7px;
@@ -2916,19 +3052,23 @@ a {
 }
 
 .cake-celebration {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(160px, .42fr);
-  align-items: center;
-  gap: 36px;
+  display: block;
   margin-top: 30px;
-  padding: 28px 32px;
+  padding: 36px 32px;
   border-radius: 6px;
   background: var(--cream);
 }
 
+.cake-celebration__copy {
+  max-width: 900px;
+  margin-inline: auto;
+  text-align: center;
+}
+
 .cake-celebration__copy h2 {
-  max-width: 520px;
+  max-width: 760px;
   margin: 0;
+  margin-inline: auto;
   font-family: var(--serif);
   font-size: clamp(28px, 3.4vw, 40px);
   font-weight: 600;
@@ -2941,16 +3081,17 @@ a {
 }
 
 .cake-celebration__copy > p:not(.eyebrow) {
-  max-width: 600px;
-  margin: 14px 0 0;
+  max-width: 720px;
+  margin: 14px auto 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.75;
 }
 
 .cake-celebration__actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 12px 20px;
   margin-top: 16px;
@@ -2964,9 +3105,11 @@ a {
   display: grid;
   grid-template-columns: minmax(0, .8fr) minmax(220px, 1fr);
   align-items: center;
+  max-width: 680px;
   gap: 16px;
-  margin-top: 20px;
+  margin: 24px auto 0;
   scroll-margin-top: 24px;
+  text-align: left;
 }
 
 .cake-celebration__pricing h3 {
@@ -2983,7 +3126,7 @@ a {
 .cake-celebration__pricing .cake-celebration__varieties {
   margin: 0;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
@@ -2991,11 +3134,13 @@ a {
   min-width: 0;
 }
 
-.cake-celebration > img {
-  display: block;
-  width: 100%;
-  max-height: 230px;
-  object-fit: contain;
+.cake-celebration .pricing-table thead {
+  background: var(--ink);
+}
+
+.cake-celebration__pricing > .button {
+  width: fit-content;
+  justify-self: center;
 }
 
 .service-demo-note {
@@ -3006,7 +3151,7 @@ a {
 
 .service-demo-note p {
   margin: 0;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -3040,7 +3185,7 @@ a {
 
 .service-request-intro > p:not(.eyebrow) {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.8;
 }
 
@@ -3204,6 +3349,10 @@ a {
     gap: 10px;
   }
 
+  .delivery-options-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .butchery-card {
     min-height: 0;
     padding: 20px;
@@ -3228,14 +3377,7 @@ a {
 
 @media (max-width: 650px) {
   .cake-celebration {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 20px;
-    padding: 22px;
-  }
-
-  .cake-celebration > img {
-    width: min(65%, 220px);
-    justify-self: center;
+    padding: 24px 18px;
   }
 
   .cake-celebration__pricing {
@@ -3256,11 +3398,6 @@ a {
     height: 250px;
   }
 
-  .bakery-feature__cake {
-    width: min(58%, 190px);
-    margin-top: 18px;
-  }
-
   .service-hero {
     padding-block: 40px;
   }
@@ -3272,6 +3409,23 @@ a {
 
   .butchery-hero__image {
     height: 190px;
+  }
+
+  .service-hero .butchery-hero__intro h1 {
+    font-size: clamp(28px, 8vw, 38px);
+  }
+
+  .butchery-hero__highlights {
+    font-size: 16px;
+  }
+
+  .charcuterie-hero__gallery img,
+  .charcuterie-hero__gallery img:first-child {
+    height: 125px;
+  }
+
+  .bakery-feature__gallery img {
+    height: 100px;
   }
 
   .butchery-ready {
@@ -3286,7 +3440,7 @@ a {
   }
 
   .service-hero__lead {
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .service-fact {
@@ -3305,7 +3459,8 @@ a {
   }
 
   .service-category-grid,
-  .cake-options-grid {
+  .cake-options-grid,
+  .delivery-options-grid {
     grid-template-columns: 1fr;
   }
 
