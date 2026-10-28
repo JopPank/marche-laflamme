@@ -493,7 +493,7 @@ a {
 
 .produce-freshness__inner {
   display: grid;
-  grid-template-columns: 150px minmax(0, 1fr);
+  grid-template-columns: 220px minmax(0, 1fr);
   align-items: center;
   gap: 32px;
 }
@@ -535,8 +535,8 @@ a {
 
 .produce-menu__item {
   display: grid;
-  grid-template-columns: 100px minmax(0, 1fr);
-  align-items: start;
+  grid-template-columns: 160px minmax(0, 1fr);
+  align-items: center;
   gap: 16px;
   padding: 18px;
   border: 1px solid var(--line);
@@ -546,7 +546,8 @@ a {
 
 .produce-menu__item img {
   width: 100%;
-  height: auto;
+  height: 150px;
+  object-fit: contain;
   border-radius: 4px;
 }
 
@@ -581,15 +582,19 @@ a {
 
 @media (max-width: 650px) {
   .produce-freshness__inner {
-    grid-template-columns: 85px minmax(0, 1fr);
+    grid-template-columns: 110px minmax(0, 1fr);
     align-items: start;
     gap: 16px;
   }
 
   .produce-menu__item {
-    grid-template-columns: 75px minmax(0, 1fr);
+    grid-template-columns: 105px minmax(0, 1fr);
     gap: 12px;
     padding: 14px;
+  }
+
+  .produce-menu__item img {
+    height: 110px;
   }
 }
 
@@ -2429,7 +2434,7 @@ a {
 }
 
 .butchery-hero__details {
-  padding-top: 12px;
+  align-self: end;
 }
 
 .butchery-hero__highlights {
@@ -2536,32 +2541,36 @@ a {
 }
 
 .bakery-feature__links {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   margin-top: 2px;
 }
 
-.bakery-feature__option {
-  display: grid;
-  min-width: 0;
-  gap: 10px;
+.bakery-feature__cake-copy {
+  max-width: 640px;
+  margin: 4px 0 18px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
 }
 
-.bakery-feature__option .button {
-  justify-content: space-between;
-  padding-inline: 14px;
-  white-space: nowrap;
+.bakery-feature__cake-copy h2 {
+  margin: 0 0 6px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.25;
 }
 
-.bakery-feature__option img {
-  display: block;
-  width: 100%;
-  height: 130px;
-  border-radius: 6px;
-  background: var(--white);
-  object-fit: contain;
+.bakery-feature__cake-copy p {
+  margin: 0 0 8px;
+}
+
+.bakery-feature__cake-copy p:last-child {
+  margin-bottom: 0;
+  color: var(--red-dark);
+  font-weight: 700;
 }
 
 .delivery-truck {
@@ -2690,45 +2699,6 @@ a {
   flex: 0 0 auto;
 }
 
-.service-cake-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: stretch;
-  gap: 10px;
-}
-
-.service-cake-gallery > img {
-  display: block;
-  width: 100%;
-  height: 130px;
-  border-radius: 6px;
-  background: var(--white);
-  object-fit: cover;
-}
-
-.service-cake-gallery__note {
-  grid-column: 1 / -1;
-  padding: 15px 18px;
-  border-left: 3px solid var(--gold);
-  background: rgba(255, 254, 250, .8);
-}
-
-.service-cake-gallery__note .service-fact__icon {
-  font-size: 20px;
-}
-
-.service-cake-gallery__note p {
-  margin: 4px 0 5px;
-  color: var(--muted);
-  font-size: 11px;
-}
-
-.service-cake-gallery__note strong {
-  display: block;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
 .service-hero h1,
 .service-section-heading h2,
 .service-request-intro h2 {
@@ -2744,18 +2714,7 @@ a {
   line-height: 1.05;
 }
 
-.service-hero__heading {
-  max-width: 760px;
-  margin: 0;
-  font-family: var(--serif);
-  font-size: clamp(40px, 5vw, 60px);
-  font-weight: 600;
-  letter-spacing: -.055em;
-  line-height: 1.05;
-}
-
 .service-hero h1 em,
-.service-hero__heading em,
 .service-section-heading h2 em,
 .service-request-intro h2 em {
   color: var(--red);
@@ -2893,7 +2852,22 @@ a {
   background: var(--white);
 }
 
-.service-category > img {
+.service-category__summary {
+  display: block;
+  cursor: pointer;
+  list-style: none;
+}
+
+.service-category__summary::-webkit-details-marker {
+  display: none;
+}
+
+.service-category__summary:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: -3px;
+}
+
+.service-category__summary > img {
   display: block;
   width: 100%;
   height: 132px;
@@ -2923,6 +2897,63 @@ a {
 
 .service-category p {
   margin: 0;
+}
+
+.service-category__photos-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.service-category__photos-label::after {
+  display: inline-grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  content: "+";
+  font-size: 16px;
+  line-height: 1;
+}
+
+.service-category[open] .service-category__photos-label::after {
+  content: "−";
+}
+
+.service-category__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.service-category__gallery figure {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--paper);
+}
+
+.service-category__gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: var(--white);
+}
+
+.service-category__gallery figcaption {
+  padding: 7px 8px 9px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
 }
 
 .service-footnote {
@@ -3009,26 +3040,14 @@ a {
   padding-left: 0;
 }
 
-.cake-details__options {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin: 22px 0;
-}
-
-.cake-details__options p {
-  margin: 0;
-  padding: 14px 16px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--white);
+.cake-size__details {
+  display: block;
+  max-width: 500px;
+  margin-top: 5px;
   color: var(--muted);
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.cake-details__options strong {
-  color: var(--ink);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .cupcake-details {
@@ -3347,10 +3366,6 @@ a {
     margin-top: 12px;
   }
 
-  .service-cake-gallery > img {
-    height: 110px;
-  }
-
   .service-request-layout {
     grid-template-columns: 1fr;
   }
@@ -3367,11 +3382,6 @@ a {
 
   .cake-details {
     padding-block: 40px;
-  }
-
-  .cake-details__options {
-    grid-template-columns: 1fr;
-    gap: 8px;
   }
 
   .cupcake-details {
@@ -3445,20 +3455,6 @@ a {
     font-size: 15px;
   }
 
-  .bakery-feature__links {
-    gap: 8px;
-  }
-
-  .bakery-feature__option .button {
-    min-height: 48px;
-    padding-inline: 10px;
-    font-size: 9px;
-  }
-
-  .bakery-feature__option img {
-    height: 100px;
-  }
-
   .service-fact {
     padding: 18px;
   }
@@ -3479,12 +3475,16 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .service-category > img {
+  .service-category__summary > img {
     height: 150px;
   }
 
   .service-category__body {
     padding: 15px 16px 17px;
+  }
+
+  .service-category__gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .service-photo-story {
@@ -3496,14 +3496,6 @@ a {
 
   .service-photo-story img {
     height: 120px;
-  }
-
-  .service-cake-gallery {
-    gap: 8px;
-  }
-
-  .service-cake-gallery > img {
-    height: 96px;
   }
 
   .service-steps {

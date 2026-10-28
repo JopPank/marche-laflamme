@@ -4,6 +4,7 @@
 !assets/charcuterie-plateau.png
 !assets/gateaux-fruits.png
 !assets/boulangerie-muffins.png
+!assets/bakery-fruit-tarts.png
 node_modules/
 .env
 .env.*
