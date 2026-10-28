@@ -2927,9 +2927,9 @@ a {
 
 .service-category__gallery {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-  padding: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  padding: 8px;
   border-top: 1px solid var(--line);
 }
 
@@ -2937,22 +2937,22 @@ a {
   min-width: 0;
   margin: 0;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 3px;
   background: var(--paper);
 }
 
 .service-category__gallery img {
   display: block;
   width: 100%;
-  aspect-ratio: 1;
+  height: auto;
   object-fit: contain;
   background: var(--white);
 }
 
 .service-category__gallery figcaption {
-  padding: 7px 8px 9px;
+  padding: 4px 5px 6px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.4;
 }
 
@@ -3484,7 +3484,7 @@ a {
   }
 
   .service-category__gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .service-photo-story {
