@@ -56,6 +56,8 @@ Le pied de page répartit le titre et les heures dans la colonne gauche, avec le
 
 Les cartes de coordonnées utilisent du texte de 16 px (20 px pour le téléphone), des libellés de 11 px et des icônes SVG décoratives dorées, sans dépendance externe. Le contenu est centré verticalement et les liens sociaux sont séparés, chacun avec son icône; les libellés textuels et les destinations des liens restent conservés.
 
+La page Nous joindre reprend les icônes discrètes et une typographie agrandie. Deux colonnes regroupent la carte et l'adresse à gauche, puis téléphone, courriel, heures et réseaux sociaux à droite, sans étirer les petites cartes à la hauteur de la carte Google. La carte absorbe la hauteur disponible pour équilibrer les colonnes sans vide sous l'adresse. Les heures suivent l'ordre du lundi au dimanche; les colonnes s'empilent sur mobile.
+
 Les raccourcis de l'en-tête utilisent un dégradé crème et lin avec une bordure or sourd; le bandeau d'accueil reprend le fond crème et un fondu assorti vers la photo. Les accents bordeaux restent inchangés, sans grand aplat jaune vif dans ces deux zones.
 
 En Boulangerie, la carte « Créez le gâteau parfait pour chaque occasion » est un lien entier vers `#gateaux` (formats et prix), avec la même interaction que la carte Cupcakes : soulèvement, halo, flèche et focus clavier. Le bouton rouge interne est remplacé par la flèche, sans liens imbriqués.

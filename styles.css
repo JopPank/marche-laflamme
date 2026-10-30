@@ -4256,16 +4256,29 @@ a.text-link[href^="#"]::after {
 
 .contact-bento {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
   margin-top: 24px;
 }
 
+.contact-bento__column {
+  display: grid;
+  min-width: 0;
+  align-content: start;
+  gap: 18px;
+}
+
+.contact-bento__column--location {
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+
 .contact-bento .contact-map {
-  grid-row: span 2;
   padding: 12px 12px 22px;
 }
 
 .contact-bento .store-map {
-  min-height: 270px;
+  flex: 1 1 auto;
+  height: 300px;
+  min-height: 300px;
   border-radius: 14px;
 }
 
@@ -4274,7 +4287,32 @@ a.text-link[href^="#"]::after {
 }
 
 .contact-bento h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 24px;
+}
+
+.contact-bento .contact-icon {
+  color: #94733d;
+}
+
+.contact-bento .contact-bento__action,
+.contact-bento address,
+.contact-bento .store-hours {
+  font-size: 18px;
+}
+
+.contact-bento__phone {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.contact-bento__social .service-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
 }
 
 .contact-bento__action {
@@ -4290,8 +4328,17 @@ a.text-link[href^="#"]::after {
 }
 
 .contact-bento__hours {
-  grid-row: span 2;
   background: var(--cream);
+}
+
+.contact-bento .store-hours li {
+  padding-block: 4px;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-bento .store-hours li span:last-child {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 .contact-bento__address .text-link {
@@ -4299,6 +4346,7 @@ a.text-link[href^="#"]::after {
 }
 
 .contact-bento__hours > p {
+  margin-top: 14px;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.7;
@@ -4490,7 +4538,8 @@ a.text-link[href^="#"]::after {
   font-size: 11px;
 }
 
-.visit--footer .visit__icon {
+.visit--footer .visit__icon,
+.contact-icon {
   width: 22px;
   height: 22px;
   flex: 0 0 22px;
@@ -4502,7 +4551,8 @@ a.text-link[href^="#"]::after {
   color: #dec99e;
 }
 
-.visit--footer .visit__icon--filled {
+.visit--footer .visit__icon--filled,
+.contact-icon--filled {
   fill: currentColor;
   stroke: none;
 }
