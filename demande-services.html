@@ -80,10 +80,24 @@
           <div class="request-card" data-service-request>
             <fieldset class="request-type">
               <legend>Qu’aimeriez-vous demander?</legend>
-              <label><input type="radio" name="service-type" value="gateau" checked> <span>Un gâteau</span></label>
-              <label><input type="radio" name="service-type" value="cupcakes"> <span>Des cupcakes</span></label>
-              <label><input type="radio" name="service-type" value="traiteur"> <span>Du traiteur</span></label>
-              <label><input type="radio" name="service-type" value="both"> <span>Les deux</span></label>
+              <div class="request-type__tiles">
+                <label>
+                  <input type="radio" name="service-type" value="gateau" aria-labelledby="service-cake-label" aria-describedby="service-cake-description" checked>
+                  <span><strong id="service-cake-label">Un gâteau</strong><small id="service-cake-description">Pour votre occasion</small></span>
+                </label>
+                <label>
+                  <input type="radio" name="service-type" value="cupcakes" aria-labelledby="service-cupcakes-label" aria-describedby="service-cupcakes-description">
+                  <span><strong id="service-cupcakes-label">Des cupcakes</strong><small id="service-cupcakes-description">Petites douceurs</small></span>
+                </label>
+                <label>
+                  <input type="radio" name="service-type" value="traiteur" aria-labelledby="service-catering-label" aria-describedby="service-catering-description">
+                  <span><strong id="service-catering-label">Du traiteur</strong><small id="service-catering-description">Plateaux à partager</small></span>
+                </label>
+                <label>
+                  <input type="radio" name="service-type" value="both" aria-labelledby="service-both-label" aria-describedby="service-both-description">
+                  <span><strong id="service-both-label">Gâteau et traiteur</strong><small id="service-both-description">Une demande combinée</small></span>
+                </label>
+              </div>
             </fieldset>
             <p><a class="button button--red" href="./livraison.html#commande">Commander avec Laflamme Express <span aria-hidden="true">↗</span></a></p>
 

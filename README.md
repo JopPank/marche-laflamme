@@ -44,6 +44,12 @@ Le nom accessible du logo provient de son texte alternatif et de sa légende vis
 
 ### Cartes bento
 
+Le formulaire combiné présente quatre tuiles de sélection compactes (gâteau, cupcakes, traiteur, gâteau et traiteur), en deux colonnes sur ordinateur et une sur mobile. Chaque tuile reste un libellé de bouton radio natif : clic sur toute la surface, navigation au clavier, description accessible, bordure bordeaux pour la sélection et contour de focus visible. Les paramètres de présélection et le comportement conditionnel de `services.js` sont conservés; aucune flèche ni animation de déplacement n'est ajoutée à ces choix.
+
+La page Notre histoire associe une grande photo de famille, une tuile « Depuis 1959 » et quatre cartes chronologiques dans une liste ordonnée. Les dates, personnes et descriptions restent inchangées; seules les actions de visite et d'exploration sont interactives. Le pied de page partagé conserve son fond sombre avec des regroupements de coordonnées légèrement arrondis, des espacements plus généreux et des états de survol/focus contrastés. Les groupes s'empilent sur mobile sans déplacer les coordonnées ni masquer les heures.
+
+Les heures du pied de page sont mises en évidence dans un encadré crème pleine largeur : « Ouvert tous les jours » et « 8 h à 22 h » en grands caractères, avec la réserve sur les jours fériés en dessous. Le contenu est bilingue et reste informatif, sans état d'ouverture calculé en temps réel.
+
 Les raccourcis de l'en-tête utilisent un dégradé crème et lin avec une bordure or sourd; le bandeau d'accueil reprend le fond crème et un fondu assorti vers la photo. Les accents bordeaux restent inchangés, sans grand aplat jaune vif dans ces deux zones.
 
 En Boulangerie, la carte « Créez le gâteau parfait pour chaque occasion » est un lien entier vers `#gateaux` (formats et prix), avec la même interaction que la carte Cupcakes : soulèvement, halo, flèche et focus clavier. Le bouton rouge interne est remplacé par la flèche, sans liens imbriqués.

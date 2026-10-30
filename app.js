@@ -140,7 +140,14 @@ contactFooter.innerHTML = `
     <span class="visit__decoration" aria-hidden="true">M</span>
   </div>
   <div class="container visit__more">
-    <p>Heures d’ouverture : tous les jours, de 8 h à 22 h. Les heures des jours fériés peuvent varier; appelez pour confirmer.</p>
+    <div class="visit__hours">
+      <div>
+        <h3>Heures d’ouverture</h3>
+        <p class="visit__hours-daily">Ouvert tous les jours</p>
+      </div>
+      <p class="visit__hours-time">8 h à 22 h</p>
+      <p class="visit__hours-note">Les heures des jours fériés peuvent varier; appelez pour confirmer.</p>
+    </div>
     <a href="./contact.html">Coordonnées, carte et renseignements ↗</a>
     <p><a href="./a-propos.html">Découvrir notre histoire</a> · <a href="https://maps.google.com/?q=March%C3%A9+Laflamme+126+rue+Principale+Gatineau" target="_blank" rel="noopener noreferrer">Consulter les avis clients sur Google ↗</a></p>
   </div>
