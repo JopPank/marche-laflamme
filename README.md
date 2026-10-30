@@ -42,7 +42,25 @@ Le nom accessible du logo provient de son texte alternatif et de sa légende vis
 
 ## Présentation, circulaire et identité visuelle
 
-La page Livraison utilise la photo fournie `Delivery Truck.png`, optimisée en `assets/delivery-truck.webp` (1100 × 509 pixels). Le camion reste entièrement visible, sans recadrage, à côté de l'introduction sur ordinateur et sous celle-ci sur mobile; son texte alternatif est bilingue.
+### Cartes bento
+
+Les raccourcis de l'en-tête utilisent un dégradé crème et lin avec une bordure or sourd; le bandeau d'accueil reprend le fond crème et un fondu assorti vers la photo. Les accents bordeaux restent inchangés, sans grand aplat jaune vif dans ces deux zones.
+
+En Boulangerie, la carte « Créez le gâteau parfait pour chaque occasion » est un lien entier vers `#gateaux` (formats et prix), avec la même interaction que la carte Cupcakes : soulèvement, halo, flèche et focus clavier. Le bouton rouge interne est remplacé par la flèche, sans liens imbriqués.
+
+Les deux liens « Préparer une demande » du Traiteur utilisent la variante compacte `bento-action` : fond crème, flèche ronde bordeaux et interactions des cartes, en conservant le parcours `?service=traiteur#demande`.
+
+Les autres actions anciennement rouges (`button--red`, nom conservé pour compatibilité) reprennent ce style dans toute la feuille partagée, y compris les boutons de simulation. Le panneau Tally utilise la même présentation avec un indicateur plus/moins natif; la fiche de préparation adapte également ses boutons d'action dans sa feuille séparée, sans modifier l'impression. Les états de langue sélectionnée et les petits accents bordeaux restent distincts des appels à l'action.
+
+Les liens d'action autonomes `a.text-link` (menu officiel, exploration des rayons, aperçu des offres, plateaux traiteur et itinéraires) partagent également ce traitement. Les éléments `span.text-link` à l'intérieur d'une carte déjà cliquable, la navigation et les liens intégrés aux paragraphes ne deviennent pas des boutons.
+
+L'accueil (rayons et spéciaux), les catégories Traiteur et les aperçus Livraison, Boulangerie et Contact partagent des cartes arrondies, des ombres légères et des accents crème, bordeaux et or dans `styles.css`. Les rayons et catégories utilisent des tailles variées sur ordinateur; les grilles se simplifient sur tablette et mobile sans changer l'ordre du contenu. Les cartes de produits restent informatives, sans faux lien.
+
+Les quatre autres rayons suivent la même présentation : la Boucherie associe sa photo aux tuiles de fraîcheur et de service, la Charcuterie combine trois cartes asymétriques avec les plateaux existants, les Fruits et légumes mettent en valeur la fraîcheur et le premier plateau de chaque catégorie sans déstructurer le catalogue, et le Prêt à manger distingue ses trois listes par des teintes douces. Les variétés de saucisses, plats, ingrédients, prix et portions restent visibles sans interaction. Ces cartes informatives ne simulent pas des boutons; les halos et soulèvements restent réservés aux vrais liens.
+
+Les liens de cartes proposent un léger soulèvement et un halo au survol avec une souris précise, ainsi qu'un contour visible au clavier. Les galeries Traiteur conservent leurs éléments natifs `details`/`summary` et grandissent sans hauteur fixe à l'ouverture. Les effets respectent `prefers-reduced-motion`; aucune dépendance ni animation JavaScript n'est ajoutée. Les traductions existantes, tableaux de prix, modalités de livraison, avertissements de démonstration et formulaires restent conservés. Pour vérifier une modification, contrôler les dix surfaces en FR et EN à 320, 390, 768 et 1440 pixels, les galeries ouvertes, le focus clavier et la réduction des animations.
+
+La page Livraison utilise la photo fournie `Delivery Truck.png`, optimisée en `assets/delivery-truck.webp` (1100 × 509 pixels). Le camion reste entièrement visible, sans recadrage, dans une carte à côté des options sur ordinateur et au-dessus de celles-ci sur mobile; son texte alternatif est bilingue.
 
 La section **Circulaire et promotions / Les spéciaux de la semaine** apparaît immédiatement sous la navigation, avant le bandeau du marché, comme point d'entrée prioritaire. La capture Metro fournie sert de référence de hiérarchie seulement; aucune image de produit ou promotion Metro n'est publiée. Les cartes de rayons reprennent des photos déjà utilisées sur le site : saucisses maison de la page officielle de boucherie, légumes recadrés de la circulaire, puis fromages, beignes, bouchées traiteur et gâteau des pages de services. Les badges numérotés des images des cartes ont été retirés.
 

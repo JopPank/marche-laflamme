@@ -24,22 +24,25 @@
     </div></header>
     <main id="contenu">
       <section class="service-content bakery-feature" aria-labelledby="bakery-feature-title">
-        <div class="container bakery-feature__inner">
-          <img class="bakery-feature__bread" src="./assets/bakery-bread-960.webp" width="960" height="443" loading="lazy" alt="Pains frais cuits en magasin">
-          <div class="bakery-feature__copy">
+        <div class="container bakery-feature__inner bakery-bento">
+          <div class="bakery-feature__copy bakery-bento__intro">
             <p class="eyebrow"><span class="eyebrow__line"></span> Votre boulangerie de choix à Aylmer</p>
             <h1 id="bakery-feature-title">Toujours <em>frais.</em></h1>
             <p>Dans notre section boulangerie, retrouvez des pains frais cuits en magasin ainsi qu’une sélection de desserts.</p>
-            <div class="bakery-feature__cake-copy">
-              <h2>Créez le gâteau parfait pour chaque occasion</h2>
-              <p>Chez Marché Laflamme, nous sommes fiers d’offrir un service de pâtisserie unique et personnalisé qui répond à toutes vos envies de confiserie. Qu’il s’agisse d’un anniversaire, d’une fête ou de toute autre occasion spéciale, nous sommes là pour créer le gâteau parfait. Nos boulangers experts confectionnent de délicieux gâteaux préparés sur commande, vous permettant de choisir parmi une gamme de saveurs, de garnitures et de designs.</p>
-              <p>Nous demandons un délai de 24 h afin de passer une commande de gâteau.</p>
-            </div>
-            <div class="bakery-feature__links">
-              <a class="button button--red" href="#gateaux">Gâteaux personnalisés <span aria-hidden="true">↘</span></a>
-              <a class="button button--red" href="#cupcakes">Cupcakes personnalisés <span aria-hidden="true">↘</span></a>
-            </div>
           </div>
+          <img class="bakery-feature__bread bento-card" src="./assets/bakery-bread-960.webp" width="960" height="443" loading="lazy" alt="Pains frais cuits en magasin">
+          <a class="bakery-feature__cake-copy bento-card" href="#gateaux" aria-labelledby="cake-card-title">
+            <h2 id="cake-card-title">Créez le gâteau parfait pour chaque occasion</h2>
+            <p>Chez Marché Laflamme, nous sommes fiers d’offrir un service de pâtisserie unique et personnalisé qui répond à toutes vos envies de confiserie. Qu’il s’agisse d’un anniversaire, d’une fête ou de toute autre occasion spéciale, nous sommes là pour créer le gâteau parfait. Nos boulangers experts confectionnent de délicieux gâteaux préparés sur commande, vous permettant de choisir parmi une gamme de saveurs, de garnitures et de designs.</p>
+            <p>Nous demandons un délai de 24 h afin de passer une commande de gâteau.</p>
+            <span class="bento-arrow" aria-hidden="true">↘</span>
+          </a>
+          <a class="bento-card bakery-bento__cupcakes" href="#cupcakes">
+            <p class="eyebrow">Une petite douceur</p>
+            <h2>Cupcakes personnalisés</h2>
+            <p>Choisissez parmi les saveurs vanille, chocolat ou red velvet.</p>
+            <span class="bento-arrow" aria-hidden="true">↘</span>
+          </a>
         </div>
       </section>
       <section class="service-content cake-details" id="gateaux" aria-labelledby="cake-pricing-title">

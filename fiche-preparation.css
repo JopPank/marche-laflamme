@@ -25,10 +25,19 @@ input, select, textarea {
 }
 textarea { resize: vertical; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-button { background: #b81d24; color: white; border: 1px solid #b81d24; border-radius: 4px; padding: 12px 20px; font: inherit; cursor: pointer; }
+button { background: linear-gradient(110deg, #fffefa, #f2ede2); color: #242424; border: 1px solid #e6e0d5; border-radius: 22px; padding: 14px 18px; font: inherit; cursor: pointer; box-shadow: 0 6px 24px rgb(61 48 27 / 4%); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.actions button { display: inline-flex; max-width: 100%; align-items: center; justify-content: space-between; gap: 20px; }
+.actions button[type="submit"]::after { content: "\2197"; display: inline-grid; flex: 0 0 42px; width: 42px; height: 42px; place-items: center; border: 1px solid #e6e0d5; border-radius: 50%; background: #fffefa; color: #b81d24; font-size: 22px; transition: transform .25s ease, background-color .25s ease, color .25s ease; }
+@media (hover: hover) and (pointer: fine) {
+  .actions button:hover { transform: translateY(-4px); border-color: #b81d24; box-shadow: 0 16px 36px rgb(61 48 27 / 9%), 0 0 24px rgb(184 29 36 / 12%); }
+  .actions button[type="submit"]:hover::after { transform: translate(2px, -2px); background: #b81d24; color: #fffefa; }
+}
+@media (prefers-reduced-motion: reduce) {
+  button, button::after { transition-duration: .01ms !important; }
+}
 button.secondary { background: white; color: #971820; }
 .language-switch { display: inline-flex; align-items: center; gap: 3px; margin-bottom: 16px; color: #555; font-size: 12px; font-weight: bold; }
-.language-switch button { width: auto; margin: 0; padding: 6px 8px; background: transparent; color: inherit; border: 0; }
+.language-switch button { width: auto; margin: 0; padding: 6px 8px; background: transparent; color: inherit; border: 0; box-shadow: none; }
 .language-switch button[aria-pressed="true"] { background: #971820; color: white; }
 .language-switch button:focus-visible { outline: 2px solid #176ca4; outline-offset: 2px; }
 :focus-visible { outline: 3px solid #176ca4; outline-offset: 3px; }

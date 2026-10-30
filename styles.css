@@ -116,17 +116,7 @@ a {
 
 .demo-form-loader summary {
   width: fit-content;
-  padding: 14px 20px;
-  border-radius: 4px;
-  background: var(--red);
-  color: var(--white);
   cursor: pointer;
-  font-weight: 700;
-}
-
-.demo-form-loader summary:focus-visible {
-  outline: 3px solid var(--ink);
-  outline-offset: 3px;
 }
 
 .demo-notice {
@@ -224,10 +214,10 @@ a {
   align-items: center;
   gap: 9px;
   padding: 8px 12px 8px 9px;
-  border: 1px solid #e6b839;
+  border: 1px solid #d8cbb5;
   border-radius: 6px;
-  background: linear-gradient(110deg, #ffe58a, #f4c75e 62%, #ffd970);
-  box-shadow: 0 3px 0 #d9a928, 0 6px 16px rgb(143 62 71 / 16%);
+  background: linear-gradient(110deg, var(--paper), #eee3cf);
+  box-shadow: 0 2px 0 #d8cbb5, 0 6px 16px rgb(61 48 27 / 7%);
   color: #75232a;
   text-decoration: none;
   transition: transform .18s ease, box-shadow .18s ease;
@@ -239,7 +229,7 @@ a {
 
 .header-action:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 0 #d9a928, 0 9px 20px rgb(143 62 71 / 20%);
+  box-shadow: 0 3px 0 #d8cbb5, 0 9px 20px rgb(61 48 27 / 10%);
 }
 
 .header-action[aria-current="page"] {
@@ -1016,14 +1006,6 @@ a {
   transform: translateY(-2px);
 }
 
-.button--red {
-  background: var(--red);
-}
-
-.button--red:hover {
-  background: var(--red-dark);
-}
-
 .button--small {
   min-height: 42px;
   gap: 13px;
@@ -1066,7 +1048,7 @@ a {
   position: relative;
   display: flex;
   align-items: center;
-  background: #ffda24;
+  background: var(--cream);
 }
 
 .hero__photo,
@@ -1083,7 +1065,7 @@ a {
 }
 
 .hero__wash {
-  background: linear-gradient(90deg, #ffda24 0%, #ffda24 40%, rgba(255, 218, 36, .8) 46%, transparent 58%);
+  background: linear-gradient(90deg, var(--cream) 0%, var(--cream) 40%, rgba(242, 237, 226, .8) 46%, transparent 58%);
 }
 
 .hero__content {
@@ -1147,6 +1129,7 @@ a {
 
 .hero__actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 24px;
 }
@@ -1235,6 +1218,162 @@ a {
   line-height: 1.65;
 }
 
+.bento-card,
+.butchery-bento .butchery-hero__highlights li,
+.meal-categories--bento .butchery-card,
+.produce-menu--bento .produce-menu__item,
+.department-card,
+.specials-card,
+.service-category {
+  --card-glow: rgba(184, 29, 36, .12);
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--white);
+  box-shadow: 0 6px 24px rgba(61, 48, 27, .04);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.bento-card {
+  position: relative;
+  padding: clamp(22px, 3vw, 32px);
+}
+
+a.bento-card {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.bento-action,
+.button--red,
+a.text-link,
+.demo-form-loader summary {
+  --card-glow: rgba(184, 29, 36, .12);
+  display: inline-flex;
+  max-width: 100%;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: linear-gradient(110deg, var(--white), var(--cream));
+  box-shadow: 0 6px 24px rgba(61, 48, 27, .04);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.button--red > span[aria-hidden="true"],
+a.text-link > span[aria-hidden="true"] {
+  display: none;
+}
+
+.button--red::after,
+a.text-link::after,
+.demo-form-loader summary::after {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--red);
+  content: "\2197";
+  font-size: 22px;
+  transition: transform .25s ease, background-color .25s ease, color .25s ease;
+}
+
+a.text-link[href^="#"]::after {
+  content: "\2193";
+}
+
+.demo-form-loader summary {
+  list-style: none;
+}
+
+.demo-form-loader summary::-webkit-details-marker {
+  display: none;
+}
+
+.demo-form-loader summary::after {
+  content: "+";
+}
+
+.demo-form-loader[open] summary::after {
+  content: "\2212";
+}
+
+@media (hover: none), (pointer: coarse) {
+  .button--red:hover {
+    transform: none;
+  }
+}
+
+.bento-action > span:first-child {
+  min-width: 0;
+}
+
+.bento-card h2,
+.bento-card h3 {
+  margin: 0 0 12px;
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.8vw, 34px);
+  line-height: 1.2;
+}
+
+.bento-card em {
+  color: var(--red);
+}
+
+.bento-arrow {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--red);
+  font-size: 22px;
+  transition: transform .25s ease, background-color .25s ease, color .25s ease;
+}
+
+:is(a.bento-card, a.text-link, .department-card, a.specials-card, .button--red, .demo-form-loader summary):focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 4px;
+  box-shadow: 0 10px 32px var(--card-glow);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  :is(a.bento-card, a.text-link, .department-card, a.specials-card, .button--red, .demo-form-loader summary):hover {
+    transform: translateY(-4px);
+    border-color: rgba(184, 29, 36, .35);
+    box-shadow: 0 16px 36px rgba(61, 48, 27, .09), 0 0 24px var(--card-glow);
+  }
+
+  :is(a.bento-card, .department-card):hover :is(.bento-arrow, .department-card__arrow) {
+    transform: translate(2px, -2px);
+    background: var(--red);
+    color: var(--white);
+  }
+
+  :is(.button--red, a.text-link, .demo-form-loader summary):hover::after {
+    transform: translate(2px, -2px);
+    background: var(--red);
+    color: var(--white);
+  }
+}
+
 .department-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1249,11 +1388,8 @@ a {
   position: relative;
   overflow: hidden;
   padding: 22px 23px 19px;
-  border: 1px solid rgba(69, 59, 42, .06);
-  background: var(--white);
   color: var(--ink);
   text-decoration: none;
-  transition: transform .2s ease, box-shadow .2s ease;
 }
 
 .department-card__photo {
@@ -1266,11 +1402,6 @@ a {
   background-color: var(--paper);
   object-fit: cover;
   object-position: center;
-}
-
-.department-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(61, 48, 27, .08);
 }
 
 .department-card__icon {
@@ -1363,10 +1494,6 @@ a {
 .specials-card {
   min-width: 0;
   overflow: hidden;
-  border: 1px solid rgba(36, 37, 31, .07);
-  border-radius: 8px;
-  background: var(--white);
-  box-shadow: 0 5px 16px rgba(36, 37, 31, .08);
 }
 
 .specials-card__image {
@@ -2540,13 +2667,6 @@ a {
   line-height: 1.8;
 }
 
-.bakery-feature__links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 2px;
-}
-
 .bakery-feature__cake-copy {
   max-width: 640px;
   margin: 4px 0 18px;
@@ -2567,7 +2687,7 @@ a {
   margin: 0 0 8px;
 }
 
-.bakery-feature__cake-copy p:last-child {
+.bakery-feature__cake-copy p:last-of-type {
   margin-bottom: 0;
   color: var(--red-dark);
   font-weight: 700;
@@ -2847,9 +2967,6 @@ a {
 
 .service-category {
   overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--white);
 }
 
 .service-category__summary {
@@ -3542,5 +3659,689 @@ a {
 
   .request-grid__wide {
     grid-column: auto;
+  }
+}
+
+/* Bento layouts keep source order and let expanded or translated content grow. */
+.department-grid--bento,
+.specials__rail--bento,
+.catering-grid--bento,
+.delivery-bento,
+.bakery-bento,
+.contact-bento {
+  display: grid;
+  gap: 18px;
+}
+
+.butchery-bento,
+.deli-bento,
+.meal-bento,
+.meal-categories--bento,
+.produce-bento,
+.produce-freshness--bento {
+  gap: 18px;
+}
+
+.butchery-bento {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.butchery-bento .butchery-hero__intro {
+  grid-column: 1 / -1;
+}
+
+.butchery-bento .butchery-hero__intro h1 {
+  max-width: 900px;
+}
+
+.butchery-bento .butchery-hero__image {
+  height: 100%;
+  min-height: 420px;
+  margin: 0;
+  padding: 0;
+}
+
+.butchery-bento .butchery-hero__details {
+  display: grid;
+  align-self: stretch;
+  gap: 18px;
+}
+
+.butchery-bento .butchery-hero__highlights {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.butchery-bento .butchery-hero__highlights li {
+  padding: 24px 20px 24px 42px;
+  background: radial-gradient(ellipse at top right, rgba(244, 199, 94, .22), transparent 80%), var(--white);
+  font-size: 15px;
+}
+
+.butchery-bento .butchery-hero__highlights li::before {
+  left: 20px;
+}
+
+.butchery-bento .butchery-hero__details > p {
+  padding: 26px;
+  font-size: 15px;
+}
+
+.deli-bento {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  align-items: start;
+}
+
+.deli-bento .deli-bento__cuts {
+  grid-row: span 2;
+  background: radial-gradient(ellipse at top, rgba(244, 199, 94, .2), transparent 70%), var(--white);
+}
+
+.deli-bento .deli-bento__salads {
+  background: #edf3e9;
+}
+
+.deli-bento .deli-bento__cheese {
+  background: #faf0dc;
+}
+
+.deli-bento .butchery-card {
+  padding: 28px;
+}
+
+.deli-bento__photo {
+  display: block;
+  width: 100%;
+  height: 180px;
+  margin-bottom: 24px;
+  object-fit: contain;
+}
+
+.deli-bento__cuts .deli-bento__photo {
+  height: 320px;
+}
+
+.deli-bento .butchery-card h2 {
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+.deli-bento .butchery-card p {
+  font-size: 16px;
+}
+
+.produce-bento {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.produce-bento__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: radial-gradient(ellipse at top left, rgba(244, 199, 94, .25), transparent 80%), var(--white);
+}
+
+.produce-bento .butchery-hero__image {
+  height: 100%;
+  min-height: 340px;
+  margin: 0;
+  padding: 0;
+}
+
+.produce-freshness--bento {
+  grid-template-columns: minmax(0, .65fr) minmax(0, 1.35fr);
+  align-items: stretch;
+}
+
+.produce-freshness--bento > img {
+  height: 100%;
+  max-height: 350px;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--white);
+  padding: 20px;
+}
+
+.produce-menu--bento .produce-menu__item {
+  border-radius: 22px;
+}
+
+.produce-menu--bento .produce-menu__item:first-child {
+  border-color: #c4d2bf;
+  background: radial-gradient(ellipse at top left, rgba(46, 125, 80, .1), transparent 75%), var(--white);
+}
+
+.meal-bento {
+  align-items: stretch;
+}
+
+.meal-bento .meal-hero__image {
+  min-height: 360px;
+}
+
+.meal-categories--bento {
+  grid-template-columns: minmax(0, 1.15fr) repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.meal-categories--bento .butchery-card {
+  position: relative;
+  padding: 30px 26px;
+  border-radius: 22px;
+  border-top: 4px solid #d5ac55;
+  background: #faf0dc;
+}
+
+.meal-categories--bento .butchery-card:nth-child(2) {
+  border-top-color: #b81d24;
+  background: #f8ece7;
+}
+
+.meal-categories--bento .butchery-card:nth-child(3) {
+  border-top-color: #2e7d50;
+  background: #edf3e9;
+}
+
+.meal-categories--bento .butchery-card h3 {
+  margin-top: 0;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+@media (max-width: 900px) {
+  .butchery-bento,
+  .deli-bento,
+  .meal-categories--bento,
+  .produce-bento {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .butchery-bento .butchery-hero__image {
+    min-height: 0;
+    height: 320px;
+  }
+
+  .deli-bento .deli-bento__cuts {
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .butchery-bento,
+  .deli-bento,
+  .meal-bento,
+  .meal-categories--bento,
+  .produce-bento,
+  .produce-freshness--bento {
+    gap: 12px;
+  }
+
+  .produce-freshness--bento {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .produce-freshness--bento > img {
+    height: 220px;
+  }
+
+  .butchery-bento .butchery-hero__image,
+  .produce-bento .butchery-hero__image {
+    height: 240px;
+    min-height: 0;
+  }
+
+  .butchery-bento .butchery-hero__highlights li {
+    padding: 20px 14px 20px 34px;
+    font-size: 14px;
+  }
+
+  .butchery-bento .butchery-hero__highlights li::before {
+    left: 14px;
+  }
+
+  .deli-bento__cuts .deli-bento__photo {
+    height: 220px;
+  }
+
+  .deli-bento .butchery-card,
+  .meal-categories--bento .butchery-card {
+    padding: 24px;
+  }
+
+  .meal-bento .meal-hero__image {
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 380px) {
+  .butchery-bento .butchery-hero__highlights {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.department-grid--bento {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.department-grid--bento .department-card {
+  min-height: 250px;
+  padding: 26px 24px;
+}
+
+.department-grid--bento .department-card__photo {
+  height: calc(100% - 135px);
+  transition: transform .4s ease;
+}
+
+.department-grid--bento .department-card__name,
+.department-grid--bento .department-card__detail {
+  max-width: calc(100% - 36px);
+}
+
+.department-grid--bento .department-card__detail {
+  min-height: 32px;
+  line-height: 1.5;
+}
+
+.department-grid--bento .department-card--meat {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.department-grid--bento .department-card--meat .department-card__name {
+  font-size: clamp(32px, 4vw, 48px);
+}
+
+.department-grid--bento .department-card--meat .department-card__photo {
+  height: calc(100% - 150px);
+}
+
+.department-grid--bento :is(.department-card--catering, .department-card--cakes) {
+  grid-column: span 2;
+}
+
+.department-grid--bento .department-card__arrow {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  bottom: 26px;
+  right: 20px;
+  transition: transform .25s ease, background-color .25s ease, color .25s ease;
+}
+
+.specials__rail--bento {
+  grid-template-columns: minmax(0, .9fr) repeat(2, minmax(0, 1.2fr));
+  grid-auto-flow: row;
+  grid-auto-columns: auto;
+  overflow: visible;
+  padding: 0;
+}
+
+.specials__rail--bento .specials-card--flyer {
+  grid-row: span 2;
+  min-height: 350px;
+  padding: 28px;
+  background: radial-gradient(ellipse at top right, rgba(244, 199, 94, .22), transparent 70%), var(--green);
+  --card-glow: rgba(46, 125, 80, .18);
+}
+
+.specials__rail--bento .specials-card:not(.specials-card--flyer) {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+}
+
+.specials__rail--bento .specials-card__image {
+  height: 100%;
+  min-height: 160px;
+}
+
+.specials__rail--bento .specials-card__details {
+  align-self: center;
+  min-height: 0;
+  padding: 18px 16px;
+}
+
+.specials__rail--bento .specials-card h3 {
+  min-height: 0;
+}
+
+.specials__rail--bento .specials-card__flyer-title {
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+.catering-grid--bento {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+}
+
+.catering-grid--bento .service-category:nth-child(3n + 1) {
+  grid-column: span 2;
+}
+
+.catering-grid--bento .service-category:nth-child(3n + 2),
+.catering-grid--bento .service-category:nth-child(3n + 3) {
+  grid-column: span 1;
+}
+
+.catering-grid--bento .service-category__summary > img {
+  height: 210px;
+  transition: filter .25s ease;
+}
+
+.catering-grid--bento .service-category__body {
+  min-height: 205px;
+  padding: 24px;
+  background: radial-gradient(ellipse at top right, rgba(244, 199, 94, .13), transparent 80%);
+}
+
+.catering-grid--bento .service-category__gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 14px;
+}
+
+.catering-grid--bento .service-category__gallery figcaption {
+  padding: 8px;
+  font-size: 12px;
+}
+
+.catering-grid--bento .service-category:focus-within {
+  border-color: var(--red);
+  box-shadow: 0 8px 28px var(--card-glow);
+}
+
+.delivery-bento {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+:is(.delivery-bento, .bakery-bento, .contact-bento) .bento-card {
+  border-radius: 22px;
+}
+
+.delivery-bento__photo {
+  display: flex;
+  grid-row: span 2;
+  flex-direction: column;
+  justify-content: center;
+  background: radial-gradient(ellipse at top, rgba(244, 199, 94, .3), transparent 75%), var(--cream);
+}
+
+.delivery-bento__photo .delivery-truck {
+  margin-bottom: 32px;
+}
+
+.delivery-bento .butchery-card {
+  min-height: 0;
+}
+
+.delivery-bento .butchery-card h3 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.delivery-bento__express {
+  display: flex;
+  grid-column: 1 / -1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: radial-gradient(ellipse at right, rgba(244, 199, 94, .45), transparent 75%), var(--white);
+}
+
+.bakery-bento {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.bakery-bento__intro {
+  grid-column: 1 / -1;
+}
+
+.bakery-bento .bakery-feature__copy > p:not(.eyebrow) {
+  max-width: 640px;
+  margin-bottom: 8px;
+}
+
+.bakery-bento .bakery-feature__bread {
+  grid-row: span 2;
+  height: 100%;
+  min-height: 480px;
+  padding: 0;
+}
+
+.bakery-bento .bakery-feature__cake-copy {
+  max-width: none;
+  margin: 0;
+  padding: 28px;
+}
+
+.bakery-bento .bakery-feature__cake-copy h2 {
+  font-size: clamp(24px, 2.2vw, 30px);
+}
+
+.bakery-bento .bakery-feature__cake-copy .bento-arrow {
+  display: grid;
+  margin-top: 18px;
+  margin-left: auto;
+}
+
+.bakery-bento__cupcakes {
+  background: radial-gradient(ellipse at top left, rgba(244, 199, 94, .28), transparent 80%), var(--cream);
+}
+
+.bakery-bento__cupcakes > p:not(.eyebrow) {
+  max-width: 350px;
+  padding-right: 35px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.bakery-bento__cupcakes .bento-arrow {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+}
+
+.contact-bento {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 24px;
+}
+
+.contact-bento .contact-map {
+  grid-row: span 2;
+  padding: 12px 12px 22px;
+}
+
+.contact-bento .store-map {
+  min-height: 270px;
+  border-radius: 14px;
+}
+
+.contact-bento .contact-map > p {
+  margin: 14px 12px 0;
+}
+
+.contact-bento h3 {
+  font-size: 24px;
+}
+
+.contact-bento__action {
+  padding-right: 75px;
+  background: radial-gradient(ellipse at top right, rgba(244, 199, 94, .2), transparent 80%), var(--white);
+  overflow-wrap: anywhere;
+}
+
+.contact-bento__action .bento-arrow {
+  position: absolute;
+  right: 22px;
+  top: calc(50% - 21px);
+}
+
+.contact-bento__hours {
+  grid-row: span 2;
+  background: var(--cream);
+}
+
+.contact-bento__address .text-link {
+  margin-top: 14px;
+}
+
+.contact-bento__hours > p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .department-grid--bento .department-card:hover .department-card__photo,
+  .department-grid--bento .department-card:focus-visible .department-card__photo {
+    transform: scale(1.035);
+  }
+
+  .catering-grid--bento .service-category:has(.service-category__summary:hover) {
+    border-color: rgba(184, 29, 36, .35);
+    box-shadow: 0 12px 32px var(--card-glow);
+  }
+
+  .catering-grid--bento .service-category__summary:hover > img {
+    filter: saturate(1.12);
+  }
+}
+
+@media (max-width: 1050px) {
+  .catering-grid--bento {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .catering-grid--bento .service-category:nth-child(n) {
+    grid-column: auto;
+  }
+
+  .specials__rail--bento {
+    grid-template-columns: minmax(0, .9fr) repeat(2, minmax(0, 1fr));
+  }
+
+  .specials__rail--bento .specials-card:not(.specials-card--flyer) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .specials__rail--bento .specials-card__image {
+    min-height: 0;
+    height: 110px;
+  }
+
+  .department-grid--bento {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .department-grid--bento .department-card--meat {
+    grid-row: auto;
+    min-height: 350px;
+  }
+
+  .department-grid--bento :is(.department-card--catering, .department-card--cakes) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .department-grid--bento,
+  .specials__rail--bento,
+  .catering-grid--bento,
+  .delivery-bento,
+  .bakery-bento,
+  .contact-bento {
+    gap: 12px;
+  }
+
+  .specials__rail--bento {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .specials__rail--bento .specials-card--flyer {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    gap: 16px;
+    min-height: 0;
+    padding: 24px;
+  }
+
+  .specials__rail--bento .specials-card__details {
+    padding: 14px 12px;
+  }
+
+  .department-grid--bento .department-card {
+    min-height: 265px;
+    padding: 20px 16px;
+  }
+
+  .department-grid--bento .department-card__photo {
+    height: calc(100% - 140px);
+  }
+
+  .department-grid--bento .department-card--meat {
+    min-height: 310px;
+  }
+
+  .department-grid--bento .department-card__name,
+  .department-grid--bento .department-card__detail {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .department-grid--bento .department-card__detail {
+    min-height: 50px;
+    padding-right: 12px;
+  }
+
+  .department-grid--bento .department-card__arrow {
+    right: 12px;
+    bottom: 12px;
+    width: 26px;
+    height: 26px;
+    background: var(--white);
+  }
+
+  .catering-grid--bento,
+  .delivery-bento,
+  .bakery-bento,
+  .contact-bento {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .catering-grid--bento .service-category__body {
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .catering-grid--bento .service-category__summary > img {
+    height: 200px;
+  }
+
+  .delivery-bento__photo,
+  .bakery-bento .bakery-feature__bread,
+  .contact-bento .contact-map,
+  .contact-bento__hours {
+    grid-row: auto;
+  }
+
+  .bakery-bento .bakery-feature__bread {
+    height: 260px;
+    min-height: 0;
+  }
+
+  .bakery-bento .bakery-feature__cake-copy {
+    padding: 24px;
+  }
+
+  .contact-bento .store-map {
+    min-height: 300px;
   }
 }
