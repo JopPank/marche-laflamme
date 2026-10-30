@@ -200,3 +200,49 @@ document.addEventListener("click", (event) => {
     navigation.querySelectorAll("details").forEach((details) => { details.open = false; });
   }
 });
+
+const spotlightMedia = window.matchMedia(
+  "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)"
+);
+const spotlightCards = document.querySelectorAll(
+  ".department-grid--bento > a.department-card, a.bakery-feature__cake-copy, a.bakery-bento__cupcakes, a.delivery-bento__express"
+);
+
+spotlightCards.forEach((card) => {
+  card.classList.add("spotlight-card");
+
+  const clearSpotlight = () => {
+    card.classList.remove("spotlight-card--active");
+    ["--spotlight-x", "--spotlight-y", "--photo-x", "--photo-y"].forEach((property) => {
+      card.style.removeProperty(property);
+    });
+  };
+
+  const moveSpotlight = (event) => {
+    if (event.pointerType !== "mouse" || !spotlightMedia.matches) {
+      clearSpotlight();
+      return;
+    }
+    const bounds = card.getBoundingClientRect();
+    const x = Math.max(0, Math.min(event.clientX - bounds.left, bounds.width));
+    const y = Math.max(0, Math.min(event.clientY - bounds.top, bounds.height));
+    card.style.setProperty("--spotlight-x", `${x}px`);
+    card.style.setProperty("--spotlight-y", `${y}px`);
+    card.style.setProperty("--photo-x", `${(x / bounds.width - .5) * 4}px`);
+    card.style.setProperty("--photo-y", `${(y / bounds.height - .5) * 4}px`);
+    card.classList.add("spotlight-card--active");
+  };
+
+  const updateSpotlight = () => {
+    clearSpotlight();
+    card.removeEventListener("pointermove", moveSpotlight);
+    if (spotlightMedia.matches) card.addEventListener("pointermove", moveSpotlight);
+  };
+
+  card.addEventListener("pointerleave", clearSpotlight);
+  card.addEventListener("pointercancel", clearSpotlight);
+  card.addEventListener("focus", clearSpotlight);
+  card.addEventListener("blur", clearSpotlight);
+  spotlightMedia.addEventListener("change", updateSpotlight);
+  updateSpotlight();
+});
