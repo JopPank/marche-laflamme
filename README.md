@@ -50,7 +50,11 @@ Le formulaire combiné présente quatre tuiles de sélection compactes (gâteau,
 
 La page Notre histoire associe une grande photo de famille, une tuile « Depuis 1959 » et quatre cartes chronologiques dans une liste ordonnée. Les dates, personnes et descriptions restent inchangées; seules les actions de visite et d'exploration sont interactives. Le pied de page partagé conserve son fond sombre avec des regroupements de coordonnées légèrement arrondis, des espacements plus généreux et des états de survol/focus contrastés. Les groupes s'empilent sur mobile sans déplacer les coordonnées ni masquer les heures.
 
-Les heures du pied de page sont mises en évidence dans un encadré crème pleine largeur : « Ouvert tous les jours » et « 8 h à 22 h » en grands caractères, avec la réserve sur les jours fériés en dessous. Le contenu est bilingue et reste informatif, sans état d'ouverture calculé en temps réel.
+Les heures du pied de page sont regroupées dans un widget crème compact : « Du lundi au dimanche », « Chaque jour, pour vous » et un badge lin « 8 h à 22 h » en texte sombre. Le badge reste proche du titre sur ordinateur et passe dessous, aligné à gauche, sur mobile; la réserve sur les jours fériés reste lisible en dessous. Le contenu est bilingue et reste informatif, sans état d'ouverture calculé en temps réel.
+
+Le pied de page répartit le titre et les heures dans la colonne gauche, avec les quatre groupes de coordonnées dans la colonne droite de même hauteur. Les trois liens complémentaires occupent une rangée séparée, suivie du répertoire des pages et des mentions de bas de page. Le grand monogramme décoratif est retiré; les colonnes s'empilent sur tablette et mobile sans zone vide réservée.
+
+Les cartes de coordonnées utilisent du texte de 16 px (20 px pour le téléphone), des libellés de 11 px et des icônes SVG décoratives dorées, sans dépendance externe. Le contenu est centré verticalement et les liens sociaux sont séparés, chacun avec son icône; les libellés textuels et les destinations des liens restent conservés.
 
 Les raccourcis de l'en-tête utilisent un dégradé crème et lin avec une bordure or sourd; le bandeau d'accueil reprend le fond crème et un fondu assorti vers la photo. Les accents bordeaux restent inchangés, sans grand aplat jaune vif dans ces deux zones.
 

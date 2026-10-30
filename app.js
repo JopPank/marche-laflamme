@@ -114,42 +114,43 @@ contactFooter.innerHTML = `
     <div class="visit__heading">
       <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span> On vous attend</p>
       <h2 id="visit-title">À bientôt<br><em>au marché.</em></h2>
+      <div class="visit__hours">
+        <div>
+          <h3>Heures d’ouverture</h3>
+          <p class="visit__hours-daily">Du lundi au dimanche</p>
+          <p class="visit__hours-caption">Chaque jour, pour vous</p>
+        </div>
+        <p class="visit__hours-time">8 h à 22 h</p>
+        <p class="visit__hours-note">Les heures des jours fériés peuvent varier; appelez pour confirmer.</p>
+      </div>
     </div>
     <div class="visit__details">
       <div class="visit__detail">
-        <span class="visit__label">Adresse</span>
+        <span class="visit__label"><svg class="visit__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Adresse</span>
         <a href="https://maps.google.com/?q=126+rue+Principale,+Aylmer,+QC" target="_blank" rel="noopener noreferrer">126, rue Principale<br>Aylmer (Québec)</a>
         <a href="https://maps.google.com/?q=March%C3%A9+Laflamme+126+rue+Principale+Gatineau" target="_blank" rel="noopener noreferrer">Itinéraire ↗</a>
       </div>
       <div class="visit__detail">
-        <span class="visit__label">Téléphone</span>
-        <a href="tel:+18196844156">(819) 684-4156</a>
+        <span class="visit__label"><svg class="visit__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m8 3 3 5-3 3a14 14 0 0 0 5 5l3-3 5 3v3a2 2 0 0 1-2 2C10 21 3 14 3 5a2 2 0 0 1 2-2Z"/></svg>Téléphone</span>
+        <a class="visit__phone" href="tel:+18196844156">(819) 684-4156</a>
       </div>
       <div class="visit__detail">
-        <span class="visit__label">Courriel</span>
+        <span class="visit__label"><svg class="visit__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>Courriel</span>
         <a href="mailto:info@marchelaflamme.com">info@marchelaflamme.com</a>
       </div>
       <div class="visit__detail">
-        <span class="visit__label">Suivez-nous</span>
+        <span class="visit__label"><svg class="visit__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m9 10 6-4M9 14l6 4"/></svg>Suivez-nous</span>
         <div class="visit__social-links">
-          <a href="https://www.facebook.com/MarcheLaflamme/" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span></a>
-          <a href="https://www.instagram.com/marchelaflamme/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+          <a href="https://www.facebook.com/MarcheLaflamme/" target="_blank" rel="noopener noreferrer"><svg class="visit__icon visit__icon--filled" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.6 1.6-1.6h1.7V3.1c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v2.1H7v3.2h2.8V21h3.7Z"/></svg>Facebook <span aria-hidden="true">↗</span></a>
+          <a href="https://www.instagram.com/marchelaflamme/" target="_blank" rel="noopener noreferrer"><svg class="visit__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.8" r="1"/></svg>Instagram <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </div>
-    <span class="visit__decoration" aria-hidden="true">M</span>
   </div>
   <div class="container visit__more">
-    <div class="visit__hours">
-      <div>
-        <h3>Heures d’ouverture</h3>
-        <p class="visit__hours-daily">Ouvert tous les jours</p>
-      </div>
-      <p class="visit__hours-time">8 h à 22 h</p>
-      <p class="visit__hours-note">Les heures des jours fériés peuvent varier; appelez pour confirmer.</p>
-    </div>
     <a href="./contact.html">Coordonnées, carte et renseignements ↗</a>
-    <p><a href="./a-propos.html">Découvrir notre histoire</a> · <a href="https://maps.google.com/?q=March%C3%A9+Laflamme+126+rue+Principale+Gatineau" target="_blank" rel="noopener noreferrer">Consulter les avis clients sur Google ↗</a></p>
+    <a href="./a-propos.html">Découvrir notre histoire</a>
+    <a href="https://maps.google.com/?q=March%C3%A9+Laflamme+126+rue+Principale+Gatineau" target="_blank" rel="noopener noreferrer">Consulter les avis clients sur Google ↗</a>
   </div>
 `;
 footer.prepend(contactFooter);

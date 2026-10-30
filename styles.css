@@ -4451,22 +4451,27 @@ a.text-link[href^="#"]::after {
 }
 
 .visit--footer .visit__inner {
-  align-items: start;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: stretch;
   gap: 32px;
 }
 
 .visit--footer .visit__heading {
-  padding-top: 16px;
+  min-width: 0;
+  padding-top: 0;
 }
 
 .visit--footer .visit__details {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
   gap: 12px;
 }
 
 .visit--footer .visit__detail {
   min-width: 0;
   align-self: stretch;
-  gap: 8px;
+  justify-content: center;
+  gap: 12px;
   padding: 18px 20px;
   border: 1px solid rgba(244, 240, 229, .12);
   border-radius: 16px;
@@ -4479,14 +4484,54 @@ a.text-link[href^="#"]::after {
 }
 
 .visit--footer .visit__label {
-  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+}
+
+.visit--footer .visit__icon {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  color: #dec99e;
+}
+
+.visit--footer .visit__icon--filled {
+  fill: currentColor;
+  stroke: none;
 }
 
 .visit--footer .visit__detail a {
-  line-height: 1.65;
+  max-width: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.visit--footer .visit__detail .visit__phone {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.visit--footer .visit__social-links {
+  flex-direction: column;
+  gap: 12px;
+}
+
+.visit--footer .visit__social-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .visit--footer .visit__more {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   z-index: 1;
   gap: 10px 24px;
   margin-top: 24px;
@@ -4498,14 +4543,16 @@ a.text-link[href^="#"]::after {
 .visit--footer .visit__hours {
   display: grid;
   width: 100%;
+  max-width: 100%;
+  flex: 0 1 auto;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  gap: 12px 28px;
-  margin-bottom: 10px;
-  padding: 24px 28px;
+  gap: 14px 20px;
+  margin-top: 24px;
+  padding: 22px;
   border: 1px solid #d8cbb5;
   border-radius: 20px;
-  background: linear-gradient(110deg, var(--paper), #eee3cf);
+  background: var(--paper);
   color: var(--ink);
 }
 
@@ -4524,16 +4571,28 @@ a.text-link[href^="#"]::after {
 
 .visit--footer .visit__hours-daily {
   font-family: var(--serif);
-  font-size: clamp(24px, 3vw, 34px);
+  font-size: 23px;
   line-height: 1.2;
 }
 
+.visit--footer .visit__hours-caption {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 .visit--footer .visit__hours-time {
-  color: var(--red-dark);
-  font-size: clamp(30px, 4vw, 46px);
-  font-weight: 700;
-  letter-spacing: -.04em;
-  line-height: 1.15;
+  justify-self: start;
+  padding: 14px 16px;
+  border: 1px solid #d8cbb5;
+  border-radius: 14px;
+  background: #eee3cf;
+  color: var(--ink);
+  font-size: 23px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
 }
 
 .visit--footer .visit__hours .visit__hours-note {
@@ -4613,6 +4672,7 @@ a.text-link[href^="#"]::after {
   }
 
   .visit--footer .visit__more {
+    grid-template-columns: minmax(0, 1fr);
     margin-top: 20px;
   }
 

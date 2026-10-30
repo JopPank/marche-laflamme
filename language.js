@@ -655,6 +655,8 @@ const english = {
   "Coordonnées et emplacement": "Contact details and location",
   "Heures d’ouverture": "Opening hours",
   "Ouvert tous les jours": "Open every day",
+  "Du lundi au dimanche": "Monday to Sunday",
+  "Chaque jour, pour vous": "Here for you, every day",
   "Itinéraire ↗": "Get directions ↗",
   "Itinéraire": "Get directions",
   "Mardi": "Tuesday",
