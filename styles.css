@@ -4106,8 +4106,22 @@ a.text-link[href^="#"]::after {
   padding: 0;
 }
 
+.specials__inner {
+  width: min(1600px, calc(100% - 64px));
+  margin-left: 32px;
+  margin-right: auto;
+}
+
+.specials-card__image--ham {
+  background-image: url("./assets/specials-ham.webp");
+}
+
+.specials-card__image--camembert {
+  background-image: url("./assets/specials-camembert.webp");
+}
+
 .specials__rail--bento .specials-card--flyer {
-  grid-row: span 2;
+  grid-row: span 3;
   min-height: 350px;
   padding: 28px;
   background: radial-gradient(ellipse at top right, rgba(244, 199, 94, .22), transparent 70%), var(--green);
@@ -4136,6 +4150,20 @@ a.text-link[href^="#"]::after {
 
 .specials__rail--bento .specials-card__flyer-title {
   font-size: clamp(28px, 3vw, 40px);
+}
+
+@media (min-width: 1250px) {
+  .specials__rail--bento {
+    grid-template-columns: minmax(0, .9fr) repeat(3, minmax(0, 1fr));
+  }
+
+  .specials__rail--bento .specials-card--flyer {
+    grid-row: span 2;
+  }
+
+  .specials__rail--bento .specials-card:not(.specials-card--flyer) {
+    grid-template-columns: minmax(0, .65fr) minmax(0, 1fr);
+  }
 }
 
 .catering-grid--bento {
