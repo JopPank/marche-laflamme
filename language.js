@@ -1,4 +1,11 @@
 const english = {
+  "Témoignages": "Testimonials",
+  "Les mots": "Words",
+  "de nos clients.": "from our customers.",
+  "Extraits d’avis publiés sur Google Maps, dans leur langue d’origine.": "Excerpts from Google Maps reviews, in their original language.",
+  "Les comptoirs frais": "Fresh food counters",
+  "Service traiteur": "Catering",
+  "Retrouvez-nous sur Google Maps": "Find us on Google Maps",
   "Au Marché Laflamme,": "At Marché Laflamme,",
   "nous privilégions la fraîcheur et le service.": "we prioritize freshness and service.",
   "Viande hachée produite en magasin": "Ground meat prepared in store",

@@ -44,6 +44,12 @@ Le nom accessible du logo provient de son texte alternatif et de sa légende vis
 
 ## Présentation, circulaire et identité visuelle
 
+### Témoignages de l'accueil
+
+Trois extraits d'avis Google Maps fournis par le propriétaire du projet présentent les gâteaux, les comptoirs frais et le traiteur. Les citations conservent leur texte anglais et leur attribution; les titres et la note de source sont bilingues. La section est statique, en trois colonnes sur ordinateur puis empilée sur tablette et mobile, sans carrousel ni chargement de service tiers. Le lien ouvre la fiche du marché sur Google Maps. Lors d'un remplacement, vérifier le texte et l'auteur dans la source; ne pas ajouter de note globale ou de date non vérifiée.
+
+Le lien « Nous joindre » de l'en-tête HTML de l'accueil pointe vers `contact.html`, comme la navigation générée par `app.js`, et fonctionne aussi sans JavaScript.
+
 ### Cartes bento
 
 Un liseré « spotlight » champagne/bordeaux suit la souris uniquement sur les sept cartes de rayons de l'accueil, les cartes gâteau et cupcakes et la carte Laflamme Express de Livraison. Les photos des rayons ont un déplacement maximal de 2 px par axe et un zoom de 1,025. `app.js` utilise les événements de pointeur sans boucle d'animation ni bibliothèque; le masque CSS ne couvre que le bord et ne bloque pas les clics. L'effet et la profondeur sont désactivés pour les pointeurs non souris et `prefers-reduced-motion`; changer cette préférence nettoie immédiatement les styles. Le focus clavier existant reste visible sans mouvement. Formulaires, sélecteurs, prix et cartes historiques sont exclus.

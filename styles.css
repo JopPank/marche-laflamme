@@ -1255,6 +1255,73 @@ a {
   background: #f1ede4;
 }
 
+.testimonials {
+  background: var(--paper);
+}
+
+.testimonials__intro {
+  margin: -20px 0 36px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-top: 24px;
+  border-top: 2px solid var(--line);
+}
+
+.testimonial__topic {
+  margin: 0 0 16px;
+  color: var(--red-dark);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.testimonial blockquote {
+  margin: 0 0 24px;
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.testimonial blockquote p {
+  margin: 0;
+}
+
+.testimonial figcaption {
+  display: grid;
+  gap: 4px;
+  margin-top: auto;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.testimonial__author {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.testimonials__link {
+  margin-top: 36px;
+}
+
+@media (max-width: 900px) {
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .section-heading {
   display: flex;
   align-items: end;
